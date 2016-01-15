@@ -1,4 +1,4 @@
-# addBox2D
+![addbox2d logo color](https://cloud.githubusercontent.com/assets/8098454/12345206/c4156d7c-bb99-11e5-961a-69064c6aae31.png)
 
 A professional, developer friendly, native JavaScript optimized Box2D and LiquidFun library.
 Not an unreadable ASM.js result of c++ cross compliation.
