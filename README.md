@@ -4,7 +4,7 @@ A professional, developer friendly, native JavaScript optimized Box2D and Liquid
 Not an unreadable ASM.js result of c++ transpilation.
 
 Whilst developed for [addPhysicsJS](https://github.com/SmartArtsStudio/addPhysicsJS) which adds "Code FREE JavaScript Box2D
-to Flash IDE", addBox2D remains a stand alone developer freindly javascript port of Erin Catto's Box2D.
+to Flash IDE", addBox2D remains a stand alone developer freindly javascript port of Erin Catto's [Box2D](https://github.com/erincatto/Box2D).
 
 Box2d modules fully documented with Erin Catto's original comments, LiquidFun's Particle module fully documented with the 
 Google teams original comments for easier developer education and all round ENJOYABLE experience.
