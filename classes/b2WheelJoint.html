@@ -1,0 +1,4852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : b2WheelJoint</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>b2WheelJoint Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends <a href="../classes/B2Joint.html" class="crosslink">B2Joint</a>
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l17"><code>b2WheelJoint:17</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/Joints.html">Joints</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_b2WheelJoint" class="method item">
+    <h3 class="name"><code>b2WheelJoint</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>wheelJointDef</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l17"><code>b2WheelJoint:17</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">wheelJointDef</code>
+                        <span class="type">B2WheelJointDef</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method public">
+                                <a href="#method_enableMotor">enableMotor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getAnchorB">getAnchorB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getAnchorB">getAnchorB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getJointTranslation">getJointTranslation</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getLinearOffset">getLinearOffset</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getLocalAnchorA">getLocalAnchorA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getLocalAnchorB">getLocalAnchorB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getLocalAxisA">getLocalAxisA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getMaxMotorTorque">getMaxMotorTorque</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getMotorSpeed">getMotorSpeed</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getMotorTorque">getMotorTorque</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getReactionForce">getReactionForce</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getReactionTorque">getReactionTorque</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getSpringFrequencyHz">getSpringFrequencyHz</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_getSpringFrequencyHz">getSpringFrequencyHz</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_initVelocityConstraints">initVelocityConstraints</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setMaxMotorTorque">setMaxMotorTorque</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setMotorSpeed">setMotorSpeed</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setSpringDampingRatio">setSpringDampingRatio</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_setSpringFrequencyHz">setSpringFrequencyHz</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method public">
+                                <a href="#method_solveVelocityConstraints">solveVelocityConstraints</a>
+
+                                
+                                
+                            </li>
+
+                            <li class="index-item method inherited">
+                                <a href="#method_create">create</a>
+
+
+                                <span class="flag static">static</span>
+
+
+                            </li>
+
+                            <li class="index-item method inherited">
+                                <a href="#method_destroy">destroy</a>
+
+
+                                <span class="flag static">static</span>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getAnchorA">getAnchorA</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getAnchorB">getAnchorB</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getBodyA">getBodyA</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getBodyB">getBodyB</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getCollideConnected">getCollideConnected</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getNext">getNext</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getReactionForce">getReactionForce</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getReactionTorque">getReactionTorque</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getType">getType</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_getUserData">getUserData</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_initVelocityConstraints">initVelocityConstraints</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_isActive">isActive</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_setUserData">setUserData</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_shiftOrigin">shiftOrigin</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_solveVelocityConstraints">solveVelocityConstraints</a>
+
+
+                            </li>
+
+                            <li class="index-item method inherited public">
+                                <a href="#method_solveVelocityConstraints">solveVelocityConstraints</a>
+
+
+                            </li>
+
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_ax">m_ax</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_ay">m_ay</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_bias">m_bias</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_dampingRatio">m_dampingRatio</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_enableLimit">m_enableLimit</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_enableMotor">m_enableMotor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_frequencyHz">m_frequencyHz</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_gamma">m_gamma</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_impulse">m_impulse</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_indexA">m_indexA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_indexB">m_indexB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_invIA">m_invIA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_invIB">m_invIB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_invMassA">m_invMassA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_invMassB">m_invMassB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_lalcA">m_lalcA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_lalcB">m_lalcB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_limitState">m_limitState</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_localAnchorA">m_localAnchorA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_localAnchorB">m_localAnchorB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_localCenterA">m_localCenterA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_localCenterB">m_localCenterB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_localXAxisA">m_localXAxisA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_localYAxisA">m_localYAxisA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_mass">m_mass</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_maxMotorForce">m_maxMotorForce</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_motorImpulse">m_motorImpulse</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_motorMass">m_motorMass</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_motorSpeed">m_motorSpeed</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_qA">m_qA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_qB">m_qB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_rA">m_rA</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_rB">m_rB</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_sAx">m_sAx</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_sAy">m_sAy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_sBx">m_sBx</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_sBy">m_sBy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_springImpulse">m_springImpulse</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_m_springMass">m_springMass</a>
+
+                                
+                                
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_bodyA">m_bodyA</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_bodyB">m_bodyB</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_collideConnected">m_collideConnected</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_edgeA">m_edgeA</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_edgeB">m_edgeB</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_index">m_index</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_islandFlag">m_islandFlag</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_next">m_next</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_prev">m_prev</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_type">m_type</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_m_userData">m_userData</a>
+
+
+                            </li>
+
+                            <li class="index-item property inherited public">
+                                <a href="#property_ParentClass">ParentClass</a>
+
+
+                            </li>
+
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_enableMotor" class="method item public">
+    <h3 class="name"><code>enableMotor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>flag</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Void</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l560"><code>enableMotor:560</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Set the target angular offset, in radians.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">flag</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Void</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getAnchorB" class="method item public">
+    <h3 class="name"><code>getAnchorB</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[out=b2Vec2]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l431"><code>getAnchorB:431</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[out=b2Vec2]</code>
+                        <span class="type">B2Vec2 | Object=</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>reusable object</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+                    
+                    <p>out</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getAnchorB" class="method item public">
+    <h3 class="name"><code>getAnchorB</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[out=b2Vec2]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l442"><code>getAnchorB:442</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[out=b2Vec2]</code>
+                        <span class="type">B2Vec2 | Object=</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>reusable object</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+                    
+                    <p>out</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getJointTranslation" class="method item public">
+    <h3 class="name"><code>getJointTranslation</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l522"><code>getJointTranslation:522</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get the position correction factor in the range [0,1].</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getLinearOffset" class="method item public">
+    <h3 class="name"><code>getLinearOffset</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l551"><code>getLinearOffset:551</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getLocalAnchorA" class="method item public">
+    <h3 class="name"><code>getLocalAnchorA</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[out=b2Vec2]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l483"><code>getLocalAnchorA:483</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The local anchor point relative to bodyA&#39;s origin.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[out=b2Vec2]</code>
+                        <span class="type">B2Vec2 | Object=</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>reusable object</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+                    
+                    <p>out</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getLocalAnchorB" class="method item public">
+    <h3 class="name"><code>getLocalAnchorB</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">[out=b2Vec2]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l496"><code>getLocalAnchorB:496</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The local anchor point relative to bodyA&#39;s origin.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[out=b2Vec2]</code>
+                        <span class="type">B2Vec2 | Object=</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>reusable object</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+                    
+                    <p>out</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getLocalAxisA" class="method item public">
+    <h3 class="name"><code>getLocalAxisA</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>out</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l509"><code>getLocalAxisA:509</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The local joint axis relative to bodyA.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">out</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getMaxMotorTorque" class="method item public">
+    <h3 class="name"><code>getMaxMotorTorque</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l626"><code>getMaxMotorTorque:626</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get the maximum friction torque in N*m.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getMotorSpeed" class="method item public">
+    <h3 class="name"><code>getMotorSpeed</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l615"><code>getMotorSpeed:615</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get the motor speed, usually in radians per second.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getMotorTorque" class="method item public">
+    <h3 class="name"><code>getMotorTorque</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>invDeltaTime</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l602"><code>getMotorTorque:602</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get the current motor torque given the inverse time step,
+usually in N-m.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">invDeltaTime</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getReactionForce" class="method item public">
+    <h3 class="name"><code>getReactionForce</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>invDeltaTime</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[out=b2Vec2]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l453"><code>getReactionForce:453</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get the reaction force given the inverse time step.
+Unit is N.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">invDeltaTime</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[out=b2Vec2]</code>
+                        <span class="type">B2Vec2 | Object=</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>reusable object</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">B2Vec2 | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+                    
+                    <p>out</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getReactionTorque" class="method item public">
+    <h3 class="name"><code>getReactionTorque</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>invDeltaTime</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l470"><code>getReactionTorque:470</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Get the reaction torque given the inverse time step.
+Unit is N*m. This is always zero for a distance joint.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">invDeltaTime</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getSpringFrequencyHz" class="method item public">
+    <h3 class="name"><code>getSpringFrequencyHz</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l666"><code>getSpringFrequencyHz:666</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getSpringFrequencyHz" class="method item public">
+    <h3 class="name"><code>getSpringFrequencyHz</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l647"><code>getSpringFrequencyHz:647</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_initVelocityConstraints" class="method item public">
+    <h3 class="name"><code>initVelocityConstraints</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>data</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Void</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l675"><code>initVelocityConstraints:675</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">data</code>
+                        <span class="type">B2SolverData</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Void</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_setMaxMotorTorque" class="method item public">
+    <h3 class="name"><code>setMaxMotorTorque</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>torque</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l588"><code>setMaxMotorTorque:588</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Set the maximum motor force, usually in N-m.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">torque</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_setMotorSpeed" class="method item public">
+    <h3 class="name"><code>setMotorSpeed</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>speed</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Void</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l574"><code>setMotorSpeed:574</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Set the motor speed, usually in radians per second.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">speed</code>
+                        <span class="type">B2Vec2 | Object=</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Void</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_setSpringDampingRatio" class="method item public">
+    <h3 class="name"><code>setSpringDampingRatio</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>ratio</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l656"><code>setSpringDampingRatio:656</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">ratio</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_setSpringFrequencyHz" class="method item public">
+    <h3 class="name"><code>setSpringFrequencyHz</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>hz</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l637"><code>setSpringFrequencyHz:637</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">hz</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Float</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_solveVelocityConstraints" class="method item public">
+    <h3 class="name"><code>solveVelocityConstraints</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>data</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Void</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l832"><code>solveVelocityConstraints:832</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">data</code>
+                        <span class="type">B2SolverData</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Void</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_m_ax" class="property item public">
+    <h3 class="name"><code>m_ax</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l96"><code>m_ax:96</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_ay" class="property item public">
+    <h3 class="name"><code>m_ay</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l104"><code>m_ay:104</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_bias" class="property item public">
+    <h3 class="name"><code>m_bias</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l374"><code>m_bias:374</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_dampingRatio" class="property item public">
+    <h3 class="name"><code>m_dampingRatio</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l170"><code>m_dampingRatio:170</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_enableLimit" class="property item public">
+    <h3 class="name"><code>m_enableLimit</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l202"><code>m_enableLimit:202</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> false</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_enableMotor" class="property item public">
+    <h3 class="name"><code>m_enableMotor</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l211"><code>m_enableMotor:211</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> false</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_frequencyHz" class="property item public">
+    <h3 class="name"><code>m_frequencyHz</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l178"><code>m_frequencyHz:178</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_gamma" class="property item public">
+    <h3 class="name"><code>m_gamma</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l383"><code>m_gamma:383</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_impulse" class="property item public">
+    <h3 class="name"><code>m_impulse</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l237"><code>m_impulse:237</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_indexA" class="property item public">
+    <h3 class="name"><code>m_indexA</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l266"><code>m_indexA:266</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_indexB" class="property item public">
+    <h3 class="name"><code>m_indexB</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l275"><code>m_indexB:275</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_invIA" class="property item public">
+    <h3 class="name"><code>m_invIA</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l302"><code>m_invIA:302</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_invIB" class="property item public">
+    <h3 class="name"><code>m_invIB</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l311"><code>m_invIB:311</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_invMassA" class="property item public">
+    <h3 class="name"><code>m_invMassA</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l284"><code>m_invMassA:284</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_invMassB" class="property item public">
+    <h3 class="name"><code>m_invMassB</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l293"><code>m_invMassB:293</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_lalcA" class="property item public">
+    <h3 class="name"><code>m_lalcA</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l128"><code>m_lalcA:128</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_lalcB" class="property item public">
+    <h3 class="name"><code>m_lalcB</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l136"><code>m_lalcB:136</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_limitState" class="property item public">
+    <h3 class="name"><code>m_limitState</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l220"><code>m_limitState:220</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_localAnchorA" class="property item public">
+    <h3 class="name"><code>m_localAnchorA</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l48"><code>m_localAnchorA:48</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_localAnchorB" class="property item public">
+    <h3 class="name"><code>m_localAnchorB</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l56"><code>m_localAnchorB:56</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_localCenterA" class="property item public">
+    <h3 class="name"><code>m_localCenterA</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l80"><code>m_localCenterA:80</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_localCenterB" class="property item public">
+    <h3 class="name"><code>m_localCenterB</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l88"><code>m_localCenterB:88</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_localXAxisA" class="property item public">
+    <h3 class="name"><code>m_localXAxisA</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l64"><code>m_localXAxisA:64</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_localYAxisA" class="property item public">
+    <h3 class="name"><code>m_localYAxisA</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l72"><code>m_localYAxisA:72</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_mass" class="property item public">
+    <h3 class="name"><code>m_mass</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l356"><code>m_mass:356</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_maxMotorForce" class="property item public">
+    <h3 class="name"><code>m_maxMotorForce</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l186"><code>m_maxMotorForce:186</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_motorImpulse" class="property item public">
+    <h3 class="name"><code>m_motorImpulse</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l246"><code>m_motorImpulse:246</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_motorMass" class="property item public">
+    <h3 class="name"><code>m_motorMass</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l228"><code>m_motorMass:228</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_motorSpeed" class="property item public">
+    <h3 class="name"><code>m_motorSpeed</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l194"><code>m_motorSpeed:194</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_qA" class="property item public">
+    <h3 class="name"><code>m_qA</code></h3>
+    <span class="type">B2Rot</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l112"><code>m_qA:112</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_qB" class="property item public">
+    <h3 class="name"><code>m_qB</code></h3>
+    <span class="type">B2Rot</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l120"><code>m_qB:120</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_rA" class="property item public">
+    <h3 class="name"><code>m_rA</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l144"><code>m_rA:144</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_rB" class="property item public">
+    <h3 class="name"><code>m_rB</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l152"><code>m_rB:152</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_sAx" class="property item public">
+    <h3 class="name"><code>m_sAx</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l320"><code>m_sAx:320</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_sAy" class="property item public">
+    <h3 class="name"><code>m_sAy</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l338"><code>m_sAy:338</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_sBx" class="property item public">
+    <h3 class="name"><code>m_sBx</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l329"><code>m_sBx:329</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_sBy" class="property item public">
+    <h3 class="name"><code>m_sBy</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l347"><code>m_sBy:347</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_springImpulse" class="property item public">
+    <h3 class="name"><code>m_springImpulse</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l255"><code>m_springImpulse:255</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_m_springMass" class="property item public">
+    <h3 class="name"><code>m_springMass</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2WheelJoint.js.html#l365"><code>m_springMass:365</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

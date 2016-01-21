@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : addBox2D\Dynamics\b2Body.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = addBox2D\Dynamics\b2Body.js
+</script>
+<h1 class="file-heading">File:addBox2D\Dynamics\b2Body.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+//################################################################################################//
+//################################################################################################//
+//                                                                                                //
+//                           ██    ██████ ██████          ██                                      //
+//                           ██        ██ ██  ██          ██                                      //
+//                           █████     ██ ██  ██ █████ █████ ██ ██                                //
+//                           ██ ██ ██████ █████  ██ ██ ██ ██ ██ ██                                //
+//                           ██ ██ ██     ██  ██ ██ ██ ██ ██ ██ ██                                //
+//                           ██ ██ ██     ██  ██ ██ ██ ██ ██ ██ ██                                //
+//                           █████ ██████ ██████ █████ █████ █████                                //
+//                                                              ██                                //
+//                                                           █████                                //
+//                                                                                                //
+//################################################################################################//
+//################################################################################################//
+
+// CLASS CONSTRUCTOR
+
+    /**
+     * A rigid body. These are created via
+     * &lt;a href=../classes/b2World.html#method_createBody&gt;b2World.createBody()&lt;/a&gt;.
+     *
+     * @module  Dynamics
+     * @class b2Body
+     * @constructor
+     * @param   {b2BodyDef} bodyDef
+     * @param   {b2World}   world
+     * @module Dynamics
+     */
+    function b2Body(bodyDef, world) {
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██████                              ██   ██                                   //
+//                  ██  ██                              ██                                        //
+//                  ██  ██ ████ █████ █████ █████ ████ █████ ██ █████ █████                       //
+//                  ██████ ██   ██ ██ ██ ██ ██ ██ ██    ██   ██ ██ ██ ██                          //
+//                  ██     ██   ██ ██ ██ ██ █████ ██    ██   ██ █████ █████                       //
+//                  ██     ██   ██ ██ ██ ██ ██    ██    ██   ██ ██       ██                       //
+//                  ██     ██   █████ █████ █████ ██    ████ ██ █████ █████                       //
+//                                    ██                                                          //
+//                                    ██                                                          //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // property DECLARATIONS
+
+        /**
+         * The body origin transform.
+         *
+         * @public
+         * @property  m_xf
+         * @type      {b2Transform}
+         */
+        this.m_xf = new b2Transform;
+
+/*#if EXPORT_PARTICLES */
+        /**
+         * The previous transform for particle simulation. Only used by the
+         * &lt;a href=../modules/Particle.html&gt;Particle&lt;/a&gt;
+         * and
+         * &lt;a href=../modules/ParticleSystem.html&gt;ParticleSystem&lt;/a&gt; Module&#x27;s.
+         *
+         * @public
+         * @property  m_xf0
+         * @type      {b2Transform}
+         */
+        this.m_xf0 = new b2Transform;
+/*#end EXPORT_PARTICLES */
+
+        /**
+         * The swept motion for continuous collision detection.
+         *
+         * @public
+         * @property  m_sweep
+         * @type      {b2Sweep}
+         */
+        this.m_sweep = new b2Sweep;
+
+        /**
+         * Getter memory management.
+         *
+         * @private
+         * @property  _sweep
+         * @type      {b2Sweep}
+         */
+        this._sweep = new b2Sweep;
+
+        /**
+         * @public
+         * @property  m_linearVelocity
+         * @type      {b2Vec2}
+         */
+        this.m_linearVelocity = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_force
+         * @type      {b2Vec2}
+         */
+        this.m_force = new b2Vec2;
+
+     // property INITIALISATIONS
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( bodyDef.position.isValid() );
+            b2Assert( bodyDef.linearVelocity.isValid() );
+            b2Assert( isFinite( bodyDef.angle ) );
+            b2Assert( isFinite( bodyDef.angularVelocity ) );
+            b2Assert( isFinite( bodyDef.gravityScale ) &amp;&amp; bodyDef.gravityScale &gt;= 0 );
+            b2Assert( isFinite( bodyDef.angularDamping ) &amp;&amp; bodyDef.angularDamping &gt;= 0 );
+            b2Assert( isFinite( bodyDef.linearDamping ) &amp;&amp; bodyDef.linearDamping &gt;= 0 );
+        }
+        /*#end EXPORT_ASSERTS */
+        // TODO: refactor with b2Body static class flags
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_islandFlag = false;
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_awakeFlag = false;
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_autoSleepFlag = false;
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_bulletFlag = false;
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_fixedRotationFlag = false;
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_activeFlag = false;
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_toiFlag = false;
+
+        /**
+         * @public
+         * @property  m_flags
+         * @type      {binary}
+         * @default   0
+         */
+        // TODO: refactor with bitmask ops flags
+         this.m_flags = 0;
+
+        if ( bodyDef.bullet ) { this.m_flag_bulletFlag = true; }
+        if ( bodyDef.fixedRotation ) { this.m_flag_fixedRotationFlag = true; }
+        if ( bodyDef.allowSleep ) { this.m_flag_autoSleepFlag = true; }
+        if ( bodyDef.awake ) { this.m_flag_awakeFlag = true; }
+        if ( bodyDef.active ) { this.m_flag_activeFlag = true; }
+        // if (bodyDef.bullet) { this.m_flags |= b2Body.e_bulletFlag; }
+        // if (bodyDef.fixedRotation) { this.m_flags |= b2Body.e_fixedRotationFlag; }
+        // if (bodyDef.allowSleep) { this.m_flags |= b2Body.e_allowSleepFlag; }
+        // if (bodyDef.awake) { this.m_flags |= b2Body.e_awakeFlag; }
+        // if (bodyDef.active) { this.m_flags |= b2Body.e_activeFlag; }
+
+        /**
+         * @public
+         * @property  m_world
+         * @type      {b2World}
+         */
+        this.m_world = world;
+
+        this.m_xf.p.copy( bodyDef.position );
+        this.m_xf.q.set( bodyDef.angle );
+/*#if EXPORT_PARTICLES */
+        this.m_xf0.copy( this.m_xf );
+/*#end EXPORT_PARTICLES */
+        this.m_sweep.localCenter.x = 0;
+        this.m_sweep.localCenter.y = 0;
+        this.m_sweep.c0.x = this.m_xf.p.x;
+        this.m_sweep.c0.y = this.m_xf.p.y;
+        this.m_sweep.c.x = this.m_xf.p.x;
+        this.m_sweep.c.y = this.m_xf.p.y;
+        this.m_sweep.a0 = bodyDef.angle;
+        this.m_sweep.a = bodyDef.angle;
+        this.m_sweep.alpha0 = 0;
+
+        this.m_linearVelocity.x = bodyDef.linearVelocity.x;
+        this.m_linearVelocity.y = bodyDef.linearVelocity.y;
+
+        /**
+         * The angular velocity of the body.
+         *
+         * @public
+         * @property  m_angularVelocity
+         * @type      {float}
+         * @default   b2bodyDef.angularVelocity
+         */
+        this.m_angularVelocity = bodyDef.angularVelocity;
+
+        /**
+         * Linear damping is use to reduce the linear velocity. The
+         * damping parameter can be larger than 1.0f but the damping
+         * effect becomes sensitive to the time step when the damping
+         * parameter is large.
+         *
+         * @public
+         * @property  m_linearDamping
+         * @type      {int}
+         * @default   b2bodyDef.linearDamping
+         */
+        this.m_linearDamping = bodyDef.linearDamping;
+
+        /**
+         * @public
+         * @property  m_angularDamping
+         * @type      {int}
+         * @default   b2bodyDef.angularDamping
+         */
+        this.m_angularDamping = bodyDef.angularDamping;
+
+        /**
+         * For inertia (perceived gravity) scaling.
+         *
+         * @public
+         * @property  m_inertiaScale
+         * @type      {float}
+         * @default   b2bodyDef.inertiaScale
+         */
+        this.m_gravityScale = bodyDef.gravityScale;
+
+        /**
+         * @public
+         * @property  m_torque
+         * @type      {float}
+         * @default   0
+         */
+        this.m_torque = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_sleepTime
+         * @type      {float}
+         * @default   0
+         */
+        this.m_sleepTime = 0;
+
+        /**
+         * The body type: Static, Dynamic or Kinematic.&lt;/br&gt;&lt;/br&gt;
+         *
+         * NOTE: The
+         *       &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+         *       adds a fourth type: Tweened. TODO crosslink addPhysicsJS API
+         *       Tweened is a Kinematic body moved by a FlashCC timeline tween.
+         *       &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+         *       translates the timeline tween motion into linear and angular
+         *       velocities applied appropriately to its corresponding kinematic
+         *       &lt;a href=../classes/b2Body.html&gt;b2Body&lt;/a&gt;
+         *       in the
+         *       &lt;a href=../classes/b2World.html&gt;b2World&lt;/a&gt;
+         *       simulation.
+         *
+         * @public
+         * @property  m_type
+         * @type      {int}
+         * @default   b2bodyDef.type
+         */
+        this.m_type = bodyDef.type;
+
+        if ( bodyDef.type === b2Body.b2_dynamicBody ) {
+            this.m_mass = 1.0;
+            this.m_invMass = 1.0;
+        }
+        else {
+
+            /**
+             * Body&#x27;s mass.
+             *
+             * @public
+             * @property  m_mass
+             * @type      {float}
+             * @default     0.0
+             */
+            this.m_mass = 0.0;
+
+            /**
+             * Body&#x27;s inverse mass.
+             *
+             * @public
+             * @property  m_invMass
+             * @type      {float}
+             * @default     0.0
+             */
+            this.m_invMass = 0.0;
+        }
+
+        /**
+         * Rotational inertia about the center of mass.
+         *
+         * @public
+         * @property  m_I
+         * @type      {float}
+         * @default     0.0
+         */
+        this.m_I = 0.0;
+
+        /**
+         * Inverse rotational inertia about the center of mass.
+         *
+         * @public
+         * @property  m_invI
+         * @type      {float}
+         * @default     0.0
+         */
+        this.m_invI = 0.0;
+
+        /**
+         * Application specific data.
+         *
+         * NOTE: Using the
+         *       &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+         *       m_userData is managed for you extending either a
+         *       &lt;a href=http://www.createjs.com/docs/easeljs/classes/Container.html&gt;createjs.container&lt;/a&gt;
+         *       or
+         *       &lt;a href=http://www.createjs.com/docs/easeljs/classes/MovieClip.html&gt;createjs.movieClip&lt;/a&gt;
+         *       class.
+         *
+         * @public
+         * @property  m_userData
+         * @type      {*}
+         * @default   b2bodyDef.userData
+         */
+        this.m_userData = bodyDef.userData;
+
+        /**
+         * @public
+         * @property  m_fixtureList
+         * @type      {b2Fixture|null}
+         * @default   null
+         */
+        this.m_fixtureList = null;
+
+        /**
+         * @public
+         * @property  m_fixtureCount
+         * @type      {int}
+         * @default     0
+         */
+        this.m_fixtureCount = 0;
+
+        /**
+         * @type {number}
+         */
+        this.m_islandIndex = 0;
+
+/*##if EXPORT_CONTROLLERS */
+        /**
+         * @public
+         * @property  m_controllerList
+         * @type      {b2ControllerEdge|null}
+         * @default   null
+         */
+        this.m_controllerList = null;
+
+        /**
+         * @public
+         * @property  m_controllerCount
+         * @type      {int}
+         * @default     0
+         */
+        this.m_controllerCount = 0;
+/*#end EXPORT_CONTROLLERS */
+
+        /**
+         * @public
+         * @property  m_jointList
+         * @type      {b2JointEdge|null}
+         * @default   null
+         */
+        this.m_jointList = null;
+
+        /**
+         * @public
+         * @property  m_contactList
+         * @type      {b2ContactEdge|null}
+         * @default   null
+         */
+        this.m_contactList = null;
+
+        /**
+         * The previous body in the world&#x27;s &#x27;bodies linked-list&#x27;.
+         *
+         * @public
+         * @property  m_prev
+         * @type      {b2Body|null}
+         * @default   null
+         */
+        this.m_prev = null;
+
+        /**
+         * The next body in the world&#x27;s &#x27;bodies linked-list&#x27;.
+         * Maybe null if &#x27;this&#x27; body instance is the &#x27;head&#x27; of the linked-list.
+         *
+         * @public
+         * @property  m_next
+         * @type      {b2Body|null}
+         * @default   null
+         */
+        this.m_next = null;
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██       ██               ██  ██                                              //
+//                  ██       ██                   ██                                              //
+//                  ██ █████ █████ █████ ████ ██ █████ █████ █████ █████ █████                    //
+//                  ██ ██ ██ ██ ██ ██ ██ ██   ██  ██      ██ ██ ██ ██    ██ ██                    //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ██   █████ ██ ██ ██    █████                    //
+//                  ██ ██ ██ ██ ██ ██    ██   ██  ██   ██ ██ ██ ██ ██    ██                       //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ████ █████ ██ ██ █████ █████                    //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    } p = b2Body.prototype; Box2D.b2Body = b2Body;
+
+// STATIC CLASS PROPERTIES
+
+// FLAGS - BODY TYPE
+
+    /**
+     * b2BodyDef base class default: unknown.
+     *
+     * @public
+     * @static @const
+     * @property  b2_staticBody
+     * @type      {binary}
+     * default      -1
+     */
+    b2Body.b2_unknown = -1;
+
+    /**
+     * Static: zero mass, zero velocity, may be manually moved.
+     *
+     * @public
+     * @static @const
+     * @property  b2_staticBody
+     * @type      {binary}
+     * default      0
+     */
+    b2Body.b2_staticBody = 0;
+
+    /**
+     * Kinematic: zero mass, non-zero velocity set by user, moved by solver.
+     *
+     * @public
+     * @static @const
+     * @property  b2_kinematicBody
+     * @type      {binary}
+     * default      1
+     */
+    b2Body.b2_kinematicBody = 1;
+
+    /**
+     * Dynamic: positive mass, non-zero velocity determined by forces, moved by solver.
+     *
+     * @public
+     * @static @const
+     * @property  b2_dynamicBody
+     * @type      {binary}
+     * default      2
+     */
+    b2Body.b2_dynamicBody = 2;
+
+    /**
+     * @public
+     * @static @const
+     * @property  b2_bulletBody
+     * @type      {binary}
+     * default      2
+     */
+    b2Body.b2_bulletBody = 3; // TODO_ERIN
+
+  // FLAGS
+
+    /**
+      * @public
+      * @static @const
+      * @property  e_islandFlag
+      * @type      {binary}
+      * default      0x0001
+      */
+    b2Body.e_islandFlag = 0x0001;
+
+     /**
+      * @public
+      * @static @const
+      * @property  e_awakeFlag
+      * @type      {binary}
+      * default      0x0002
+      */
+     b2Body.e_awakeFlag = 0x0002;
+
+     /**
+      * @public
+      * @static @const
+      * @property  e_allowSleepFlag
+      * @type      {binary}
+      * default      0x0004
+      */
+     b2Body.e_allowSleepFlag = 0x0004;
+
+     /**
+      * @public
+      * @static @const
+      * @property  e_bulletFlag
+      * @type      {binary}
+      * default      0x0008
+      */
+     b2Body.e_bulletFlag = 0x0008;
+
+     /**
+      * @public
+      * @static @const
+      * @property  e_fixedRotationFlag
+      * @type      {binary}
+      * default      0x0010
+      */
+     b2Body.e_fixedRotationFlag = 0x0010;
+
+     /**
+      * @public
+      * @static @const
+      * @property  e_activeFlag
+      * @type      {binary}
+      * default      0x0020
+      */
+     b2Body.e_activeFlag = 0x0020;
+
+    /**
+     * Object pool for memory management.
+     */
+    b2Body._B2VEC2_POOL0 = new b2Vec2;
+    b2Body._B2VEC2_POOL1 = new b2Vec2;
+    b2Body._B2VEC2_POOL2 = new b2Vec2;
+    b2Body._B2MASS_DATA = new b2MassData;
+    b2Body._B2TRANSFORM_POOL0 = new b2Transform;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                       ██   ██        ██   ██             ██                                    //
+//                       ███ ███        ██   ██             ██                                    //
+//                       ███████ █████ █████ █████ █████ █████ █████                              //
+//                       ██ █ ██ ██ ██  ██   ██ ██ ██ ██ ██ ██ ██                                 //
+//                       ██   ██ █████  ██   ██ ██ ██ ██ ██ ██ █████                              //
+//                       ██   ██ ██     ██   ██ ██ ██ ██ ██ ██    ██                              //
+//                       ██   ██ █████  ████ ██ ██ █████ █████ █████                              //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // INSTANCE METHODS
+
+     /**
+      * Creates a fixture and attach it to &#x27;this&#x27; body instance. Use this
+      * function if you need to set some fixture parameters, like
+      * friction. Otherwise you can create the fixture directly from
+      * a shape&#x27;s Set(As)...() methods.
+      * If the density is non-zero, this function automatically
+      * updates the mass of the body. Contacts are not created until
+      * the next time step.
+      *
+      *  Warning: This function is locked during callbacks.&lt;/br&gt;
+      *    NOTE:  However using the
+      *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+      *           event listeners you can do what every you want whenever you want and
+      *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+      *           manages the locked world problems for you.
+      *
+      * @public
+      * @method  createFixture
+      * @param   {b2FixtureDef} def  The fixture definition.
+      * @return  {b2Fixture}
+      */
+     p.createFixture = function (def) {
+        /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {  b2Assert( !this.m_world.isLocked() );  }
+         /*#end EXPORT_ASSERTS */
+         if ( this.m_world.isLocked() ) {  return null; }
+
+         var fixture = new b2Fixture();
+         fixture.create( this, def );
+
+         if ( this.m_flag_activeFlag ) { //TODO: this.m_flags &amp; b2Body.e_activeFlag
+             var broadPhase = this.m_world.m_contactManager.m_broadPhase;
+             fixture.createProxies( broadPhase, this.m_xf );
+         }
+
+         fixture.m_next = this.m_fixtureList;
+         this.m_fixtureList = fixture;
+         ++this.m_fixtureCount;
+
+         fixture.m_body = this;
+
+         // Adjust mass properties if needed.
+         if ( fixture.m_density &gt; 0 ) {
+             this.resetMassData();
+         }
+
+         // Let the world know we have a new fixture. This will cause new contacts
+         // to be created at the beginning of the next time step.
+         this.m_world.m_flag_newFixture = true;
+
+         return fixture;
+     };
+
+     /**
+      * Creates a fixture from a shape and attach it to this body.
+      * This is a convenience function. Use
+      * &lt;a href=../classes/b2FixtureDef.html&gt;b2FixtureDef&lt;/a&gt;
+      * if you need to set parameters like friction, restitution, user data, or
+      * filtering.
+      * If the density is non-zero, this function automatically
+      * updates the mass of the body.
+      *
+      *  Warning: This function is locked during callbacks.&lt;/br&gt;
+      *    NOTE:  However using the
+      *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+      *           event listeners you can do what every you want whenever you want and
+      *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+      *           manages the locked world problems for you.
+      *
+      * @public
+      * @method  createFixtureShape
+      * @param   {b2Shape}   shape   The shape to be cloned.
+      * @param   {float}     density The shape density (set to zero for static bodies).
+      * @return  {b2Fixture}
+      */
+     p.createFixtureShape = function (shape, density) {
+         density = density || 0;
+         var def = b2FixtureDef.POOL0;
+         def.shape = shape;
+         def.density = density;
+         return this.createFixture( def );
+     };
+
+     /**
+      * Destroy a fixture. This removes the fixture from the
+      * broad-phase and destroys all contacts associated with this
+      * fixture. This will automatically adjust the mass of the body
+      * if the body is dynamic and the fixture has positive density.
+      * All fixtures attached to a body are implicitly destroyed when
+      * the body is destroyed.
+      *
+      *  Warning: This function is locked during callbacks.&lt;/br&gt;
+      *    NOTE:  However using the
+      *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+      *           event listeners you can do what every you want whenever you want and
+      *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+      *           manages the locked world problems for you.
+      *
+      * @public
+      * @method  destroyFixture
+      * @param   {b2Fixture}   fixture  The fixture to be removed.
+      * @return  {void}
+      */
+     p.destroyFixture = function (fixture) {
+        /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {
+             b2Assert( !this.m_world.isLocked() );
+         }/*#*/
+         if ( this.m_world.isLocked() ) {
+             return;
+         }/*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {
+             b2Assert( fixture.m_body === this );
+             b2Assert( this.m_fixtureCount &gt; 0 );
+         }/*#*/
+         // Remove the fixture from this body&#x27;s singly linked list.
+         var node = this.m_fixtureList;
+         var ppF = null;
+         var found = false;
+         while (node !== null) {
+             if ( node === fixture ) {
+                 if ( ppF ) {
+                     ppF.m_next = fixture.m_next;
+                 }
+                 else {
+                     this.m_fixtureList = fixture.m_next;
+                 }
+                 found = true;
+                 break;
+             }
+             ppF = node;
+             node = node.m_next;
+         }
+         // You tried to remove a shape that is not attached to this body.
+         /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {
+             b2Assert( found );
+         }/*#*/
+         // Destroy any contacts associated with the fixture.
+         var edge = this.m_contactList;
+         while (edge) {
+             var c = edge.contact;
+             edge = edge.next;
+
+             var fixtureA = c.getFixtureA();
+             var fixtureB = c.getFixtureB();
+             if ( fixture === fixtureA || fixture === fixtureB ) {
+                 // This destroys the contact and removes it from
+                 // this body&#x27;s contact list.
+                 this.m_world.m_contactManager.destroy( c );
+             }
+         }
+
+         if ( this.m_flag_activeFlag ) { //TODO: m_flag_activeFlag -&gt; this.m_flags &amp; b2Body.e_activeFlag
+             var broadPhase = this.m_world.m_contactManager.m_broadPhase;
+             fixture.destroyProxies( broadPhase );
+         }
+         fixture.destroy();
+         fixture.m_body = null;
+         fixture.m_next = null;
+
+         --this.m_fixtureCount;
+
+         // Reset the mass data.
+         this.resetMassData();
+     };
+
+     /**
+      * Set the position of the body&#x27;s origin and rotation.
+      * Manipulating a body&#x27;s transform may cause non-physical
+      * behavior.
+      *
+      * Note: contacts are updated on the next call to
+      * &lt;a href=../classes/b2World.html#method_step&gt;b2World.step()&lt;/a&gt;.
+      *
+      * @public
+      * @method  setPositionAndAngle
+      * @param   {b2Vec2}    position    The world position of the body&#x27;s local origin.
+      * @param   {float}     angle       The world rotation in radians.
+      * @return  {void}
+      */
+     p.setPositionAndAngle = function (position, angle) {
+         angle = angle || 0;
+         /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) { b2Assert( !this.m_world.isLocked() ); }
+         /*#end EXPORT_ASSERTS */
+         if ( this.m_world.isLocked() ) {   // TODO: (this.m_flags &amp; b2World.e_locked) &gt; 0
+             return;
+         }
+
+         var x = position.x;
+         var y = position.y;
+         if ( (this.m_xf.p.x === x) &amp;&amp; (this.m_xf.p.y === y) &amp;&amp; (this.m_xf.q.getAngle()) === angle ) {
+             return;
+         }
+
+         this.m_xf.q.set( angle );
+         this.m_xf.p.set( x, y );
+/*#if EXPORT_PARTICLES */
+         this.m_xf0.copy( this.m_xf );
+/*#end EXPORT_PARTICLES */
+         b2Transform.timesV2( this.m_xf, this.m_sweep.localCenter, this.m_sweep.c );
+         this.m_sweep.a = angle;
+         this.m_sweep.c0.copy( this.m_sweep.c );
+         this.m_sweep.a0 = angle;
+
+         var broadPhase = this.m_world.m_contactManager.m_broadPhase;
+         for (var f = this.m_fixtureList; f; f = f.m_next) {
+             f.synchronize( broadPhase, this.m_xf, this.m_xf );
+         }
+     };
+
+     /**
+      * Set the body transform for the body.
+      *
+      * @public
+      * @method  setTransform
+      * @param   {b2Transform} transform
+      * @return  {void}
+      */
+     // API ONLY
+     p.setTransform = function (transform) {
+         this.setPositionAndAngle(transform.position, transform.getAngle());
+     };
+
+     /**
+      * Get the body transform for the body&#x27;s origin.
+      *
+      * @public
+      * @method  getTransform
+	  * @param  {Object|b2Transform=}	[out=b2Transform]   reusable object.
+      * @return {Object|b2Transform}    The world transform of the body&#x27;s origin.
+      */
+     p.getTransform = function ( out ) {
+		 out = out || this.m_xf;
+		 return out.copy(this.m_xf);
+     };
+
+     /**
+      * Get the world body origin position.
+      *
+      * @public
+      * @method  getPosition
+      * @param   {Object|b2Vec2=}  [out=b2Vec2]   reusable object.
+      * @return  {Object|b2Vec2}   out      The world position of the body&#x27;s origin.
+      */
+     p.getPosition = function ( out ) {
+         out = out || this.m_xf.p;
+         return out.copy( this.m_xf.p );
+     };
+
+     /**
+      * @public
+      * @method  setPosition
+      * @param   {b2Vec2}  position
+      * @return  {void}
+      */
+     p.setPosition = function ( position ) {
+         this.setPositionAndAngle( position, this.getAngle() );
+     };
+
+     /**
+      * Get the angle in radians.
+      *
+      * @public
+      * @method  getAngle
+      * @return {float}     The current world rotation angle in radians.
+      */
+     p.getAngle = function () {
+         return this.m_sweep.a;
+     };
+
+     /**
+      * @public
+      * @method  setAngle
+      * @param  {float=}    [angle=0.0]  In radians.
+      * @return  {void}
+      */
+     p.setAngle = function (angle) {
+         angle = angle || 0.0;
+         this.setPositionAndAngle(this.getPosition(), angle);
+     };
+
+     /**
+      * Get the world body origin rotation.
+      *
+      * @public
+      * @method  getRotation
+      * @param   {Object|b2Transform=}  [out=b2Transform]   reusable object.
+      * @return  {Object|b2Transform}   out      The current world rotation angle on a b2Transform.
+      */
+     p.getRotation = function ( out ) {
+         out = out || this.m_xf.q;
+         return out.copy( this.m_xf.q );
+     };
+
+     /**
+      * Set the world body origin rotation.
+      *
+      * @public
+      * @method  setRotation
+      * @param   {float=}    [rotation=0.0]  In radians.
+      * @return  {void}
+      */
+     p.setRotation = function ( rotation ) {
+         rotation = rotation || 0.0;
+         this.setPositionAndAngle( this.getPosition(), rotation.getAngle() );
+     };
+
+     /**
+      * Get the world position of the center of mass.
+      *
+      * @public
+      * @method  getWorldCenter
+	  * @param {Object|b2Vec2=}	    [out=b2Vec2]    reusable object
+      * @return  {Object|b2Vec2}    out
+      */
+     p.getWorldCenter = function ( out ) {
+         out = out || this._sweep.c;
+         return out.copy( this.m_sweep.c );
+     };
+
+     /**
+      * Get the local position of the center of mass.
+      *
+      * @public
+      * @method  getLocalCenter
+      * @param {Object|b2Vec2=}     [out=b2Vec2]    reusable object
+      * @return  {Object|b2Vec2}    out
+      */
+     p.getLocalCenter = function ( out ) {
+         out = out || this._sweep.localCenter;
+         return out.copy( this.m_sweep.localCenter );
+     };
+
+     /**
+      * Set the linear velocity of the center of mass.
+      *
+      * @public
+      * @method  setLinearVelocity
+      * @param   {b2Vec2}  velocity     The new linear velocity of the center of mass.
+      * @return  {void}
+      */
+     p.setLinearVelocity = function (velocity) {
+         if (this.m_type == b2Body.b2_staticBody) { return; }
+
+         if ( b2Vec2.dot( velocity, velocity ) &gt; 0 ) {
+             this.setAwake( true );
+         }
+         this.m_linearVelocity.copy( velocity );
+     };
+
+     /**
+      * Get the linear velocity of the center of mass.
+      *
+      * @public
+      * @method  getLinearVelocity
+	  * @param {Object|b2Vec2=}     [out=b2Vec2]    reusable object
+      * @return  {Object|b2Vec2}	out
+      */
+     p.getLinearVelocity = function ( out ) {
+         out = out || this.m_linearVelocity;
+         return out.copy( this.m_linearVelocity );
+     };
+
+     /**
+      * Set the angular velocity.
+      *
+      * @public
+      * @method  setAngularVelocity
+      * @param   {float} omega   The new angular velocity in radians/second.
+      * @return  {void}
+      */
+     p.setAngularVelocity = function (omega) {
+         omega = omega || 0;
+         if ( this.m_type === b2Body.b2_staticBody ) {  return; }
+
+         if ( omega * omega &gt; 0 ) {
+             this.setAwake( true );
+         }
+         this.m_angularVelocity = omega;
+     };
+
+     /**
+      * Get the angular velocity.
+      *
+      * @public
+      * @method  getAngularVelocity
+      * @return  {float}     The angular velocity in radians/second.
+      */
+     p.getAngularVelocity = function () {
+         return this.m_angularVelocity;
+     };
+
+    /**
+     * @public
+     * @method  getDefinition
+     * @param  {b2BodyDef}     [bodyDef=b2BodyDef]  reusable object
+     * @return {b2BodyDef}     out
+     */
+    //TODO: GetDefinition -&gt; bitflags
+    p.getDefinition = function ( bodyDef ) {
+        bodyDef = bodyDef || new b2BodyDef;
+        bodyDef.type = this.getType();
+        bodyDef.allowSleep = this.m_flag_autoSleepFlag;         // (this.m_flags &amp; b2Body.e_allowSleepFlag) == b2Body.e_allowSleepFlag;
+        bodyDef.angle = this.getAngle();
+        bodyDef.angularDamping = this.m_angularDamping;
+        bodyDef.gravityScale = this.m_gravityScale;
+        bodyDef.angularVelocity = this.m_angularVelocity;
+        bodyDef.fixedRotation = this.m_flag_fixedRotationFlag;  // (this.m_flags &amp; b2Body.e_fixedRotationFlag) == b2Body.e_fixedRotationFlag
+        bodyDef.bullet = this.m_flag_bulletFlag;                // (this.m_flags &amp; b2Body.e_bulletFlag) == b2Body.e_bulletFlag
+        bodyDef.awake = this.m_flag_awakeFlag;                  // (this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag
+        bodyDef.linearDamping = this.m_linearDamping;
+        bodyDef.linearVelocity.copy( this.getLinearVelocity() );
+        bodyDef.position.copy( this.getPosition() );
+        bodyDef.userData = this.getUserData();
+        return bodyDef;
+    };
+
+     /**
+      * Apply a force at a world point. If the force is not applied
+      * at the center of mass, it will generate a torque and affect
+      * the angular velocity. This wakes up the body by default.
+      *
+      * @public
+      * @method  applyForce
+      * @param   {b2Vec2}   force  The world force vector, usually in Newtons (N).
+      * @param   {b2Vec2}   point  The world position of the point of application.
+      * @param   {boolean=} [wake=true]   Also wake up the body.
+      * @return  {void}
+      */
+     p.applyForce = function ( force, point, wake ) {
+         wake = wake || true;
+         if ( this.m_type !== b2Body.b2_dynamicBody ) {
+             return;
+         }
+         if ( wake &amp;&amp; !this.m_flag_awakeFlag ) { // wake &amp;&amp; ((this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag)
+             this.setAwake( true );
+         }
+         // Don&#x27;t accumulate a force if the body is sleeping.
+         if ( this.m_flag_awakeFlag ) { // (this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag
+             this.m_force.x += force.x;
+             this.m_force.y += force.y;
+             this.m_torque += ((point.x - this.m_sweep.c.x) * force.y - (point.y - this.m_sweep.c.y) * force.x);
+         }
+     };
+
+     /**
+      * Apply a force to the center of mass. This wakes up the body by default.
+      *
+      * @public
+      * @method  applyForce
+      * @param   {b2Vec2}   force  The world force vector, usually in Newtons (N).
+      * @param   {boolean=} [wake=true]   Also wake up the body.
+      * @return  {void}
+      */
+     p.applyForceToCenter = function ( force, wake ) {
+         wake = wake || true;
+         if ( this.m_type !== b2Body.b2_dynamicBody ) {
+             return;
+         }
+         if ( wake &amp;&amp; !this.m_flag_awakeFlag ) { // wake &amp;&amp; ((this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag)
+             this.setAwake( true );
+         }
+         // Don&#x27;t accumulate a force if the body is sleeping.
+         if ( this.m_flag_awakeFlag ) { // (this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag
+             this.m_force.x += force.x;
+             this.m_force.y += force.y;
+         }
+     };
+
+     /**
+      * Apply a torque. This affects the angular velocity without
+      * affecting the linear velocity of the center of mass. This
+      * wakes up the body by default.
+      *
+      * @public
+      * @method  applyTorque
+      * @param   {float}    [torque=0.0]  About the z-axis (out of the screen), usually in N-m.
+      * @param   {boolean=} [wake=true]   Also wake up the body.
+      * @return  {void}
+      */
+     p.applyTorque = function ( torque, wake ) {
+         torque = torque || 0.0;
+         if (this.m_type != b2Body.b2_dynamicBody) {
+             return;
+         }
+         if ( wake &amp;&amp; !this.m_flag_awakeFlag ) { // wake &amp;&amp; ((this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag)
+             this.setAwake( true );
+         }
+         // Don&#x27;t accumulate a force if the body is sleeping.
+         if ( this.m_flag_awakeFlag ) { // (this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag
+             this.m_torque += torque;
+         }
+     };
+
+     /**
+      * Apply an impulse at a point. This immediately modifies the
+      * velocity. It also modifies the angular velocity if the point
+      * of application is not at the center of mass. This wakes up
+      * the body by default.
+      *
+      * @public
+      * @method  applyImpulse
+      * @param   {float}    impulse       The world impulse vector, usually in N-seconds or kg-m/s.
+      * @param   {float}    point         The world position of the point of application.
+      * @param   {boolean=} [wake=true]   Also wake up the body.
+      * @return  {void}
+      */
+     p.applyLinearImpulse = function ( impulse, point, wake ) {
+         wake = wake || true;
+         if (this.m_type != b2Body.b2_dynamicBody) {
+             return;
+         }
+         if ( wake &amp;&amp; !this.m_flag_awakeFlag ) { // wake &amp;&amp; ((this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag)
+             this.setAwake( true );
+         }
+         // Don&#x27;t accumulate a force if the body is sleeping.
+         if ( this.m_flag_awakeFlag ) { // (this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag
+             this.m_linearVelocity.x += this.m_invMass * impulse.x;
+             this.m_linearVelocity.y += this.m_invMass * impulse.y;
+             this.m_angularVelocity += this.m_invI * ((point.x - this.m_sweep.c.x) * impulse.y - (point.y - this.m_sweep.c.y) * impulse.x);
+         }
+     };
+
+     /**
+      * Apply an impulse at a point. This immediately modifies the
+      * velocity. It also modifies the angular velocity if the point
+      * of application is not at the center of mass. This wakes up
+      * the body by default.
+      *
+      * @public
+      * @method  applyImpulse
+      * @param   {float}    impulse       The world impulse vector, usually in N-seconds or kg-m/s.
+      * @param   {boolean=} [wake=true]   Also wake up the body.
+      * @return  {void}
+      */
+     p.applyAngularImpulse = function ( impulse, wake ) {
+         wake = wake || true;
+         if (this.m_type != b2Body.b2_dynamicBody) {
+             return;
+         }
+         if ( wake &amp;&amp; !this.m_flag_awakeFlag ) { // wake &amp;&amp; ((this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag)
+             this.setAwake( true );
+         }
+         // Don&#x27;t accumulate a force if the body is sleeping.
+         if ( this.m_flag_awakeFlag ) { // (this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag
+             this.m_angularVelocity += this.m_invI * impulse;
+         }
+     };
+
+     /**
+      * Get the total mass of the body.
+      *
+      * @public
+      * @method  getMass
+      * @return  {float} The mass, usually in kilograms (kg).
+      */
+     p.getMass = function () {
+         return this.m_mass;
+     };
+
+     /**
+      * Get the rotational inertia of the body about the local origin.
+      *
+      * @public
+      * @method  getInertia
+      * @return  {float} The rotational inertia, usually in kg-m^2.
+      */
+     p.getInertia = function () {
+         return this.m_I + this.m_mass * b2Vec2.dot( this.m_sweep.localCenter, this.m_sweep.localCenter );
+     };
+
+     /**
+      * Get the mass data of the body.
+      *
+      * @public
+      * @method  getMassData
+      * @param   {b2MassData} massData
+      * @return  {b2MassData} massData  Containing the mass, inertia and center of the body.
+      */
+     p.getMassData = function (massData) {
+         massData.mass = this.m_mass;
+         massData.I = this.m_I + this.m_mass * b2Vec2.dot( this.m_sweep.localCenter, this.m_sweep.localCenter );
+         massData.center.copy( this.m_sweep.localCenter );
+         return massData;
+     };
+
+     /**
+      * Set the mass properties to override the mass properties of the fixtures.
+      * Note that this changes the center of mass position.
+      * Note that creating or destroying fixtures can also alter the mass.
+      * This function has no effect if the body isn&#x27;t dynamic.
+      *
+      * @public
+      * @method  setMassData
+      * @param   {b2MassData} massData   The mass properties.
+      * @return  {void}
+      */
+     p.setMassData = function (massData) {
+         /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {
+             b2Assert( !this.m_world.isLocked() );
+         }/*#*/
+         if ( this.m_world.isLocked() ) {
+             return;
+         }
+
+         if ( this.m_type !== b2Body.b2_dynamicBody ) {
+             return;
+         }
+
+         this.m_invMass = 0;
+         this.m_I = 0;
+         this.m_invI = 0;
+
+         this.m_mass = massData.mass;
+         if ( this.m_mass &lt;= 0 ) {
+             this.m_mass = 1;
+         }
+
+         this.m_invMass = 1 / this.m_mass;
+
+         if ( massData.I &gt; 0 &amp;&amp; !this.m_flag_fixedRotationFlag ) {   // (massData.I &gt; 0 &amp;&amp; (this.m_flags &amp; b2Body.e_fixedRotationFlag) == 0)
+             this.m_I = massData.I - this.m_mass * b2Vec2.dot( massData.center, massData.center );
+             /*##if EXPORT_ASSERTS */
+             if ( b2Settings.ASSERTS_ENABLED ) {
+                 b2Assert( this.m_I &gt; 0 );
+             }/*#*/
+             this.m_invI = 1 / this.m_I;
+         }
+
+         // Move center of mass.
+         var oldCenter = b2Body._B2VEC2_POOL0.copy( this.m_sweep.c );
+         this.m_sweep.localCenter.copy( massData.center );
+         b2Transform.timesV2( this.m_xf, this.m_sweep.localCenter, this.m_sweep.c );
+         this.m_sweep.c0.copy( this.m_sweep.c );
+
+         // Update center of mass velocity.
+         b2Vec2.vPlusCrossFV( this.m_linearVelocity, this.m_angularVelocity, b2Vec2.subtract( this.m_sweep.c, oldCenter, b2Body._B2VEC2_POOL0 ), this.m_linearVelocity );
+     };
+
+
+     /**
+      * This resets the mass properties to the sum of the mass
+      * properties of the fixtures. This normally does not need to be
+      * called unless you called SetMassData to override the mass and
+      * you later want to reset the mass.
+      *
+      * @public
+      * @method  resetMassData
+      * @return  {void}
+      */
+     p.resetMassData = function () {
+         // Compute mass data from shapes. Each shape has its own density.
+         this.m_mass = 0;
+         this.m_invMass = 0;
+         this.m_I = 0;
+         this.m_invI = 0;
+         this.m_sweep.localCenter.setZero();
+
+         // Static and kinematic bodies have zero mass.
+         if ( this.m_type === b2Body.b2_staticBody || this.m_type === b2Body.b2_kinematicBody ) {
+             this.m_sweep.c0.copy( this.m_xf.p );
+             this.m_sweep.c.copy( this.m_xf.p );
+             this.m_sweep.a0 = this.m_sweep.a;
+             return;
+         }
+        /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {
+             b2Assert( this.m_type === b2Body.b2_dynamicBody );
+         }
+         /*#end EXPORT_ASSERTS */
+         // Accumulate mass over all fixtures.
+         var localCenter = b2Body._B2VEC2_POOL1.setZero();
+         for (var f = this.m_fixtureList; f; f = f.m_next) {
+             if ( f.m_density === 0 ) {
+                 continue;
+             }
+
+             var massData = f.getMassData( b2Body._B2MASS_DATA );
+             this.m_mass += massData.mass;
+             localCenter.x += massData.center.x * massData.mass;
+             localCenter.y += massData.center.y * massData.mass;
+             this.m_I += massData.I;
+         }
+
+         // Compute center of mass.
+         if ( this.m_mass &gt; 0 ) {
+             this.m_invMass = 1 / this.m_mass;
+             localCenter.x *= this.m_invMass;
+             localCenter.y *= this.m_invMass;
+         }
+         else {
+             // Force all dynamic bodies to have a positive mass.
+             this.m_mass = 1;
+             this.m_invMass = 1;
+         }
+
+         if ( this.m_I &gt; 0 &amp;&amp; !this.m_flag_fixedRotationFlag ) { // (this.m_I &gt; 0 &amp;&amp; (this.m_flags &amp; b2Body.e_fixedRotationFlag) == 0)
+             // Center the inertia about the center of mass.
+             this.m_I -= this.m_mass * b2Vec2.dot( localCenter, localCenter );
+             /*##if EXPORT_ASSERTS */
+             if ( b2Settings.ASSERTS_ENABLED ) {
+                 b2Assert( this.m_I &gt; 0 );
+             }/*#*/
+             this.m_invI = 1 / this.m_I;
+         }
+         else {
+             this.m_I = 0;
+             this.m_invI = 0;
+         }
+
+         // Move center of mass.
+         var oldCenter = b2Body._B2VEC2_POOL2.copy( this.m_sweep.c );
+         this.m_sweep.localCenter.copy( localCenter );
+         b2Transform.timesV2( this.m_xf, this.m_sweep.localCenter, this.m_sweep.c );
+         this.m_sweep.c0.copy( this.m_sweep.c );
+
+         // Update center of mass velocity.
+         b2Vec2.vPlusCrossFV( this.m_linearVelocity, this.m_angularVelocity, b2Vec2.subtract( this.m_sweep.c, oldCenter, b2Body._B2VEC2_POOL0 ), this.m_linearVelocity );
+     };
+
+    /**
+      * Get the world coordinates of a point given the local coordinates.
+      *
+      * @public
+      * @method  getWorldPoint
+      * @param   {b2Vec2}           localPoint     A point on the body measured relative the the body&#x27;s origin.
+      * @param {Object|b2Vec2=}     [out=b2Vec2]   Reusable object.
+      * @return  {Object|b2Vec2}    out            A point expressed in world coordinates.
+      */
+     p.getWorldPoint = function ( localPoint, out ) {
+         return b2Transform.timesV2( this.m_xf, localPoint, out );
+     };
+
+     /**
+      * Get the world coordinates of a vector given the local coordinates.
+      *
+      * @public
+      * @method  getWorldVector
+      * @param   {b2Vec2}           localVector    A vector fixed in the body.
+      * @param {Object|b2Vec2=}     [out=b2Vec2]   Reusable object.
+      * @return  {Object|b2Vec2}    out            Expressed in world coordinates.
+      */
+     p.getWorldVector = function ( localVector, out ) {
+         return b2Rot.timesV2( this.m_xf.q, localVector, out );
+     };
+
+     /**
+      * Gets a local point relative to the body&#x27;s origin given a world point.
+      *
+      * @public
+      * @method  getLocalPoint
+      * @param   {b2Vec2}           worldPoint     A point in world coordinates.
+      * @param {Object|b2Vec2=}     [out=b2Vec2]   Reusable object.
+      * @return  {Object|b2Vec2}    out            The corresponding local point relative to the body&#x27;s origin.
+      */
+     p.getLocalPoint = function ( worldPoint, out ) {
+         return b2Transform.tTimesV2( this.m_xf, worldPoint, out );
+     };
+
+     /**
+      * Gets a local vector given a world vector.
+      *
+      * @public
+      * @method  getLocalVector
+      * @param   {b2Vec2}           worldVector    A vector in world coordinates.
+      * @param {Object|b2Vec2=}     [out=b2Vec2]   Reusable object.
+      * @return  {Object|b2Vec2}    out            The corresponding local vector.
+      */
+     p.getLocalVector = function ( worldVector, out ) {
+         return b2Rot.invRotV2( this.m_xf.q, worldVector, out );
+     };
+
+     /**
+      * Get the world linear velocity of a world point attached to this body.
+      *
+      * @public
+      * @method  getLinearVelocityFromWorldPoint
+      * @param   {b2Vec2} 			worldPoint  	A point in world coordinates.
+      * @param   {b2Vec2|Object=} 	[out=b2Vec2]    Reusable vector object.
+      * @return  {b2Vec2|Object}                	The world velocity of a point.
+      */
+     p.getLinearVelocityFromWorldPoint = function (worldPoint, out) {
+         out = out || b2Body._B2VEC2_POOL0;
+		 out.x = this.m_linearVelocity.x - this.m_angularVelocity * (worldPoint.y - this.m_sweep.c.y);
+		 out.y = this.m_linearVelocity.y + this.m_angularVelocity * (worldPoint.x - this.m_sweep.c.x);
+         return out;
+	 };
+
+     /**
+      * Get the world velocity of a local point.
+      *
+      * @public
+      * @method  getLinearVelocityFromLocalPoint
+      * @param   {b2Vec2}           localPoint     A point in local coordinates
+      * @param   {b2Vec2|Object=}   [out=b2Vec2]   Reusable vector object.
+      * @return  {b2Vec2|Object}                   The world velocity of a point.
+      */
+     p.getLinearVelocityFromLocalPoint = function ( localPoint, out ) {
+         return this.getLinearVelocityFromWorldPoint( this.getWorldPoint( localPoint, out ), out );
+     };
+
+     /**
+      * Get the linear damping of the body.
+      *
+      * @public
+      * @method  getLinearDamping
+      * @return  {float}
+      */
+     p.getLinearDamping = function () {
+         return this.m_linearDamping;
+     };
+
+     /**
+      * Set the linear damping of the body.
+      *
+      * @public
+      * @method  setLinearDamping
+      * @param   {float}    [damping=0.0]
+      * @return  {void}
+      */
+     p.setLinearDamping = function (damping) {
+         damping = damping || 0.0;
+         this.m_linearDamping = damping;
+     };
+
+     /**
+      * @public
+      * @method  getAngularDamping
+      * @return  {float}
+      */
+     p.getAngularDamping = function () {
+         return this.m_angularDamping;
+     };
+
+     /**
+      * Get the angular damping of the body.
+      *
+      * @public
+      * @method  setAngularDamping
+      * @param   {float}    [angularDamping=0.0]
+      * @return  {void}
+      */
+     p.setAngularDamping = function (angularDamping) {
+         angularDamping = angularDamping || 0.0;
+         this.m_angularDamping = angularDamping;
+     };
+
+
+     /**
+      * Get the gravity scale of the body.
+      *
+      * @public
+      * @method  getGravityScale
+      * @return  {float}
+      */
+     p.getGravityScale = function () {
+         return this.m_gravityScale;
+     };
+
+     /**
+      * Get the gravity scale of the body.
+      *
+      * @public
+      * @method  setAngularDamping
+      * @param   {float}    scale
+      * @return  {void}
+      */
+     p.setAngularDamping = function ( scale ) {
+         this.m_gravityScale = scale;
+     };
+
+     /**
+      * Set the type of this body. This may alter the mass and velocity.
+      *
+      * @public
+      * @method  setType
+      * @param   {int}  type
+      * @return  {void}
+      */
+     p.setType = function ( type ) {
+         /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {
+             b2Assert( !this.m_world.isLocked() );
+         }/*#*/
+         if ( this.m_world.isLocked() ) {
+             return;
+         }
+         if ( this.m_type === type ) {
+             return;
+         }
+         this.m_type = type;
+
+         this.resetMassData();
+
+         if ( this.m_type === b2Body.b2_staticBody ) {
+             this.m_linearVelocity.setZero();
+             this.m_angularVelocity = 0;
+             this.m_sweep.a0 = this.m_sweep.a;
+             this.m_sweep.c0.copy( this.m_sweep.c );
+             this.synchronizeFixtures();
+         }
+         this.setAwake( true );
+
+         this.m_force.setZero();
+         this.m_torque = 0;
+
+         // Delete the attached contacts.
+         /** b2ContactEdge */ var ce = this.m_contactList;
+         while (ce) {
+             /** b2ContactEdge */ var ce0 = ce;
+             ce = ce.next;
+             this.m_world.m_contactManager.destroy( ce0.contact );
+         }
+         this.m_contactList = null;
+
+         // Touch the proxies so that new contacts will be created (when appropriate)
+         /** b2BroadPhase */ var broadPhase = this.m_world.m_contactManager.m_broadPhase;
+         for (/** b2Fixture */ var f = this.m_fixtureList; f; f = f.m_next) {
+             var proxyCount = f.m_proxyCount;
+             for (var i = 0; i &lt; proxyCount; ++i) {
+                 broadPhase.touchProxy( f.m_proxies[i].proxy );
+             }
+         }
+     };
+
+     /**
+      * Get the type of this body.
+      *
+      * @public
+      * @method  getType
+      * @return  {int} body type
+      */
+     p.getType = function () {
+         return this.m_type;
+     };
+
+     /**
+      * Should this body be treated like a bullet for continuous collision detection?
+      *
+      * @public
+      * @method  setBullet
+      * @param   {boolean} flag
+      * @return  {void}
+      */
+     p.setBullet = function ( flag ) {
+         // TODO SetBullet by bitmask
+         // if (flag) {
+         //     this.m_flags |= b2Body.e_bulletFlag;
+         // }
+         // else {
+         //     this.m_flags &amp;= ~b2Body.e_bulletFlag;
+         // }
+         this.m_flag_bulletFlag = flag;
+     };
+
+     /**
+      * Is this body treated like a bullet for continuous collision detection?
+      *
+      * @public
+      * @method  isBullet
+      * @return {boolean}
+      */
+     p.isBullet = function () {
+         // TODO IsBullet by bitmask
+         // return (this.m_flags &amp; b2Body.e_bulletFlag) == b2Body.e_bulletFlag;
+         return this.m_flag_bulletFlag;
+     };
+
+     /**
+      * You can disable sleeping on this body. If you disable sleeping,
+      * the body will be woken.
+      *
+      * @public
+      * @method  setSleepingAllowed
+      * @return {boolean}
+      */
+     p.setSleepingAllowed = function ( flag ) {
+         // TODO SetSleepingAllowed by bitmask
+         // if (flag) {
+         //     this.m_flags |= b2Body.e_allowSleepFlag;
+         // }
+         // else {
+         //     this.m_flags &amp;= ~b2Body.e_allowSleepFlag;
+         //     this.setAwake(true);
+         // }
+         if ( flag ) {
+             this.m_flag_autoSleepFlag = true;
+         }
+         else {
+             this.m_flag_autoSleepFlag = false;
+             this.setAwake( true );
+         }
+
+     };
+
+     /**
+      * Set the sleep state of the body. A sleeping body has very low CPU cost.
+      *
+      * @public
+      * @method  setAwake
+      * @param   {boolean} flag  Set to TRUE to wake the body,
+      *                                 FALSE to put it to sleep.
+      * @return {void}
+      */
+     p.setAwake = function ( flag ) {
+         // TODO SetAwake by bitmask
+         // if (flag) {
+         //     this.m_flags |= b2Body.e_awakeFlag;
+         //     this.m_sleepTime = 0;
+         // }
+         // else {
+         //     this.m_flags &amp;= ~b2Body.e_awakeFlag;
+         //     this.m_sleepTime = 0;
+         //     this.m_linearVelocity.setZero();
+         //     this.m_angularVelocity = 0;
+         //     this.m_force.setZero();
+         //     this.m_torque = 0;
+         // }
+         if ( flag ) {
+             if ( !this.m_flag_awakeFlag ) {
+                 this.m_flag_awakeFlag = true;
+                 this.m_sleepTime = 0;
+             }
+         }
+         else {
+             this.m_flag_awakeFlag = false;
+             this.m_sleepTime = 0;
+             this.m_linearVelocity.setZero();
+             this.m_angularVelocity = 0;
+             this.m_force.setZero();
+             this.m_torque = 0;
+         }
+     };
+
+     /**
+      * Get the sleeping state of this body.
+      *
+      * @public
+      * @method  isAwake
+      * @return  {boolean}
+      */
+     p.isAwake = function () {
+         // TODO IsAwake by bitmask
+         // return (this.m_flags &amp; b2Body.e_awakeFlag) == b2Body.e_awakeFlag;
+         return this.m_flag_awakeFlag;
+     };
+
+     /**
+      * Set this body to have fixed rotation. This causes the mass to
+      * be reset.
+      *
+      * @public
+      * @method  setFixedRotation
+      * @return {boolean} true if the body is awake.
+      */
+     p.setFixedRotation = function ( fixed ) {
+         // TODO SetFixedRotation by bitmask
+         // if (fixed) {
+         //     this.m_flags |= b2Body.e_fixedRotationFlag;
+         // }
+         // else {
+         //     this.m_flags &amp;= ~b2Body.e_fixedRotationFlag;
+         // }
+         var status = this.m_flag_fixedRotationFlag;
+         if ( status === fixed ) {
+             return;
+         }
+         this.m_flag_fixedRotationFlag = fixed;
+         this.m_angularVelocity = 0;
+         this.resetMassData();
+     };
+
+     /**
+      * Does this body have fixed rotation?
+      *
+      * @public
+      * @method  isFixedRotation
+      * @return {boolean}
+      */
+     p.isFixedRotation = function () {
+         // TODO IsFixedRotation by bitmask
+         // return (this.m_flags &amp; b2Body.e_fixedRotationFlag) == b2Body.e_fixedRotationFlag;
+         return this.m_flag_fixedRotationFlag;
+
+     };
+
+     /**
+      * Set the active state of the body.
+      *
+      * An inactive body is not simulated and cannot be collided with
+      * or woken up.
+      * If you pass a flag of true, all fixtures will be added to the
+      * broad-phase.
+      * If you pass a flag of false, all fixtures will be removed from
+      * the broad-phase and all contacts will be destroyed.
+      *
+      * Fixtures and joints are otherwise unaffected. You may continue
+      * to create/destroy fixtures and joints on inactive bodies.
+      * Fixtures on an inactive body are implicitly inactive and will
+      * not participate in collisions, ray-casts, or queries.
+      *
+      * Joints connected to an inactive body are implicitly inactive.
+      * An inactive body is still owned by a
+      * &lt;a href=../classes/b2World.html&gt;b2World&lt;/a&gt;
+      * object and remains in the body list.
+      *
+      * @public
+      * @method  setActive
+      * @param   {boolean} active
+      * @return  {void}
+      */
+     p.setActive = function ( active ) {
+         /*##if EXPORT_ASSERTS */
+         if ( b2Settings.ASSERTS_ENABLED ) {  b2Assert( !this.m_world.isLocked() ); }
+         /*#end EXPORT_ASSERTS */
+         if ( active === this.isActive() ) { return; }
+         var broadPhase;
+
+         if ( active ) {
+             this.m_flag_activeFlag = true; // this.m_flags |= b2Body.e_activeFlag;
+
+             // Create all proxies.
+             broadPhase = this.m_world.m_contactManager.m_broadPhase;
+             for (var f = this.m_fixtureList; f; f = f.m_next) {
+                 f.createProxies( broadPhase, this.m_xf );
+             }
+             // Contacts are created the next time step.
+         }
+         else {
+             this.m_flag_activeFlag = false; // this.m_flags &amp;= ~b2Body.e_activeFlag;
+
+             // Destroy all proxies.
+             broadPhase = this.m_world.m_contactManager.m_broadPhase;
+             for (var f = this.m_fixtureList; f; f = f.m_next) {
+                 f.destroyProxies( broadPhase );
+             }
+             // Destroy the attached contacts.
+             var ce = this.m_contactList;
+             while (ce) {
+                 var ce0 = ce;
+                 ce = ce.next;
+                 this.m_world.m_contactManager.destroy( ce0.contact );
+             }
+             this.m_contactList = null;
+         }
+     };
+
+     /**
+      * Get the active state of the body.
+      *
+      * @public
+      * @method  isActive
+      * @return {boolean}
+      */
+     p.isActive = function () {
+         // TODO IsActive by bitmask
+         // return (this.m_flags &amp; b2Body.e_activeFlag) == b2Body.e_activeFlag;
+         return this.m_flag_activeFlag;
+     };
+
+     /**
+      * Is this body allowed to sleep
+      *
+      * @public
+      * @method  isSleepingAllowed
+      * @return  {boolean}
+      */
+     p.isSleepingAllowed = function () {
+         // TODO IsSleepingAllowed by bitmask
+         // return (this.m_flags &amp; b2Body.e_allowSleepFlag) == b2Body.e_allowSleepFlag;
+         return this.m_flag_autoSleepFlag;
+     };
+
+     /**
+      * Get the list of all fixtures attached to this body.
+      *
+      * @public
+      * @method  getFixtureList
+      * @return  {b2Fixture}
+      */
+     p.getFixtureList = function () {
+         return this.m_fixtureList;
+     };
+
+     /**
+      * Get the list of all joints attached to this body.
+      *
+      * @public
+      * @method  getJointList
+      * @return {b2JointEdge}
+      */
+     p.getJointList = function () {
+         return this.m_jointList;
+     };
+
+     /**
+      * Get the list of all contacts attached to this body.
+      *
+      * Warning: This list changes during the time step and you may
+      * miss some collisions if you don&#x27;t use
+      * &lt;a href=../classes/b2ContactListener.html&gt;b2ContactListener&lt;/a&gt;.
+      *
+      * @public
+      * @method  getContactList
+      * @return {b2ContactEdge}
+      */
+     p.getContactList = function () {
+         return this.m_contactList;
+     };
+
+     /**
+      * Get the next body in the world&#x27;s body list.
+      *
+      * @public
+      * @method  getNext
+      * @return  {b2Body}
+      */
+     p.getNext = function () {
+         return this.m_next;
+     };
+
+     /**
+      * Get the user data reference that was provided by the body definition.
+      *
+      * @public
+      * @method  getUserData
+      * @return {*}
+      */
+     p.getUserData = function () {
+         return this.m_userData;
+     };
+
+     /**
+      * Set the user data. Use this to store your application specific data.
+      *
+      * @public
+      * @method  setUserData
+      * @param   {*}    data
+      * @return  {void}
+      */
+     p.setUserData = function (data) {
+         this.m_userData = data;
+     };
+
+     /**
+      * Get the parent world of this body.
+      *
+      * @public
+      * @method  getWorld
+      * @return {b2World}
+      */
+     p.getWorld = function () {
+         return this.m_world;
+     };
+
+     /**
+      * @public
+      * @method  synchronizeFixtures
+      * @return {void}
+      */
+     p.synchronizeFixtures = function () {
+         var xf1 = b2Body._B2TRANSFORM_POOL0;
+         xf1.q.setAngle( this.m_sweep.a0 );
+         b2Rot.timesV2( xf1.q, this.m_sweep.localCenter, xf1.p );
+         b2Vec2.subtract( this.m_sweep.c0, xf1.p, xf1.p );
+
+         var broadPhase = this.m_world.m_contactManager.m_broadPhase;
+         for (var f = this.m_fixtureList; f; f = f.m_next) {
+             f.synchronize( broadPhase, xf1, this.m_xf );
+         }
+     };
+
+     /**
+      * @public
+      * @method  synchronizeTransform
+      * @return  {void}
+      */
+     p.synchronizeTransform = function () {
+         this.m_xf.q.setAngle( this.m_sweep.a );
+         b2Rot.timesV2( this.m_xf.q, this.m_sweep.localCenter, this.m_xf.p );
+         b2Vec2.subtract( this.m_sweep.c, this.m_xf.p, this.m_xf.p );
+     };
+
+     /**
+      * This is used to prevent connected bodies from colliding.
+      * It may lie, depending on the collideConnected flag.
+      *
+      * @public
+      * @method  shouldCollide
+      * @param   {b2Body}   other   &lt;a href=../classes/b2Body.html&gt;b2Body&lt;/a&gt;
+      * @return  {boolean}
+      */
+     p.shouldCollide = function (other) {
+         // At least one body should be dynamic.
+         if ( this.m_type !== b2Body.b2_dynamicBody &amp;&amp; other.m_type !== b2Body.b2_dynamicBody ) {
+             return false;
+         }
+         // Does a joint prevent collision?
+         for (var jn = this.m_jointList; jn; jn = jn.next) {
+             if ( jn.other === other ) {
+                 if ( !jn.joint.m_collideConnected ) {
+                     return false;
+                 }
+             }
+         }
+         return true;
+     };
+
+     /**
+      * Advance to the new safe time. This doesn&#x27;t sync the broad-phase.
+      *
+      * @public
+      * @method  advance
+      * @param   {number} alpha     The original start time.
+      * @return  {void}
+      */
+     p.advance = function (alpha) {
+         // Advance to the new safe time. This doesn&#x27;t sync the broad-phase.
+         this.m_sweep.advance( alpha );
+         this.m_sweep.c.copy( this.m_sweep.c0 );
+         this.m_sweep.a = this.m_sweep.a0;
+         this.m_xf.q.setAngle( this.m_sweep.a );
+         b2Rot.timesV2( this.m_xf.q, this.m_sweep.localCenter, this.m_xf.p );
+         b2Vec2.subtract( this.m_sweep.c, this.m_xf.p, this.m_xf.p );
+     };
+
+/*##if EXPORT_CONTROLLERS */
+    /**
+     * See
+     * &lt;a href=../classes/b2Controller.html&gt;b2Controller&lt;/a&gt;
+     * list.
+     *
+     * @public
+     * @method  getControllerList
+     * @return {b2ControllerEdge}
+     */
+    p.getControllerList = function () {
+        return this.m_controllerList;
+    };
+
+    /**
+     * See
+     * &lt;a href=../classes/b2Controller.html&gt;b2Controller&lt;/a&gt;
+     * list.
+     *
+     * @public
+     * @method  getControllerCount
+     * @return {int}
+     */
+    p.getControllerCount = function () {
+        return this.m_controllerCount;
+    };
+/*#end EXPORT_CONTROLLERS */
+
+    /**
+      * Splits a body into two bodies.
+      *
+      * @public
+      * @method  split
+      * @param   {b2QueryCallback}   callback
+      * @return  {b2Body}
+      */
+     p.split = function (callback) {
+         var linearVelocity = this.getLinearVelocity().clone();
+         var angularVelocity = this.getAngularVelocity();
+         var center = this.getWorldCenter();
+         var body1 = this;
+         var body2 = this.m_world.createBody(this.getDefinition());
+         var prev;
+
+         for (var f = body1.m_fixtureList; f;) {
+             if (callback(f)) {
+                 var next = f.m_next;
+                 if (prev) {
+                     prev.m_next = next;
+                 }
+                 else {
+                     body1.m_fixtureList = next;
+                 }
+                 body1.m_fixtureCount--;
+                 f.m_next = body2.m_fixtureList;
+                 body2.m_fixtureList = f;
+                 body2.m_fixtureCount++;
+                 f.m_body = body2;
+                 f = next;
+             }
+             else {
+                 prev = f;
+                 f = f.m_next;
+             }
+         }
+         body1.resetMassData();
+         body2.resetMassData();
+         var center1 = body1.getWorldCenter();
+         var center2 = body2.getWorldCenter();
+         var velocity1 = b2Vec2.add(
+             linearVelocity,
+             b2Vec2.numTimes(angularVelocity, b2Vec2.subtract(center1, center))
+         );
+         var velocity2 = b2Vec2.add(
+             linearVelocity,
+             b2Vec2.numTimes(angularVelocity, b2Vec2.subtract(center2, center))
+         );
+         body1.setLinearVelocity(velocity1);
+         body2.setLinearVelocity(velocity2);
+         body1.setAngularVelocity(angularVelocity);
+         body2.setAngularVelocity(angularVelocity);
+         body1.synchronizeFixtures();
+         body2.synchronizeFixtures();
+         return body2;
+     };
+
+     /**
+      * Merges two bodies into one.
+      *
+      * @public
+      * @method     merge
+      * @param      {b2Body}  other &lt;a href=../classes/b2Body.html&gt;b2Body&lt;/a&gt;
+      * @return     {void}
+      */
+     p.merge = function (other) {
+         var f;
+         var body1 = this;
+         var body2 = other;
+         for (f = other.m_fixtureList; f;) {
+             var next = f.m_next;
+             other.m_fixtureCount--;
+             f.m_next = this.m_fixtureList;
+             this.m_fixtureList = f;
+             this.m_fixtureCount++;
+             f.m_body = body2;
+             f = next;
+         }
+         body1.m_fixtureCount = 0;
+         var center1 = body1.getWorldCenter();
+         var center2 = body2.getWorldCenter();
+         var velocity1 = body1.getLinearVelocity().clone();
+         var velocity2 = body2.getLinearVelocity().clone();
+         var angular1 = body1.getAngularVelocity();
+         var angular = body2.getAngularVelocity();
+         body1.resetMassData();
+         this.synchronizeFixtures();
+     };
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

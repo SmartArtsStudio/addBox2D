@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : addBox2D\Dynamics\b2World.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = addBox2D\Dynamics\b2World.js
+</script>
+<h1 class="file-heading">File:addBox2D\Dynamics\b2World.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+//################################################################################################//
+//################################################################################################//
+//                                                                                                //
+//                         ██    ██████ ██  ██  ██            ██    ██                            //
+//                         ██        ██ ██  ██  ██            ██    ██                            //
+//                         █████     ██ ██  ██  ██ █████ ████ ██ █████                            //
+//                         ██ ██ ██████ ██  ██  ██ ██ ██ ██   ██ ██ ██                            //
+//                         ██ ██ ██     ██  ██  ██ ██ ██ ██   ██ ██ ██                            //
+//                         ██ ██ ██     ██  ██  ██ ██ ██ ██   ██ ██ ██                            //
+//                         █████ ██████ ██████████ █████ ██   ██ █████                            //
+//                                                                                                //
+//################################################################################################//
+//################################################################################################//
+
+// CLASS CONSTRUCTOR
+
+    /**
+     * The world class manages all physics entities, dynamic simulation,
+     * and asynchronous queries. The world also contains efficient memory
+     * management facilities.
+     *
+     * @class b2World
+     * @constructor
+     * @param   {b2Vec2=}    [gravity=b2Vec2]
+     * @param   {boolean=}   [allowSleep=true]
+     * @module Dynamics
+     */
+    function b2World( gravity, allowSleep ) {
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██████                              ██   ██                                   //
+//                  ██  ██                              ██                                        //
+//                  ██  ██ ████ █████ █████ █████ ████ █████ ██ █████ █████                       //
+//                  ██████ ██   ██ ██ ██ ██ ██ ██ ██    ██   ██ ██ ██ ██                          //
+//                  ██     ██   ██ ██ ██ ██ █████ ██    ██   ██ █████ █████                       //
+//                  ██     ██   ██ ██ ██ ██ ██    ██    ██   ██ ██       ██                       //
+//                  ██     ██   █████ █████ █████ ██    ████ ██ █████ █████                       //
+//                                    ██                                                          //
+//                                    ██                                                          //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // property DECLARATIONS
+
+        /**
+         * The flag that controls automatic clearing of forces after each time step.
+         *
+         * @public
+         * @property     m_flag_clearForces
+         * @type        {boolean}
+         * @default     true
+         */
+        // ( this.m_flags &amp; b2World.e_clearForces )
+        this.m_flag_clearForces = true;
+
+        /**
+         * @public
+         * @property  m_contactManager
+         * @type      {b2ContactManager}
+         */
+        this.m_contactManager = new b2ContactManager;
+
+        /**
+         * @public
+         * @property  m_gravity
+         * @type      {b2Vec2}
+         * @default   (0,0)
+         */
+        this.m_gravity = new b2Vec2;
+
+        /**
+         * Development profiling data.
+         *
+         * @public
+         * @property  m_profile
+         * @type      {b2Profile}
+         */
+        this.m_profile = new b2Profile();
+
+        /**
+         *
+         * @public
+         * @property  m_groundBody
+         * @type      {int}
+         * @default   b2Body.
+         */
+        this.m_groundBody = this.createBody( new b2BodyDef );
+
+     // property INITIALISATIONS
+
+        /**
+         * Enable/disable sleep.
+         *
+         * @public
+         * @property  m_allowSleep
+         * @type      {boolean}
+         */
+        this.m_allowSleep = allowSleep || true;
+
+
+        /**
+         * @public
+         * @property  m_bodyList
+         * @type     {b2Body}
+         * @default    null
+         */
+        this.m_bodyList = null;
+
+        /**
+         * @public
+         * @property  m_bodyCount
+         * @type      {int}
+         * @default    0
+         */
+        this.m_bodyCount = 0;
+
+        /**
+         * @public
+         * @property  m_destructionListener
+         * @type      {?b2DestructionListener|null}
+         * @default   null
+         */
+        this.m_destructionListener = null;
+
+        /**
+         * @public
+         * @property  m_debugDraw
+         * @type      {?b2DebugDraw|null}
+         * @default   null
+         */
+        this.m_debugDraw = null;
+
+
+        if ( gravity ) {
+            if ( gravity.isProxy ) {
+                this.m_gravity = gravity;
+            }
+            else {
+                this.m_gravity.copy( gravity )
+            }
+        }
+        //TODO: m_flag -&gt; bitmask
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_newFixture = false;
+        /**
+         * @type {boolean}
+         */
+        this.m_flag_locked = false;
+
+        /**
+         * This is used to compute the time step ratio to support a variable time step.
+         *
+         * @public
+         * @property  m_inv_dt0
+         * @type      {float}
+         * @default     0.0
+         */
+        this.m_inv_dt0 = 0;
+
+        /**
+         * @public
+         * @property  m_island
+         * @type      {b2Island}
+         */
+        this.m_island = new b2Island();
+
+        /**
+         * @public
+         * @property  m_jointCount
+         * @type      {int}
+         * @default   0
+         */
+        this.m_jointCount = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_jointList
+         * @type      {?b2Joint|null}
+         * @default   null
+         */
+        this.m_jointList = null;
+
+        /**
+         * @public
+         * @property  s_stack
+         * @type      {Array.&lt;?b2Body&gt;}
+         */
+        this.s_stack = [];
+
+        /**
+         * These are for debugging the solver.
+         * @type {boolean}
+         */
+        //TODO: static? b2World.
+        this.m_warmStarting = true;
+        this.m_continuousPhysics = true;
+        this.m_subStepping = false;
+        this.m_stepComplete = true;
+
+/*#if EXPORT_PARTICLES */
+        /**
+         * @public
+         * @property  m_particleSystemList
+         * @type      {?b2ParticleSystem}
+         * @default   null
+         */
+        this.m_particleSystemList = null;
+/*#end EXPORT_PARTICLES */
+/*##if EXPORT_CONTROLLERS */
+        /**
+         * @public
+         * @property  m_controllerList
+         * @type      {?b2Controller|null}
+         * @default   null
+         */
+        this.m_controllerList = null;
+
+        /**
+         * @public
+         * @property  m_controllerCount
+         * @type      {int}
+         * @default   0
+         */
+        this.m_controllerCount = 0;
+/*#end EXPORT_CONTROLLERS */
+
+    } p = b2World.prototype; Box2D.b2World = b2World;
+
+     // STATIC CLASS PROPERTIES
+
+        /**
+         * Object pool for memory management.
+         */
+        b2World._B2VEC2_POOL0 = new b2Vec2;
+        b2World._B2VEC2_POOL1 = new b2Vec2;
+        b2World._B2VEC2_POOL2 = new b2Vec2;
+        b2World._B2VEC2_POOL3 = new b2Vec2;
+        b2World._B2AABB_POOL0 = new b2AABB;
+        b2World._B2TIMESTEP_POOL0 = new b2TimeStep;
+        b2World.B2TIMESTEP_SUB_POOL0 = new b2TimeStep;
+        b2World._B2SWEEP_POOL0 = new b2Sweep;
+        b2World._B2SWEEP_POOL1 = new b2Sweep;
+        b2World._B2SWEEP_POOL2 = new b2Sweep;
+        b2World._B2TOI_INPUT_POOL0 = new b2TOIInput;
+        b2World._B2TOI_OUTPUT_POOL0 = new b2TOIOutput;
+        b2World._B2RAYCAST_INPUT_POOL0 = new b2RayCastInput;
+        b2World._B2RAYCAST_OUTPUT_POOL0 = new b2RayCastOutput;
+        b2World._B2COLOR_POOL0 = new b2Color( 0.5, 0.8, 0.8 );
+        b2World._B2VEC2_VECTOR_4 = b2Vec2.newVector( 4 );
+        b2World._B2TRANSFORM_POOL0 = new b2Transform;
+        b2World._B2VEC2_VECTOR_MAX_POLYGON_VERTICES = b2Vec2.newVector( b2Settings.b2_maxPolygonVertices );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                       ██   ██        ██   ██             ██                                    //
+//                       ███ ███        ██   ██             ██                                    //
+//                       ███████ █████ █████ █████ █████ █████ █████                              //
+//                       ██ █ ██ ██ ██  ██   ██ ██ ██ ██ ██ ██ ██                                 //
+//                       ██   ██ █████  ██   ██ ██ ██ ██ ██ ██ █████                              //
+//                       ██   ██ ██     ██   ██ ██ ██ ██ ██ ██    ██                              //
+//                       ██   ██ █████  ████ ██ ██ █████ █████ █████                              //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // STATIC CLASS METHODS
+
+    /**
+     * Returns FALSE if the b2World has zero force on BOTH the x and y axis.
+     *
+     *  NOTE:   &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+     *          feeds zero force into addBox2D and handles force itself,
+     *          which enables its much more advanced, customisable force abilities.
+     *          Including multiple force fields.
+     *
+     * @public
+     * @method  hasForce
+     * @return  {boolean}       TRUE if force x AND y != 0.0,
+     *                          FALSE otherwise.
+     */
+    b2World.hasForce = function ( force ) {
+            return force.y != 0.0 || force.x != 0.0;
+    };
+
+// INSTANCE METHODS
+
+    /**
+     * Enable/disable allowSleeping.
+     *
+     * @public
+     * @method  setAllowSleeping
+     * @param   {boolean}     flag
+     * @return  {void}
+     */
+    p.setAllowSleeping = function ( flag ) {
+        if ( flag === this.m_allowSleep ) {
+            return;
+        }
+        this.m_allowSleep = flag;
+        if ( !this.m_allowSleep ) {
+            for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+                b.setAwake( true );
+            }
+        }
+    };
+
+    /**
+     * @public
+     * @method  getAllowSleeping
+     * @return  {boolean}     flag
+     */
+    p.getAllowSleeping = function () {
+            return this.m_allowSleep;
+    };
+
+    /**
+     * Enable/disable warm starting. For testing.
+     *
+     * @public
+     * @method  setWarmStarting
+     * @param   {boolean}     flag
+     * @return  {void}
+     */
+    p.setWarmStarting = function ( flag ) {
+        this.m_warmStarting = flag;
+    };
+
+    /**
+     * Enable/disable continuous physics. For testing.
+     *
+     * @public
+     * @method  setContinuousPhysics
+     * @param   {boolean}   flag
+     * @return  {void}
+     */
+    p.setContinuousPhysics = function ( flag ) {
+        this.m_continuousPhysics = flag;
+    };
+
+    /**
+     * Get continuous physics status. For testing.
+     *
+     * @public
+     * @method  setContinuousPhysics
+     * @return  {boolean}
+     */
+    p.getContinuousPhysics = function () {
+        return this.m_continuousPhysics;
+    };
+
+    /**
+     * Enable/disable single stepped continuous physics. For
+     * testing.
+     *
+     * @public
+     * @method  setSubStepping
+     * @param   {boolean}     flag
+     * @return  {void}
+     */
+    p.setSubStepping = function ( flag ) {
+        this.m_subStepping = flag;
+    };
+
+    /**
+     * Get single stepped continuous physics status.
+     * For testing.
+     *
+     * @public
+     * @method  getSubStepping
+     * @return  {boolean}
+     */
+    p.getSubStepping = function () {
+        return this.m_subStepping;
+    };
+
+    /**
+     * Get the world body list. With the returned body, use
+     * b2Body::GetNext to get the next body in the world list. A
+     * NULL body indicates the end of the list.
+     *
+     * @public
+     * @method  getBodyList
+     * @return  {b2Body}    The head of the world body linked-list.
+     */
+    p.getBodyList = function () {
+        return this.m_bodyList;
+    };
+
+    /**
+     * Get the world joint list. With the returned joint, use
+     * b2Joint.getNext to get the next joint in the world list. A
+     * NULL joint indicates the end of the list.
+     *
+     * @public
+     * @method  getJointList
+     * @return  {b2Joint}     The head of the world joint linked-list.
+     */
+    p.getJointList = function () {
+        return this.m_jointList;
+    };
+
+/*#if EXPORT_PARTICLES */
+    /**
+     * Get the world particle-system list. With the returned body, use
+     * b2ParticleSystem::GetNext to get the next particle-system in the world
+     * list. A NULL particle-system indicates the end of the list.
+     *
+     * @public
+     * @method  getParticleSystemList
+     * @return  {b2ParticleSystem}      The head of the world particle-system list.
+     *                                  NULL particle-system indicates the end of the list.
+     */
+    p.getParticleSystemList = function () {
+        return this.m_particleSystemList;
+    };
+/*#end EXPORT_PARTICLES */
+
+    /**
+     * Get the world contact list. With the returned contact, use
+     * &lt;a href=../classes/b2Contact.html#method_getNext&gt;b2Contact.getNext()&lt;/a&gt;
+     * to get the next contact in the world
+     * list. A NULL contact indicates the end of the list.
+     *
+     *  Warning: contacts are created and destroyed in the middle of a
+     *  time step. Use
+     *  &lt;a href=../classes/b2ContactListener.html&gt;b2ContactListener&lt;/a&gt;
+     *  to avoid missing contacts.
+     *
+     * @public
+     * @method  getContactList
+     * @return  {b2Contact} The head of the world contact linked-list
+     */
+    p.getContactList = function () {
+        return this.m_contactManager.m_contactList;
+    };
+
+    /**
+     * Get the number of bodies.
+     *
+     * @public
+     * @method  getBodyCount
+     * @return  {int}
+     */
+    p.getBodyCount = function () {
+        return this.m_bodyCount;
+    };
+
+    /**
+     * Get the number of joints.
+     *
+     * @public
+     * @method  getJointCount
+     * @return  {int}
+     */
+    p.getJointCount = function () {
+        return this.m_jointCount;
+    };
+
+    /**
+     * Get the number of contacts (each may have 0 or more contact points).
+     *
+     * @public
+     * @method  getContactCount
+     * @return  {int}
+     */
+    p.getContactCount = function () {
+        return this.m_contactManager.m_contactCount;
+    };
+
+    /**
+     * Change the global gravity vector.
+     *
+     * @public
+     * @method  setGravity
+     * @param   {b2Vec2}      gravity
+     * @param   {boolean=}    [wake=true]   false lets bodies sleep through this update.
+     * @return  {void}
+     */
+    p.setGravity = function ( gravity, wake ) {
+        wake = wake || true;
+
+        if ( (this.m_gravity.x !== gravity.x) || (this.m_gravity.y !== gravity.y) ) {
+            this.m_gravity.copy( gravity );
+
+            if ( wake ) {
+                for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+                    b.setAwake( true );
+                }
+            }
+        }
+    };
+
+    /**
+     * Get the global gravity vector.
+     *
+     *  NOTE:  Unless a reusable object is provided, this returns a permanently
+     *         heap allocated b2Vec2 for memory management.
+     *         Copy returned values to avoid un expected value changes due to recycling.
+     *
+     * @public
+     * @method  getGravity
+     * @param   {b2Vec2|Object=}    [out=b2Vec2]    reusable object
+     * @return  {b2Vec2|Object}     out
+     */
+    p.getGravity = function ( out ) {
+        out = out || b2World._B2VEC2_POOL0;
+        return out.copy( this.m_gravity );
+    };
+
+    /**
+     * @public
+     * @method  getGroundBody
+     * @return  {b2Body}
+     */
+    p.getGroundBody = function () {
+        return this.m_groundBody;
+    };
+
+    /**
+     * Is the world locked (is it mid time step).
+     *
+     * @public
+     * @method  isLocked
+     * @return  {boolean}
+     */
+    p.isLocked = function () {
+        //TODO: isLocked ((this.m_flags &amp; b2World.e_locked) &gt; 0)
+        return this.m_flag_locked;
+    };
+
+    /**
+     * Set the flag that controls automatic clearing of forces after each time step.
+     *
+     * @public
+     * @method  setAutoClearForces
+     * @param   {boolean}    flag
+     */
+    p.setAutoClearForces = function ( flag ) {
+        this.m_flag_clearForces = flag;
+    };
+
+    /**
+     * Get the flag that controls automatic clearing of forces after each time step.
+     *
+     * @public
+     * @method      getAutoClearForces
+     * @returns     {boolean}
+     */
+    p.getAutoClearForces = function () {
+        return this.m_flag_clearForces;
+    };
+
+    /**
+     * Get the contact manager for testing.
+     *
+     * @public
+     * @method  getContactManager
+     * @return {b2ContactManager}
+     */
+    p.getContactManager = function () {
+        return this.m_contactManager;
+    };
+
+    /**
+     * Get the current profile.
+     *
+     * @public
+     * @method  getProfile
+     * @return {b2Profile}
+     */
+    p.getProfile = function () {
+        return this.m_profile;
+    };
+
+    /**
+     * Register a destruction listener. The listener is owned by you and must
+     * remain in scope.
+     *
+     * @public
+     * @method  setDestructionListener
+     * @return  {void}
+     */
+    p.setDestructionListener = function ( listener ) {
+        this.m_destructionListener = listener;
+    };
+
+    /**
+     * Register a contact filter to provide specific control over collision.
+     * Otherwise the default filter is used (b2_defaultFilter). The listener is
+     * owned by you and must remain in scope.
+     *
+     * @public
+     * @method  setContactFilter
+     * @param   {b2Filter}      filter      Data to filter contacts by.
+     * @return  {void}
+     */
+    p.setContactFilter = function ( filter ) {
+        this.m_contactManager.m_contactFilter = filter;
+    };
+
+    /**
+     * Register a contact event listener. The listener is owned by you and must
+     * remain in scope.
+     *
+     * @public
+     * @method  setContactListener
+     * @param   {Function}      listener
+     * @return  {void}
+     */
+    p.setContactListener = function ( listener ) {
+        this.m_contactManager.m_contactListener = listener;
+    };
+
+    /**
+     * Register a routine for debug drawing. The debug draw functions are called
+     * inside with b2World::DrawDebugData method. The debug draw object is owned
+     * by you and must remain in scope.
+     *
+     * @public
+     * @method  setDebugDraw
+     * @param   {b2DebugDraw}    debugDraw      DebugDrawing definition.
+     * @return  {void}
+     */
+    p.setDebugDraw = function ( debugDraw ) {
+        this.m_debugDraw = debugDraw;
+    };
+
+    /**
+     * Create a rigid body given a definition. No reference to the definition is retained.
+     *
+     *  Warning: This function is locked during callbacks.&lt;/br&gt;
+     *    NOTE:  However using the
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+     *           event listeners you can do what every you want whenever you want and
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+     *           manages the locked world problems for you.
+     *
+     * @public
+     * @method  createBody
+     * @param   {b2BodyDef}     bodyDef
+     * @return  {b2Body}
+     */
+    p.createBody = function ( bodyDef ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( !this.isLocked() );
+        }/*#*/
+        if ( this.isLocked() ) {
+            return null;
+        }
+
+        /** b2Body */ var b = new b2Body( bodyDef, this );
+
+        // Add to world doubly linked list.
+        b.m_prev = null;
+        b.m_next = this.m_bodyList;
+        if ( this.m_bodyList ) {
+            this.m_bodyList.m_prev = b;
+        }
+        this.m_bodyList = b;
+        ++this.m_bodyCount;
+
+        return b;
+    };
+
+    /**
+     * Destroy a rigid body.&lt;/br&gt;&lt;/br&gt;
+     *
+     *  Warning: This automatically deletes all associated shapes and joints.&lt;/br&gt;
+     *  Warning: This function is locked during callbacks.&lt;/br&gt;
+     *    NOTE:  However using the
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+     *           event listeners you can do what every you want whenever you want and
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+     *           manages the locked world problems for you.
+     *
+     * @public
+     * @method  destroyBody
+     * @param   {b2Body}    body
+     * @return  {void}
+     */
+    p.destroyBody = function ( body ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( this.m_bodyCount &gt; 0 );
+            b2Assert( !this.isLocked() );
+        }/*#*/
+        if ( this.isLocked() ) {
+            return;
+        }
+
+        // Delete the attached joints.
+        /** b2JointEdge */ var je = body.m_jointList;
+        while (je) {
+            /** b2JointEdge */ var je0 = je;
+            je = je.next;
+
+            if ( this.m_destructionListener ) {
+                this.m_destructionListener.sayGoodbyeJoint( je0.joint );
+            }
+
+            this.destroyJoint( je0.joint );
+
+            body.m_jointList = je;
+        }
+        body.m_jointList = null;
+
+/*##if EXPORT_CONTROLLERS */
+        /// @see b2Controller list
+        /** b2ControllerEdge */ var coe = body.m_controllerList;
+        while (coe) {
+            /** b2ControllerEdge */ var coe0 = coe;
+            coe = coe.nextController;
+            coe0.controller.removeBody( body );
+        }
+/*#end EXPORT_CONTROLLERS */
+        // Delete the attached contacts.
+        /** b2ContactEdge */ var ce = body.m_contactList;
+        while (ce) {
+            /** b2ContactEdge */ var ce0 = ce;
+            ce = ce.next;
+            this.m_contactManager.destroy( ce0.contact );
+        }
+        body.m_contactList = null;
+
+        // Delete the attached fixtures. This destroys broad-phase proxies.
+        /** b2Fixture */ var f = body.m_fixtureList;
+        while (f) {
+            /** b2Fixture */ var f0 = f;
+            f = f.m_next;
+
+            if ( this.m_destructionListener ) {
+                this.m_destructionListener.sayGoodbyeFixture( f0 );
+            }
+
+            f0.destroyProxies( this.m_contactManager.m_broadPhase );
+            f0.destroy();
+
+
+            body.m_fixtureList = f;
+            body.m_fixtureCount -= 1;
+        }
+        body.m_fixtureList = null;
+        body.m_fixtureCount = 0;
+
+        // Remove world body list.
+        if ( body.m_prev ) {
+            body.m_prev.m_next = body.m_next;
+        }
+
+        if ( body.m_next ) {
+            body.m_next.m_prev = body.m_prev;
+        }
+
+        if ( body === this.m_bodyList ) {
+            this.m_bodyList = body.m_next;
+        }
+
+        --this.m_bodyCount;
+    };
+
+    /**
+     * Create a joint to constrain bodies together. No reference to the definition
+     * is retained. This may cause the connected bodies to cease colliding.&lt;/br&gt;&lt;/br&gt;
+     *
+     *  Warning: This function is locked during callbacks.&lt;/br&gt;
+     *    NOTE:  However using the
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+     *           event listeners you can do what every you want whenever you want and
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+     *           manages the locked world problems for you.
+     *
+     * @public
+     * @method  createJoint
+     * @param   {b2JointDef}  jointDef
+     * @return  {b2Joint}
+     */
+    p.createJoint = function ( jointDef ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( !this.isLocked() );
+        }/*#*/
+        if ( this.isLocked() ) {
+            return null;
+        }
+
+        /** b2Joint */ var j = b2JointFactory.create( jointDef, null );
+
+        // Connect to the world list.
+        j.m_prev = null;
+        j.m_next = this.m_jointList;
+        if ( this.m_jointList ) {
+            this.m_jointList.m_prev = j;
+        }
+        this.m_jointList = j;
+        ++this.m_jointCount;
+
+        // Connect to the bodies&#x27; doubly linked lists.
+        j.m_edgeA.joint = j;
+        j.m_edgeA.other = j.m_bodyB;
+        j.m_edgeA.prev = null;
+        j.m_edgeA.next = j.m_bodyA.m_jointList;
+        if ( j.m_bodyA.m_jointList ) j.m_bodyA.m_jointList.prev = j.m_edgeA;
+        j.m_bodyA.m_jointList = j.m_edgeA;
+
+        j.m_edgeB.joint = j;
+        j.m_edgeB.other = j.m_bodyA;
+        j.m_edgeB.prev = null;
+        j.m_edgeB.next = j.m_bodyB.m_jointList;
+        if ( j.m_bodyB.m_jointList ) j.m_bodyB.m_jointList.prev = j.m_edgeB;
+        j.m_bodyB.m_jointList = j.m_edgeB;
+
+        /** b2Body */ var bodyA = jointDef.bodyA;
+        /** b2Body */ var bodyB = jointDef.bodyB;
+
+        // If the joint prevents collisions, then flag any contacts for filtering.
+        if ( !jointDef.collideConnected ) {
+            /** b2ContactEdge */ var edge = bodyB.getContactList();
+            while (edge) {
+                if ( edge.other === bodyA ) {
+                    // Flag the contact for filtering at the next time step (where either
+                    // body is awake).
+                    edge.contact.flagForFiltering();
+                }
+
+                edge = edge.next;
+            }
+        }
+
+        // Note: creating a joint doesn&#x27;t wake the bodies.
+
+        return j;
+    };
+
+    /**
+     *  Destroy a joint. This may cause the connected bodies to begin colliding.&lt;/br&gt;&lt;/br&gt;
+     *
+     *  Warning: This function is locked during callbacks.&lt;/br&gt;
+     *    NOTE:  However using the
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+     *           event listeners you can do what every you want whenever you want and
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+     *           manages the locked world problems for you.
+     *
+     * @public
+     * @method  destroyJoint
+     * @param   {b2Joint}   joint
+     * @return  {void}
+     */
+    p.destroyJoint = function ( joint ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( !this.isLocked() );
+        }/*#*/
+        if ( this.isLocked() ) {
+            return;
+        }
+
+        /** boolean */ var collideConnected = joint.m_collideConnected;
+
+        // Remove from the doubly linked list.
+        if ( joint.m_prev ) {
+            joint.m_prev.m_next = joint.m_next;
+        }
+
+        if ( joint.m_next ) {
+            joint.m_next.m_prev = joint.m_prev;
+        }
+
+        if ( joint === this.m_jointList ) {
+            this.m_jointList = joint.m_next;
+        }
+
+        // Disconnect from island graph.
+        /** b2Body */ var bodyA = joint.m_bodyA;
+        /** b2Body */ var bodyB = joint.m_bodyB;
+
+        // Wake up connected bodies.
+        bodyA.setAwake( true );
+        bodyB.setAwake( true );
+
+        // Remove from body 1.
+        if ( joint.m_edgeA.prev ) {
+            joint.m_edgeA.prev.next = joint.m_edgeA.next;
+        }
+
+        if ( joint.m_edgeA.next ) {
+            joint.m_edgeA.next.prev = joint.m_edgeA.prev;
+        }
+
+        if ( joint.m_edgeA === bodyA.m_jointList ) {
+            bodyA.m_jointList = joint.m_edgeA.next;
+        }
+
+        joint.m_edgeA.prev = null;
+        joint.m_edgeA.next = null;
+
+        // Remove from body 2
+        if ( joint.m_edgeB.prev ) {
+            joint.m_edgeB.prev.next = joint.m_edgeB.next;
+        }
+
+        if ( joint.m_edgeB.next ) {
+            joint.m_edgeB.next.prev = joint.m_edgeB.prev;
+        }
+
+        if ( joint.m_edgeB === bodyB.m_jointList ) {
+            bodyB.m_jointList = joint.m_edgeB.next;
+        }
+
+        joint.m_edgeB.prev = null;
+        joint.m_edgeB.next = null;
+
+        b2JointFactory.destroy( joint, null );
+       /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( this.m_jointCount &gt; 0 );
+        }/*#*/
+        --this.m_jointCount;
+
+        // If the joint prevents collisions, then flag any contacts for filtering.
+        if ( !collideConnected ) {
+            /** b2ContactEdge */ var edge = bodyB.getContactList();
+            while (edge) {
+                if ( edge.other === bodyA ) {
+                    // Flag the contact for filtering at the next time step (where either
+                    // body is awake).
+                    edge.contact.flagForFiltering();
+                }
+
+                edge = edge.next;
+            }
+        }
+    };
+
+/*#if EXPORT_PARTICLES */
+    /**
+     * Create a particle system given a definition. No reference to the
+     * definition is retained.
+     *
+     *  Warning: This function is locked during callbacks.&lt;/br&gt;
+     *    NOTE:  However using the
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+     *           event listeners you can do what every you want whenever you want and
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+     *           manages the locked world problems for you.
+     *
+     * @public
+     * @method  createParticleSystem
+     * @param   {b2ParticleSystemDef}  systemDef
+     * @return {b2ParticleSystem}
+     */
+    p.createParticleSystem = function ( systemDef ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( !this.isLocked() );
+        }/*#*/
+        if ( this.isLocked() ) {
+            return null;
+        }
+
+        var p = new b2ParticleSystem( systemDef, this );
+
+        // Add to world doubly linked list.
+        p.m_prev = null;
+        p.m_next = this.m_particleSystemList;
+        if ( this.m_particleSystemList ) {
+            this.m_particleSystemList.m_prev = p;
+        }
+        this.m_particleSystemList = p;
+
+        return p;
+    };
+
+    /**
+     * Destroy a particle system.
+     *
+     *  Warning: This function is locked during callbacks.&lt;/br&gt;
+     *    NOTE:  However using the
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS framework&lt;/a&gt;
+     *           event listeners you can do what every you want whenever you want and
+     *           &lt;a href=https://github.com/SmartArtsStudio/addPhysicsJS&gt;addPhysicsJS&lt;/a&gt;
+     *           manages the locked world problems for you.
+     *
+     * @public
+     * @method  destroyParticleSystem
+     * @param   {b2ParticleSystem}    system
+     * @return  {void}
+     */
+    p.destroyParticleSystem = function ( system ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( !this.isLocked() );
+        }/*#*/
+        if ( this.isLocked() ) {
+            return;
+        }
+
+        // Remove world particleSystem list.
+        if ( system.m_prev ) {
+            system.m_prev.m_next = system.m_next;
+        }
+
+        if ( system.m_next ) {
+            system.m_next.m_prev = system.m_prev;
+        }
+
+        if ( system === this.m_particleSystemList ) {
+            this.m_particleSystemList = system.m_next;
+        }
+    };
+/*#end EXPORT_PARTICLES */
+
+    /**
+     * Find islands, integrate and solve constraints, solve position constraints.
+     *
+     * @public
+     * @method  solve
+     * @param   {b2TimeStep} step
+     * @return  {void}
+     */
+    p.solve = function ( step ) {
+
+/*#if EXPORT_PARTICLES */
+        // update previous transforms
+        for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+            b.m_xf0.copy( b.m_xf );
+        }
+/*#end EXPORT_PARTICLES */
+/*##if EXPORT_CONTROLLERS */
+        /// @see b2Controller list
+        for (/** b2Controller */ var controller = this.m_controllerList; controller; controller = controller.m_next) {
+            controller.step( step );
+        }
+/*#end EXPORT_CONTROLLERS */
+        this.m_profile.solveInit = 0;
+        this.m_profile.solveVelocity = 0;
+        this.m_profile.solvePosition = 0;
+
+        // Size the island for the worst case.
+        /** b2Island */ var island = this.m_island;
+        island.initialize( this.m_bodyCount,
+            this.m_contactManager.m_contactCount,
+            this.m_jointCount,
+            null, // this.m_stackAllocator,
+            this.m_contactManager.m_contactListener );
+
+        // Clear all the island flags.
+        for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+            b.m_flag_islandFlag = false;
+        }
+        for (/** b2Contact */ var c = this.m_contactManager.m_contactList; c; c = c.m_next) {
+            c.m_flag_islandFlag = false;
+        }
+        for (/** b2Joint */ var j = this.m_jointList; j; j = j.m_next) {
+            j.m_islandFlag = false;
+        }
+
+        // Build and simulate all awake islands.
+        /** number */ var stackSize = this.m_bodyCount;
+        /** @type {Array.&lt;?b2Body&gt;} */ var stack = this.s_stack;
+        for (/** b2Body */ var seed = this.m_bodyList; seed; seed = seed.m_next) {
+            if ( seed.m_flag_islandFlag ) {
+                continue;
+            }
+
+            if ( !seed.isAwake() || !seed.isActive() ) {
+                continue;
+            }
+
+            // The seed can be dynamic or kinematic.
+            if ( seed.getType() === b2Body.b2_staticBody ) {
+                continue;
+            }
+
+            // Reset island and stack.
+            island.clear();
+            /** number */ var stackCount = 0;
+            stack[stackCount++] = seed;
+            seed.m_flag_islandFlag = true;
+
+            // Perform a depth first search (DFS) on the constraint graph.
+            while (stackCount &gt; 0) {
+                // Grab the next body off the stack and add it to the island.
+                /** b2Body */
+                var b = stack[--stackCount];
+                /*##if EXPORT_ASSERTS */
+                if ( b2Settings.ASSERTS_ENABLED ) {
+                    b2Assert( b.isActive() );
+                }/*#*/
+                island.addBody( b );
+
+                // Make sure the body is awake.
+                b.setAwake( true );
+
+                // To keep islands as small as possible, we don&#x27;t
+                // propagate islands across static bodies.
+                if ( b.getType() === b2Body.b2_staticBody ) {
+                    continue;
+                }
+
+                // Search all contacts connected to this body.
+                for (/** b2ContactEdge */ var ce = b.m_contactList; ce; ce = ce.next) {
+                    /** b2Contact */ var contact = ce.contact;
+
+                    // Has this contact already been added to an island?
+                    if ( contact.m_flag_islandFlag ) {
+                        continue;
+                    }
+
+                    // Is this contact solid and touching?
+                    if ( !contact.isEnabled() || !contact.isTouching() ) {
+                        continue;
+                    }
+
+                    // Skip sensors.
+                    /** boolean */ var sensorA = contact.m_fixtureA.m_isSensor;
+                    /** boolean */ var sensorB = contact.m_fixtureB.m_isSensor;
+                    if ( sensorA || sensorB ) {
+                        continue;
+                    }
+
+                    island.addContact( contact );
+                    contact.m_flag_islandFlag = true;
+
+                    /** b2Body */ var other = ce.other;
+
+                    // Was the other body already added to this island?
+                    if ( other.m_flag_islandFlag ) {
+                        continue;
+                    }
+                    /*##if EXPORT_ASSERTS */
+                    if ( b2Settings.ASSERTS_ENABLED ) {
+                        b2Assert( stackCount &lt; stackSize );
+                    }/*#*/
+                    stack[stackCount++] = other;
+                    other.m_flag_islandFlag = true;
+                }
+
+                // Search all joints connect to this body.
+                for (/** b2JointEdge */ var je = b.m_jointList; je; je = je.next) {
+                    if ( je.joint.m_islandFlag ) {
+                        continue;
+                    }
+
+                    /** b2Body */
+                    var other = je.other;
+
+                    // Don&#x27;t simulate joints connected to inactive bodies.
+                    if ( !other.isActive() ) {
+                        continue;
+                    }
+
+                    island.addJoint( je.joint );
+                    je.joint.m_islandFlag = true;
+
+                    if ( other.m_flag_islandFlag ) {
+                        continue;
+                    }
+                   /*##if EXPORT_ASSERTS */
+                    if ( b2Settings.ASSERTS_ENABLED ) {
+                        b2Assert( stackCount &lt; stackSize );
+                    }/*#*/
+                    stack[stackCount++] = other;
+                    other.m_flag_islandFlag = true;
+                }
+            }
+
+            /** b2Profile */ var profile = new b2Profile();
+            island.solve( profile, step, this.m_gravity, this.m_allowSleep );
+            this.m_profile.solveInit += profile.solveInit;
+            this.m_profile.solveVelocity += profile.solveVelocity;
+            this.m_profile.solvePosition += profile.solvePosition;
+
+            // Post solve cleanup.
+            for (/** number */ var i = 0; i &lt; island.m_bodyCount; ++i) {
+                // Allow static bodies to participate in other islands.
+                /** b2Body */
+                var b = island.m_bodies[i];
+                if ( b.getType() === b2Body.b2_staticBody ) {
+                    b.m_flag_islandFlag = false;
+                }
+            }
+        }
+
+        for (/** number */ var i = 0; i &lt; stack.length; ++i) {
+            if ( !stack[i] ) break;
+            stack[i] = null;
+        }
+
+        {
+            /** b2Timer */ var timer = new b2Timer();
+
+            // Synchronize fixtures, check for out of range bodies.
+            for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+                // If a body was not in an island then it did not move.
+                if ( !b.m_flag_islandFlag ) {
+                    continue;
+                }
+
+                if ( b.getType() === b2Body.b2_staticBody ) {
+                    continue;
+                }
+
+                // Update fixtures (for broad-phase).
+                b.synchronizeFixtures();
+            }
+
+            // Look for new contacts.
+            this.m_contactManager.findNewContacts();
+            this.m_profile.broadphase = timer.getMilliseconds();
+        }
+    };
+
+    /**
+     * Find Time Of Impact contacts and solve them.
+     *
+     * @public
+     * @method  solveTOI
+     * @param   {b2TimeStep} step
+     * @return  {void}
+     */
+    p.solveTOI = function ( step ) {
+        //	b2Island island(2 * b2Settings.b2_maxTOIContactsPerIsland, b2Settings.b2_maxTOIContactsPerIsland, 0, &amp;m_stackAllocator, m_contactManager.m_contactListener);
+        /** b2Island */ var island = this.m_island;
+        island.initialize( 2 * b2Settings.b2_maxTOIContactsPerIsland, b2Settings.b2_maxTOIContactsPerIsland, 0, null, this.m_contactManager.m_contactListener );
+
+        if ( this.m_stepComplete ) {
+            for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+                b.m_flag_islandFlag = false;
+                b.m_sweep.alpha0 = 0;
+            }
+
+            for (/** b2Contact */ var c = this.m_contactManager.m_contactList; c; c = c.m_next) {
+                // Invalidate TOI
+                c.m_flag_toiFlag = c.m_flag_islandFlag = false;
+                c.m_toiCount = 0;
+                c.m_toi = 1;
+            }
+        }
+
+        // Find TOI events and solve them.
+        for (; ;) {
+            // Find the first TOI.
+            /** b2Contact */ var minContact = null;
+            /** number */ var minAlpha = 1;
+
+            for (/** b2Contact */ var c = this.m_contactManager.m_contactList; c; c = c.m_next) {
+                // Is this contact disabled?
+                if ( !c.isEnabled() ) {
+                    continue;
+                }
+
+                // Prevent excessive sub-stepping.
+                if ( c.m_toiCount &gt; b2Settings.b2_maxSubSteps ) {
+                    continue;
+                }
+
+                /** number */ var alpha = 1;
+                if ( c.m_flag_toiFlag ) {
+                    // This contact has a valid cached TOI.
+                    alpha = c.m_toi;
+                }
+                else {
+                    /** b2Fixture */ var fA = c.getFixtureA();
+                    /** b2Fixture */ var fB = c.getFixtureB();
+
+                    // Is there a sensor?
+                    if ( fA.isSensor() || fB.isSensor() ) {
+                        continue;
+                    }
+
+                    /** b2Body */ var bA = fA.getBody();
+                    /** b2Body */ var bB = fB.getBody();
+
+                    /** int */ var typeA = bA.m_type;
+                    /** int */ var typeB = bB.m_type;
+                    /*##if EXPORT_ASSERTS */
+                    if ( b2Settings.ASSERTS_ENABLED ) {
+                        b2Assert( typeA === b2Body.b2_dynamicBody || typeB === b2Body.b2_dynamicBody );
+                    }
+                    /*#end EXPORT_ASSERTS */
+                    /** boolean */ var activeA = bA.isAwake() &amp;&amp; typeA !== b2Body.b2_staticBody;
+                    /** boolean */ var activeB = bB.isAwake() &amp;&amp; typeB !== b2Body.b2_staticBody;
+
+                    // Is at least one body active (awake and dynamic or kinematic)?
+                    if ( !activeA &amp;&amp; !activeB ) {
+                        continue;
+                    }
+
+                    /** boolean */ var collideA = bA.isBullet() || typeA !== b2Body.b2_dynamicBody;
+                    /** boolean */ var collideB = bB.isBullet() || typeB !== b2Body.b2_dynamicBody;
+
+                    // Are these two non-bullet dynamic bodies?
+                    if ( !collideA &amp;&amp; !collideB ) {
+                        continue;
+                    }
+
+                    // Compute the TOI for this contact.
+                    // Put the sweeps onto the same time interval.
+                    /** number */ var alpha0 = bA.m_sweep.alpha0;
+
+                    if ( bA.m_sweep.alpha0 &lt; bB.m_sweep.alpha0 ) {
+                        alpha0 = bB.m_sweep.alpha0;
+                        bA.m_sweep.advance( alpha0 );
+                    }
+                    else if ( bB.m_sweep.alpha0 &lt; bA.m_sweep.alpha0 ) {
+                        alpha0 = bA.m_sweep.alpha0;
+                        bB.m_sweep.advance( alpha0 );
+                    }
+                    /*##if EXPORT_ASSERTS */
+                    if ( b2Settings.ASSERTS_ENABLED ) {
+                        b2Assert( alpha0 &lt; 1 );
+                    }
+                    /*#end EXPORT_ASSERTS */
+                    /** number */ var indexA = c.getChildIndexA();
+                    /** number */ var indexB = c.getChildIndexB();
+
+                    // Compute the time of impact in interval [0, minTOI]
+                    /** b2TOIInput */ var input = b2World._B2TOI_INPUT_POOL0;
+                    input.proxyA.setShape( fA.getShape(), indexA );
+                    input.proxyB.setShape( fB.getShape(), indexB );
+                    input.sweepA.copy( bA.m_sweep );
+                    input.sweepB.copy( bB.m_sweep );
+                    input.tMax = 1;
+
+                    /** b2TOIOutput */ var output = b2World._B2TOI_OUTPUT_POOL0;
+                    b2Collision.timeOfImpact( output, input );
+
+                    // Beta is the fraction of the remaining portion of the .
+                    /** number */ var beta = output.t;
+                    if ( output.state === b2TOIOutput.e_touching ) {
+                        alpha = Math.min( alpha0 + (1 - alpha0) * beta, 1 );
+                    }
+                    else {
+                        alpha = 1;
+                    }
+
+                    c.m_toi = alpha;
+                    c.m_flag_toiFlag = true;
+                }
+
+                if ( alpha &lt; minAlpha ) {
+                    // This is the minimum TOI found so far.
+                    minContact = c;
+                    minAlpha = alpha;
+                }
+            }
+
+            if ( minContact === null || 1 - 10 * b2Settings.b2_epsilon &lt; minAlpha ) {
+                // No more TOI events. Done!
+                this.m_stepComplete = true;
+                break;
+            }
+
+            // Advance the bodies to the TOI.
+            /** b2Fixture */var fA = minContact.getFixtureA();
+            /** b2Fixture */var fB = minContact.getFixtureB();
+            /** b2Body */var bA = fA.getBody();
+            /** b2Body */var bB = fB.getBody();
+
+            /** b2Sweep */ var backup1 = b2World._B2SWEEP_POOL1.copy( bA.m_sweep );
+            /** b2Sweep */ var backup2 = b2World._B2SWEEP_POOL2.copy( bB.m_sweep );
+
+            bA.advance( minAlpha );
+            bB.advance( minAlpha );
+
+            // The TOI contact likely has some new contact points.
+            minContact.update( this.m_contactManager.m_contactListener );
+            minContact.m_flag_toiFlag = false;
+            ++minContact.m_toiCount;
+
+            // Is the contact solid?
+            if ( !minContact.isEnabled() || !minContact.isTouching() ) {
+                // Restore the sweeps.
+                minContact.setEnabled( false );
+                bA.m_sweep.copy( backup1 );
+                bB.m_sweep.copy( backup2 );
+                bA.synchronizeTransform();
+                bB.synchronizeTransform();
+                continue;
+            }
+
+            bA.setAwake( true );
+            bB.setAwake( true );
+
+            // Build the island
+            island.clear();
+            island.addBody( bA );
+            island.addBody( bB );
+            island.addContact( minContact );
+
+            bA.m_flag_islandFlag = true;
+            bB.m_flag_islandFlag = true;
+            minContact.m_flag_islandFlag = true;
+
+            // Get contacts on bodyA and bodyB.
+            //** b2Body */ var bodies = [bA, bB];
+            for (/** number */ var i = 0; i &lt; 2; ++i) {
+                /** b2Body */ var body = (i === 0) ? (bA) : (bB);//bodies[i];
+                if ( body.m_type === b2Body.b2_dynamicBody ) {
+                    for (/** b2ContactEdge */ var ce = body.m_contactList; ce; ce = ce.next) {
+                        if ( island.m_bodyCount === island.m_bodyCapacity ) {
+                            break;
+                        }
+
+                        if ( island.m_contactCount === island.m_contactCapacity ) {
+                            break;
+                        }
+
+                        /** b2Contact */ var contact = ce.contact;
+
+                        // Has this contact already been added to the island?
+                        if ( contact.m_flag_islandFlag ) {
+                            continue;
+                        }
+
+                        // Only add static, kinematic, or bullet bodies.
+                        /** b2Body */ var other = ce.other;
+                        if ( other.m_type === b2Body.b2_dynamicBody &amp;&amp; !body.isBullet() &amp;&amp; !other.isBullet() ) {
+                            continue;
+                        }
+
+                        // Skip sensors.
+                        /** boolean */ var sensorA = contact.m_fixtureA.m_isSensor;
+                        /** boolean */ var sensorB = contact.m_fixtureB.m_isSensor;
+                        if ( sensorA || sensorB ) {
+                            continue;
+                        }
+
+                        // Tentatively advance the body to the TOI.
+                        /** b2Sweep */ var backup = b2World._B2SWEEP_POOL0.copy( other.m_sweep );
+                        if ( !other.m_flag_islandFlag ) {
+                            other.advance( minAlpha );
+                        }
+
+                        // Update the contact points
+                        contact.update( this.m_contactManager.m_contactListener );
+
+                        // Was the contact disabled by the user?
+                        if ( !contact.isEnabled() ) {
+                            other.m_sweep.copy( backup );
+                            other.synchronizeTransform();
+                            continue;
+                        }
+
+                        // Are there contact points?
+                        if ( !contact.isTouching() ) {
+                            other.m_sweep.copy( backup );
+                            other.synchronizeTransform();
+                            continue;
+                        }
+
+                        // Add the contact to the island
+                        contact.m_flag_islandFlag = true;
+                        island.addContact( contact );
+
+                        // Has the other body already been added to the island?
+                        if ( other.m_flag_islandFlag ) {
+                            continue;
+                        }
+
+                        // Add the other body to the island.
+                        other.m_flag_islandFlag = true;
+
+                        if ( other.m_type !== b2Body.b2_staticBody ) {
+                            other.setAwake( true );
+                        }
+
+                        island.addBody( other );
+                    }
+                }
+            }
+
+            /** b2TimeStep */ var subStep = b2World.B2TIMESTEP_SUB_POOL0;
+            subStep.dt = (1 - minAlpha) * step.dt;
+            subStep.inv_dt = 1 / subStep.dt;
+            subStep.dtRatio = 1;
+            subStep.positionIterations = step.positionIterations;
+            subStep.velocityIterations = step.velocityIterations;
+/*#if EXPORT_PARTICLES */
+            subStep.particleIterations = step.particleIterations;
+/*#end EXPORT_PARTICLES */
+            subStep.warmStarting = false;
+            island.solveTOI( subStep, bA.m_islandIndex, bB.m_islandIndex );
+
+            // Reset island flags and synchronize broad-phase proxies.
+            for (/** number */ var i = 0; i &lt; island.m_bodyCount; ++i) {
+                /** b2Body */
+                var body = island.m_bodies[i];
+                body.m_flag_islandFlag = false;
+
+                if ( body.m_type !== b2Body.b2_dynamicBody ) {
+                    continue;
+                }
+
+                body.synchronizeFixtures();
+
+                // Invalidate all contact TOIs on this displaced body.
+                for (/** b2ContactEdge */ var ce = body.m_contactList; ce; ce = ce.next) {
+                    ce.contact.m_flag_toiFlag = ce.contact.m_flag_islandFlag = false;
+                }
+            }
+
+            // Commit fixture proxy movements to the broad-phase so that new contacts are created.
+            // Also, some contacts can be destroyed.
+            this.m_contactManager.findNewContacts();
+
+            if ( this.m_subStepping ) {
+                this.m_stepComplete = false;
+                break;
+            }
+        }
+    };
+
+    /**
+     * Take a time step. This performs collision detection,
+     * integration, and constraint solution.
+     *
+     * For the numerical stability of particles, minimize the following
+     * dimensionless gravity acceleration:
+     *     gravity / particleRadius * (timeStep / particleIterations)^2
+     * b2ParticleSystem.b2CalculateParticleIterations() or
+     * CalculateReasonableParticleIterations() help to determine the optimal
+     * particleIterations.
+     *
+     *
+     * @public
+     * @method  step
+     * @param   {number}    deltaTime           The amount of time to simulate, this should not vary.
+     * @param   {number}    velocityIterations  For the velocity constraint solver.
+     * @param   {number}    positionIterations  For the position constraint solver.
+     * @param   {number=}   particleIterations  For the particle constraint solver. (Only if particle module included.)
+     * @return  {void}
+     */
+    p.step = function ( deltaTime, velocityIterations, positionIterations/*#if EXPORT_PARTICLES */, particleIterations/*#end EXPORT_PARTICLES */ ){
+/*#if EXPORT_PARTICLES */
+        particleIterations = particleIterations || this.calculateReasonableParticleIterations( deltaTime );
+/*#end EXPORT_PARTICLES */
+        /** b2Timer */ var stepTimer = new b2Timer();
+
+        // If new fixtures were added, we need to find the new contacts.
+        if ( this.m_flag_newFixture ) {
+            this.m_contactManager.findNewContacts();
+            this.m_flag_newFixture = false;
+        }
+
+        this.m_flag_locked = true;
+
+        /** b2TimeStep */ var step = b2World._B2TIMESTEP_POOL0;
+        step.dt = deltaTime;
+        step.velocityIterations = velocityIterations;
+        step.positionIterations = positionIterations;
+/*#if EXPORT_PARTICLES */
+        step.particleIterations = particleIterations;
+/*#end EXPORT_PARTICLES */
+        if ( deltaTime &gt; 0 ) {
+            step.inv_dt = 1 / deltaTime;
+        }
+        else {
+            step.inv_dt = 0;
+        }
+
+        step.dtRatio = this.m_inv_dt0 * deltaTime;
+
+        step.warmStarting = this.m_warmStarting;
+
+        // Update contacts. This is where some contacts are destroyed.
+        {
+            /**b2Timer*/ var timer = new b2Timer();
+            this.m_contactManager.collide();
+            this.m_profile.collide = timer.getMilliseconds();
+        }
+
+        // Integrate velocities, solve velocity constraints, and integrate positions.
+        if ( this.m_stepComplete &amp;&amp; step.dt &gt; 0.0 ) {
+            timer = new b2Timer();
+/*#if EXPORT_PARTICLES */
+            for (/** b2ParticleSystem */ var p = this.m_particleSystemList; p; p = p.m_next) {
+                p.solve( step ); // Particle Simulation
+            }
+/*#end EXPORT_PARTICLES */
+            this.solve( step );
+            this.m_profile.solve = timer.getMilliseconds();
+        }
+
+        // Handle TOI events.
+        if ( this.m_continuousPhysics &amp;&amp; step.dt &gt; 0 ) {
+            timer = new b2Timer();
+            this.solveTOI( step );
+            this.m_profile.solveTOI = timer.getMilliseconds();
+        }
+
+        if ( step.dt &gt; 0 ) {
+            this.m_inv_dt0 = step.inv_dt;
+        }
+
+        if ( this.m_flag_clearForces ) {
+            this.clearForces();
+        }
+
+        this.m_flag_locked = false;
+
+        this.m_profile.step = stepTimer.getMilliseconds();
+    };
+
+    /**
+     * Manually clear the force buffer on all bodies. By default, forces are cleared automatically
+     * after each call to Step. The default behavior is modified by calling
+     * &lt;a href=../classes/b2World.html#method_setAutoClearForces&gt;b2World.setAutoClearForces()&lt;/a&gt;.
+     * The purpose of this function is to support sub-stepping. Sub-stepping is often used to maintain
+     * a fixed sized time step under a variable frame-rate.
+     * When you perform sub-stepping you will disable auto clearing of forces and instead call
+     * &lt;a href=../classes/b2World.html#method_clearForces&gt;b2World.clearForces()&lt;/a&gt;
+     * after all sub-steps are complete in one pass of your game loop. See
+     * &lt;a href=../classes/b2World.html#method_setAutoClearForces&gt;b2World.setAutoClearForces()&lt;/a&gt;
+     *
+     * @public
+     * @method  clearForces
+     * @return  {void}
+     */
+    p.clearForces = function () {
+        for (/** b2Body */ var body = this.m_bodyList; body; body = body.m_next) {
+            body.m_force.setZero();
+            body.m_torque = 0;
+        }
+    };
+
+    /**
+     * Query the world for all fixtures that potentially overlap the provided AABB.
+     *
+     * @public
+     * @method  queryAABB
+     * @param   {b2QueryCallback|function(b2Fixture):boolean}   callback    A user implemented callback class.
+     * @param   {b2AABB}        aabb    The query box.
+     * @return  {void}
+     */
+    p.queryAABB = function ( callback, aabb ) {
+        /** b2BroadPhase */ var broadPhase = this.m_contactManager.m_broadPhase;
+
+        /**
+         * @return {boolean}
+         * @param {b2TreeNode} proxy
+         */
+        var WorldQueryAABBWrapper = function ( proxy ) {
+            /** b2FixtureProxy */var fixture_proxy = broadPhase.getUserData( proxy );
+            /*##if EXPORT_ASSERTS */
+            if ( b2Settings.ASSERTS_ENABLED ) {
+                b2Assert( fixture_proxy instanceof b2FixtureProxy );
+            }/*#*/
+            /** b2Fixture */var fixture = fixture_proxy.fixture;
+            if ( callback instanceof b2QueryCallback ) {
+                return callback.reportFixture( fixture );
+            }
+            else if (typeof(callback) === &#x27;function&#x27;)
+            {
+                return callback( fixture );
+            }
+        };
+
+        broadPhase.query( WorldQueryAABBWrapper, aabb );
+/*#if EXPORT_PARTICLES */
+        if ( callback instanceof b2QueryCallback ) {
+            for (/** b2ParticleSystem */ var p = this.m_particleSystemList; p; p = p.m_next) {
+                if ( callback.shouldQueryParticleSystem( p ) ) {
+                    p.queryAABB( callback, aabb );
+                }
+            }
+        }
+/*#end EXPORT_PARTICLES */
+    };
+
+    /**
+     * Query the world for all fixtures that potentially overlap the
+     * provided shape&#x27;s AABB. Calls
+     * &lt;a href=../classes/b2World.html#method_queryAABB&gt;b2World.queryAABB()&lt;/a&gt;
+     * internally.
+     *
+     * @public
+     * @method  queryShape
+     * @param   {b2QueryCallback|function(b2Fixture):boolean}   callback
+     * @param   {b2Shape}                                       shape
+     * @param   {b2Transform}                                   transform
+     * @param   {int}                                           childIndex
+     * @return  {void}
+     */
+    p.queryShape = function ( callback, shape, transform, childIndex ) {
+        /** b2BroadPhase */ var broadPhase = this.m_contactManager.m_broadPhase;
+
+        /**
+         * @return {boolean}
+         * @param {b2TreeNode} proxy
+         */
+        var WorldQueryShapeWrapper = function ( proxy ) {
+            /** b2FixtureProxy */
+            var fixture_proxy = broadPhase.getUserData( proxy );
+            /*##if EXPORT_ASSERTS */
+            if ( b2Settings.ASSERTS_ENABLED ) {
+                b2Assert( fixture_proxy instanceof b2FixtureProxy );
+            }/*#*/
+            /** b2Fixture */ var fixture = fixture_proxy.fixture;
+            if ( b2Collision.testOverlapShape( shape, 0, fixture.getShape(), 0, transform, fixture.getBody().getTransform() ) ) {
+                if ( callback instanceof b2QueryCallback ) {
+                    return callback.reportFixture( fixture );
+                }
+                else if (typeof(callback) === &#x27;function&#x27;)
+                {
+                    return callback( fixture );
+                }
+            }
+            return true;
+        };
+
+        childIndex = childIndex || 0;
+        /** b2AABB */ var aabb = b2World._B2AABB_POOL0;
+        shape.computeAABB( aabb, transform, childIndex );
+        broadPhase.query( WorldQueryShapeWrapper, aabb );
+/*#if EXPORT_PARTICLES */
+        if ( callback instanceof b2QueryCallback ) {
+            for (/** b2ParticleSystem */ var p = this.m_particleSystemList; p; p = p.m_next) {
+                if ( callback.shouldQueryParticleSystem( p ) ) {
+                    p.queryAABB( callback, aabb );
+                }
+            }
+        }
+/*#end EXPORT_PARTICLES */
+    };
+
+    /**
+     * @public
+     * @method  queryPoint
+     * @param   {b2QueryCallback|function(b2Fixture):boolean}   callback
+     * @param   {b2Vec2}    point   Point in world to test.
+     * @param   {float=}    [slop]
+     * @return  {void}
+     */
+    p.queryPoint = function ( callback, point, slop ) {
+        /** b2BroadPhase */ var broadPhase = this.m_contactManager.m_broadPhase;
+
+        /**
+         * @return {boolean}
+         * @param {b2TreeNode} proxy
+         */
+        var WorldQueryWrapper = function ( proxy ) {
+            /** b2FixtureProxy */
+            var fixture_proxy = broadPhase.getUserData( proxy );
+            /*##if EXPORT_ASSERTS */
+            if ( b2Settings.ASSERTS_ENABLED ) {
+                b2Assert( fixture_proxy instanceof b2FixtureProxy );
+            }/*#*/
+            /** b2Fixture */ var fixture = fixture_proxy.fixture;
+            if ( fixture.testPoint( point ) ) {
+                if ( callback instanceof b2QueryCallback ) {
+                    return callback.reportFixture( fixture );
+                }
+                else if (typeof(callback) === &#x27;function&#x27;)
+                {
+                    return callback( fixture );
+                }
+            }
+            return true;
+        };
+
+        slop = (typeof(slop) === &#x27;number&#x27;) ? (slop) : (b2Settings.b2_linearSlop);
+        /** b2AABB */ var aabb = b2World._B2AABB_POOL0;
+        aabb.lowerBound.set( point.x - slop, point.y - slop );
+        aabb.upperBound.set( point.x + slop, point.y + slop );
+        broadPhase.query( WorldQueryWrapper, aabb );
+/*#if EXPORT_PARTICLES */
+        if ( callback instanceof b2QueryCallback ) {
+            for (/** b2ParticleSystem */ var p = this.m_particleSystemList; p; p = p.m_next) {
+                if ( callback.shouldQueryParticleSystem( p ) ) {
+                    p.queryAABB( callback, aabb );
+                }
+            }
+        }
+/*#end EXPORT_PARTICLES */
+    };
+
+    /**
+     * Ray-cast the world for all fixtures in the path of the ray.
+     * Your callback controls whether you get the closest point, any
+     * point, or n-points. The ray-cast ignores shapes that contain
+     * the starting point.
+     *
+     * @public
+     * @method  rayCast
+     * @param {b2RayCastCallback|function(b2Fixture,b2Vec2,b2Vec2,number):number}  callback     A user implemented callback class.
+     * @param {b2Vec2}      point1  The ray starting point
+     * @param {b2Vec2}      point2  The ray ending point
+     * @return  {void}
+     */
+    p.rayCast = function ( callback, point1, point2 ) {
+        /** b2BroadPhase */ var broadPhase = this.m_contactManager.m_broadPhase;
+
+        /**
+         * @return {number}
+         * @param {b2RayCastInput} input
+         * @param {b2TreeNode} proxy
+         */
+        var WorldRayCastWrapper = function ( input, proxy ) {
+            /** b2FixtureProxy */
+            var fixture_proxy = broadPhase.getUserData( proxy );
+            /*##if EXPORT_ASSERTS */
+            if ( b2Settings.ASSERTS_ENABLED ) {
+                b2Assert( fixture_proxy instanceof b2FixtureProxy );
+            }/*#*/
+            /** b2Fixture */ var fixture = fixture_proxy.fixture;
+            /** number */ var index = fixture_proxy.childIndex;
+            /** b2RayCastOutput */ var output = b2World._B2RAYCAST_OUTPUT_POOL0;
+            /** boolean */ var hit = fixture.rayCast( output, input, index );
+
+            if ( hit ) {
+                /** number */ var fraction = output.fraction;
+                /** b2Vec2 */ var point = b2World._B2VEC2_POOL0;
+                point.set( (1 - fraction) * point1.x + fraction * point2.x, (1 - fraction) * point1.y + fraction * point2.y );
+
+                if ( callback instanceof b2RayCastCallback ) {
+                    return callback.reportFixture( fixture, point, output.normal, fraction );
+                }
+                else if (typeof(callback) === &#x27;function&#x27;)
+                {
+                    return callback( fixture, point, output.normal, fraction );
+                }
+            }
+            return input.maxFraction;
+        };
+
+        /** b2RayCastInput */ var input = b2World._B2RAYCAST_INPUT_POOL0;
+        input.maxFraction = 1;
+        input.p1.copy( point1 );
+        input.p2.copy( point2 );
+        broadPhase.rayCast( WorldRayCastWrapper, input );
+/*#if EXPORT_PARTICLES */
+        if ( callback instanceof b2RayCastCallback ) {
+            for (/** b2ParticleSystem */ var p = this.m_particleSystemList; p; p = p.m_next) {
+                if ( callback.shouldQueryParticleSystem( p ) ) {
+                    p.rayCast( callback, point1, point2 );
+                }
+            }
+        }
+/*#end EXPORT_PARTICLES */
+    };
+
+    /**
+     * Return first fixture to intersect raycast.
+     *
+     * @public
+     * @method  rayCastOne
+     * @param   {b2Vec2}    point1  The ray starting point.
+     * @param   {b2Vec2}    point2  The ray ending point.
+     * @return  {b2Fixture}
+     */
+    p.rayCastOne = function ( point1, point2 ) {
+        /** b2Fixture */ var result = null;
+        /** number */ var min_fraction = 1;
+
+        /**
+         * @private
+         * @method  worldRayCastOneWrapper
+         * @param {b2Fixture} fixture
+         * @param {b2Vec2} point
+         * @param {b2Vec2} normal
+         * @param {number} fraction
+         * @return {number}
+         */
+        function WorldRayCastOneWrapper( fixture, point, normal, fraction ) {
+            if ( fraction &lt; min_fraction ) {
+                min_fraction = fraction;
+                result = fixture;
+            }
+
+            return min_fraction;
+        };
+
+        this.rayCast( WorldRayCastOneWrapper, point1, point2 );
+
+        return result;
+    };
+
+    /**
+     * Return all fixtures to intersect raycast.
+     *
+     * @public
+     * @method  rayCastAll
+     * @param   {b2Vec2}            point1
+     * @param   {b2Vec2}            point2
+     * @param   {Array.&lt;b2Fixture&gt;} out
+     * @return  {Array.&lt;b2Fixture&gt;} out
+     */
+    p.rayCastAll = function ( point1, point2, out ) {
+        out.length = 0;
+
+        /**
+         * @private
+         * @method  worldRayCastOneWrapper
+         * @param {b2Fixture} fixture
+         * @param {b2Vec2} point
+         * @param {b2Vec2} normal
+         * @param {number} fraction
+         * @return {number}
+         */
+        function WorldRayCastAllWrapper( fixture, point, normal, fraction ) {
+            out.push( fixture );
+            return 1;
+        }
+        this.rayCast( WorldRayCastAllWrapper, point1, point2 );
+
+        return out;
+    };
+
+    /**
+     * @public
+     * @method  drawShape
+     * @param   {b2Fixture}     fixture
+     * @param   {b2Transform}   transform
+     * @param   {b2Color}       color
+     * @return  {void}
+     */
+    p.drawShape = function ( fixture, transform, color ) {
+        /** b2Shape */ var shape = fixture.getShape();
+
+        switch (shape.m_type) {
+            case b2Shape.e_circleShape:
+            {
+                /** b2CircleShape */ var circle = shape instanceof b2CircleShape ? shape : null;
+
+                /** b2Vec2 */ var center = b2Transform.timesV2( transform, circle.m_p, b2World._B2VEC2_POOL0 );
+                /** number */ var radius = circle.m_radius;
+                /** b2Vec2 */ var axis = b2Vec2._UNITX;
+
+                this.m_debugDraw.drawSolidCircle( center, radius, axis, color );
+            }
+                break;
+
+            case b2Shape.e_edgeShape:
+            {
+                /** b2EdgeShape */ var edge = shape instanceof b2EdgeShape ? shape : null;
+                /** b2Vec2 */ var v1 = b2Transform.timesV2( transform, edge.m_vertex1, b2World._B2VEC2_POOL0 );
+                /** b2Vec2 */ var v2 = b2Transform.timesV2( transform, edge.m_vertex2, b2World._B2VEC2_POOL1 );
+                ///** b2Vec2 */ var v1 = edge.m_vertex1;
+                ///** b2Vec2 */ var v2 = edge.m_vertex2;
+                this.m_debugDraw.drawSegment( v1, v2, color );
+            }
+                break;
+
+            case b2Shape.e_chainShape:
+            {
+                /** b2ChainShape */ var chain = shape instanceof b2ChainShape ? shape : null;
+                /** number */ var count = chain.m_count;
+                /** Array.&lt;b2Vec2&gt; */var vertices = chain.m_vertices;
+
+                /** Array.&lt;b2Vec2&gt; */var v1 = b2Transform.timesV2( transform, vertices[0], b2World._B2VEC2_POOL0 );
+                /** b2Vec2 */var v2 = b2World._B2VEC2_POOL1;
+                this.m_debugDraw.drawCircle( v1, 0.05, color );
+                for (/** number */ var i = 1; i &lt; count; ++i) {
+                    /** b2Vec2 */v2.equals( b2Transform.timesV2( transform, vertices[i] ) );
+                    this.m_debugDraw.drawSegment( v1, v2, color );
+                    this.m_debugDraw.drawCircle( v2, 0.05, color );
+                    v1.equals( v2 );
+                }
+            }
+                break;
+
+            case b2Shape.e_polygonShape:
+            {
+                /** b2PolygonShape */ var poly = shape instanceof b2PolygonShape ? shape : null;
+                /** number */ var vertexCount = poly.m_count;
+                /** @type {Array.&lt;b2Vec2&gt;} */var localVertices = poly.m_vertices;
+                /** @type {Array.&lt;b2Vec2&gt;} */var vertices = b2World._B2VEC2_VECTOR_MAX_POLYGON_VERTICES;
+
+                for (i = 0; i &lt; vertexCount; ++i) {
+                    vertices[i].equals( b2Transform.timesV2( transform, localVertices[i] ) );
+                }
+                this.m_debugDraw.drawSolidPolygon( vertices, vertexCount, color );
+            }
+                break;
+        }
+    };
+
+    /**
+     * @public
+     * @method  drawJoint
+     * @param   {b2Joint} joint
+     * @return  {void}
+     */
+    p.drawJoint = function ( joint ) {
+        /** b2Body */ var bodyA = joint.getBodyA();
+        /** b2Body */ var bodyB = joint.getBodyB();
+        /** b2Transform */ var xf1 = bodyA.m_xf;
+        /** b2Transform */ var xf2 = bodyB.m_xf;
+        /** b2Vec2 */ var x1 = xf1.p;
+        /** b2Vec2 */ var x2 = xf2.p;
+        /** b2Vec2 */ var p1 = joint.getAnchorA( b2World._B2VEC2_POOL0 );
+        /** b2Vec2 */ var p2 = joint.getAnchorB( b2World._B2VEC2_POOL1 );
+
+        /** b2Color */ var color = b2World._B2COLOR_POOL0;
+        color.setRGBA( 0.5, 0.8, 0.8 );
+
+        switch (joint.m_type) {
+            case b2Joint.e_distanceJoint:
+                this.m_debugDraw.drawSegment( p1, p2, color );
+                break;
+
+            case b2Joint.e_pulleyJoint:{
+                /** b2PulleyJoint */ var pulley = joint instanceof b2PulleyJoint ? joint : null;
+                /** b2Vec2 */ var s1 = pulley.getGroundAnchorA( b2World._B2VEC2_POOL2 );
+                /** b2Vec2 */ var s2 = pulley.getGroundAnchorB( b2World._B2VEC2_POOL3 );
+                this.m_debugDraw.drawSegment( s1, p1, color );
+                this.m_debugDraw.drawSegment( s2, p2, color );
+                this.m_debugDraw.drawSegment( s1, s2, color );
+            }
+                break;
+
+            case b2Joint.e_mouseJoint:
+                // don&#x27;t draw this
+                this.m_debugDraw.drawSegment( p1, p2, color );
+                break;
+
+            default:
+                if ( bodyA != this.m_groundBody ) {
+                    this.m_debugDraw.drawSegment( x1, p1, color );
+                }
+
+                this.m_debugDraw.drawSegment( p1, p2, color );
+
+                if ( bodyB != this.m_groundBody ) {
+                    this.m_debugDraw.drawSegment( x2, p2, color );
+                }
+        };
+    };
+
+/*#if EXPORT_PARTICLES */
+    /**
+     * @public
+     * @override
+     * @method  drawParticleSystem
+     * @param   {b2ParticleSystem} system
+     * @return  {void}
+     */
+    p.drawParticleSystem = function ( system ) {
+        var particleCount = system.getParticleCount();
+        if ( particleCount ) {
+            var radius = system.getRadius();
+            var positionBuffer = system.getPositionBuffer();
+            if ( system.m_colorBuffer.data ) {
+                var colorBuffer = system.getColorBuffer();
+                this.m_debugDraw.drawParticles( positionBuffer, radius, colorBuffer, particleCount );
+            }
+            else {
+                this.m_debugDraw.drawParticles( positionBuffer, radius, null, particleCount );
+            }
+        }
+    };
+/*#end EXPORT_PARTICLES */
+
+    /**
+     * Call this to draw shapes and other debug draw data. This is intentionally non-const.
+     *
+     * @public
+     * @method  drawDebugData
+     * @return  {void}
+     */
+    p.drawDebugData = function () {
+        if ( this.m_debugDraw === null ) {
+            return;
+        }
+        this.m_debugDraw.clear();
+        /** number */ var flags = this.m_debugDraw.getFlags();
+        //** b2Color */ var color = b2World._B2COLOR_POOL0;
+
+        if ( flags &amp; b2Draw.e_shapeBit ) {
+            for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+                /** b2Transform */ var xf = b.m_xf;
+
+                for (/** b2Fixture */ var f = b.getFixtureList(); f; f = f.m_next) {
+                    if ( !b.isActive() ) {
+                        color.setRGBA( 0.5, 0.5, 0.3 );
+                        this.drawShape( f, xf, color );
+                    }
+                    else if ( b.getType() === b2Body.b2_staticBody ) {
+                        color.setRGBA( 0.5, 0.9, 0.5 );
+                        this.drawShape( f, xf, color );
+                    }
+                    else if ( b.getType() === b2Body.b2_kinematicBody ) {
+                        color.setRGBA( 0.5, 0.5, 0.9 );
+                        this.drawShape( f, xf, color );
+                    }
+                    else if ( !b.isAwake() ) {
+                        color.setRGBA( 0.6, 0.6, 0.6 );
+                        this.drawShape( f, xf, color );
+                    }
+                    else {
+                        color.setRGBA( 0.9, 0.7, 0.7 );
+                        this.drawShape( f, xf, color );
+                    }
+                }
+            }
+        }
+/*#if EXPORT_PARTICLES */
+        if ( flags &amp; b2Draw.e_particleBit ) {
+            for (/** b2ParticleSystem */ var p = this.m_particleSystemList; p; p = p.m_next) {
+                this.drawParticleSystem( p );
+            }
+        }
+/*#end EXPORT_PARTICLES */
+
+        if ( flags &amp; b2Draw.e_jointBit ) {
+            for (/** b2Joint */ var j = this.m_jointList; j; j = j.m_next) {
+                this.drawJoint( j );
+            }
+        }
+
+        /*
+         if (flags &amp; b2DrawFlags.e_pairBit)
+         {
+         color.setRGB(0.3, 0.9, 0.9);
+         for (var contact = this.m_contactManager.m_contactList; contact; contact = contact.m_next)
+         {
+         var fixtureA = contact.getFixtureA();
+         var fixtureB = contact.getFixtureB();
+
+         var cA = fixtureA.getAABB().getCenter();
+         var cB = fixtureB.getAABB().getCenter();
+
+         this.m_debugDraw.drawSegment(cA, cB, color);
+         }
+         }
+         */
+
+        if ( flags &amp; b2Draw.e_aabbBit ) {
+            color.setRGB( 0.9, 0.3, 0.9 );
+            /** b2BroadPhase */ var bp = this.m_contactManager.m_broadPhase;
+            /** @type {Array.&lt;b2Vec2&gt;} */ var vs = b2World._B2VEC2_VECTOR_4;
+
+            for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+                if ( !b.isActive() ) {
+                    continue;
+                }
+
+                for (/** b2Fixture */ var f = b.getFixtureList(); f; f = f.m_next) {
+                    for (/** number */ var i = 0; i &lt; f.m_proxyCount; ++i) {
+                        /** b2FixtureProxy */ var proxy = f.m_proxies[i];
+
+                        /** b2AABB */ var aabb = bp.getFatAABB( proxy.proxy );
+                        vs[0].set( aabb.lowerBound.x, aabb.lowerBound.y );
+                        vs[1].set( aabb.upperBound.x, aabb.lowerBound.y );
+                        vs[2].set( aabb.upperBound.x, aabb.upperBound.y );
+                        vs[3].set( aabb.lowerBound.x, aabb.upperBound.y );
+
+                        this.m_debugDraw.drawPolygon( vs, 4, color );
+                    }
+                }
+            }
+        }
+
+        if ( flags &amp; b2Draw.e_centerOfMassBit ) {
+            for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+                /** b2Transform */
+                var xf = b2World._B2TRANSFORM_POOL0;
+                xf.q.copy( b.m_xf.q );
+                xf.p.copy( b.getWorldCenter() );
+                this.m_debugDraw.drawTransform( xf );
+            }
+        }
+/*##if EXPORT_CONTROLLERS */
+        /// @see b2Controller list
+        if ( flags &amp; b2Draw.e_controllerBit ) {
+            for (/** b2Controller */ var c = this.m_controllerList; c; c = c.m_next) {
+                c.draw( this.m_debugDraw );
+            }
+        }
+/*#end EXPORT_CONTROLLERS */
+    };
+
+    /**
+     *
+     * @public
+     * @method  setBroadPhase
+     * @param   {b2BroadPhase} broadPhase
+     * @return  {void}
+     */
+    p.setBroadPhase = function ( broadPhase ) {
+        var oldBroadPhase = this.m_contactManager.m_broadPhase;
+
+        this.m_contactManager.m_broadPhase = broadPhase;
+
+        for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+            for (/** b2Fixture */ var f = b.m_fixtureList; f; f = f.m_next) {
+                f.m_proxy = broadPhase.createProxy( oldBroadPhase.getFatAABB( f.m_proxy ), f );
+            }
+        }
+    };
+
+/*#if EXPORT_PARTICLES */
+    /**
+     * Recommend a value to be used in &#x60;Step&#x60; for &#x60;particleIterations&#x60;.
+     * This calculation is necessarily a simplification and should only be
+     * used as a starting point. Please see &quot;Particle Iterations&quot; in the
+     * Programmer&#x27;s Guide for details.
+     *
+     * @public
+     * @method   calculateReasonableParticleIterations
+     * @param    {float} timeStep   Is the value to be passed into &#x60;Step&#x60;.
+     * @return   {int}              Reasonable particle iterations
+     */
+    p.calculateReasonableParticleIterations = function ( timeStep ) {
+        if ( this.m_particleSystemList === null ) {
+            return 1;
+        }
+
+        function GetSmallestRadius( world ) {
+            var smallestRadius = b2Settings.b2_maxFloat;
+            /**b2ParticleSystem*/var system = world.getParticleSystemList();
+            for ( ; system !== null; system = system.m_next) {
+                smallestRadius = Math.min( smallestRadius, system.getRadius() );
+            }
+            return smallestRadius;
+        }
+
+        // Use the smallest radius, since that represents the worst-case.
+        return b2Particle.b2CalculateParticleIterations( this.m_gravity.length(), GetSmallestRadius( this ), timeStep );
+    };
+/*#end EXPORT_PARTICLES */
+
+    /**
+     * Get the number of broad-phase proxies.
+     *
+     * @public
+     * @method  getProxyCount
+     * @return  {int}
+     */
+    p.getProxyCount = function () {
+        return this.m_contactManager.m_broadPhase.getProxyCount();
+    };
+
+    /**
+     * Get the height of the dynamic tree.
+     *
+     * @public
+     * @method  getTreeHeight
+     * @return {float}
+     */
+    p.getTreeHeight = function () {
+        return this.m_contactManager.m_broadPhase.getTreeHeight();
+    };
+
+    /**
+     * Get the balance of the dynamic tree.
+     *
+     * @public
+     * @method  getTreeBalance
+     * @return {float}
+     */
+    p.getTreeBalance = function () {
+        return this.m_contactManager.m_broadPhase.getTreeBalance();
+    };
+
+    /**
+     * Get the quality metric of the dynamic tree. The smaller the
+     * better. The minimum is 1.
+     *
+     * @public
+     * @method  getTreeQuality
+     * @return {float}
+     */
+    p.getTreeQuality = function () {
+        return this.m_contactManager.m_broadPhase.getTreeQuality();
+    };
+
+    /**
+     * Shift the world origin. Useful for large worlds.
+     * The body shift formula is: position -= newOrigin.
+     *
+     * @public
+     * @method  shiftOrigin
+     * @param   {b2Vec2}    newOrigin   The new origin with respect to the old origin.
+     * @return  {void}
+     */
+    p.shiftOrigin = function ( newOrigin ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( !this.isLocked() );
+        }/*#*/
+        if ( this.isLocked() ) {
+            return;
+        }
+
+        for (/** b2Body */ var b = this.m_bodyList; b; b = b.m_next) {
+            b.m_xf.p.minus( newOrigin );
+            b.m_sweep.c0.minus( newOrigin );
+            b.m_sweep.c.minus( newOrigin );
+        }
+
+        for (/** b2Joint */ var j = this.m_jointList; j; j = j.m_next) {
+            j.shiftOrigin( newOrigin );
+        }
+
+        this.m_contactManager.m_broadPhase.shiftOrigin( newOrigin );
+    };
+
+/*##if EXPORT_CONTROLLERS */
+    /**
+     * See
+     * &lt;a href=../classes/b2Controller.html&gt;b2Controller&lt;/a&gt;
+     * list.
+     *
+     * @public
+     * @method  addController
+     * @param   {b2Controller}  controller
+     * @return  {b2Controller}
+     */
+    p.addController = function ( controller ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( controller.m_world === null, &quot;Controller can only be a member of one world&quot; );
+        }/*#*/
+        controller.m_world = this;
+        controller.m_next = this.m_controllerList;
+        controller.m_prev = null;
+        if ( this.m_controllerList ) {
+            this.m_controllerList.m_prev = controller;
+        }
+        this.m_controllerList = controller;
+        ++this.m_controllerCount;
+        return controller;
+    };
+
+    /**
+     * See
+     * &lt;a href=../classes/b2Controller.html&gt;b2Controller&lt;/a&gt;
+     * list.
+     *
+     * @public
+     * @method  removeController
+     * @return  {b2Controller}
+     */
+    p.removeController = function ( controller ) {
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( controller.m_world === this, &quot;Controller is not a member of this world&quot; );
+        }/*#*/
+        if ( controller.m_prev ) {
+            controller.m_prev.m_next = controller.m_next;
+        }
+        if ( controller.m_next ) {
+            controller.m_next.m_prev = controller.m_prev;
+        }
+        if ( this.m_controllerList === controller ) {
+            this.m_controllerList = controller.m_next;
+        }
+        --this.m_controllerCount;
+        controller.m_prev = null;
+        controller.m_next = null;
+        controller.m_world = null;
+    };
+/*#end EXPORT_CONTROLLERS */
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

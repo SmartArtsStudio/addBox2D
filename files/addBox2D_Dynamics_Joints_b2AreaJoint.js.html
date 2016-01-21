@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : addBox2D\Dynamics\Joints\b2AreaJoint.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = addBox2D\Dynamics\Joints\b2AreaJoint.js
+</script>
+<h1 class="file-heading">File:addBox2D\Dynamics\Joints\b2AreaJoint.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+//################################################################################################//
+//################################################################################################//
+//                                                                                                //
+//                 ██    ██████ ██████                     ██       ██        ██                  //
+//                 ██        ██ ██  ██                     ██                 ██                  //
+//                 █████     ██ ██  ██ ████ █████ █████    ██ █████ ██ █████ █████                //
+//                 ██ ██ ██████ ██████ ██   ██ ██    ██    ██ ██ ██ ██ ██ ██  ██                  //
+//                 ██ ██ ██     ██  ██ ██   █████ █████    ██ ██ ██ ██ ██ ██  ██                  //
+//                 ██ ██ ██     ██  ██ ██   ██    ██ ██    ██ ██ ██ ██ ██ ██  ██                  //
+//                 █████ ██████ ██  ██ ██   █████ █████ █████ █████ ██ ██ ██  ████                //
+//                                                                                                //
+//################################################################################################//
+//################################################################################################//
+
+ // CLASS CONSTRUCTOR
+
+    /**
+     * Definition for a b2AreaJoint, which connects a
+     * group of bodies together so they maintain a constant area
+     * within them as the group distorts in reaction to collisions..
+     *
+     * @class   b2AreaJoint
+     * @constructor
+     * @extends {b2Joint}
+     * @param   {b2AreaJointDef}  areaJointDef
+     * @module  Joints
+     */
+    // TODO: test b2AreaJoint. Ported but untested.
+    function b2AreaJoint( areaJointDef ) {
+
+        /**
+         * Invokes parent class constructor function reference.
+         */
+        this.constructor( areaJointDef );
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( areaJointDef.bodies.length &gt;= 3, &quot;You cannot create an area joint with less than three bodies.&quot; );
+        }/*#*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██████                              ██   ██                                   //
+//                  ██  ██                              ██                                        //
+//                  ██  ██ ████ █████ █████ █████ ████ █████ ██ █████ █████                       //
+//                  ██████ ██   ██ ██ ██ ██ ██ ██ ██    ██   ██ ██ ██ ██                          //
+//                  ██     ██   ██ ██ ██ ██ █████ ██    ██   ██ █████ █████                       //
+//                  ██     ██   ██ ██ ██ ██ ██    ██    ██   ██ ██       ██                       //
+//                  ██     ██   █████ █████ █████ ██    ████ ██ █████ █████                       //
+//                                    ██                                                          //
+//                                    ██                                                          //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // property DECLARATIONS
+
+        /**
+         * @public
+         * @property  m_delta
+         * @type      {b2Vec2}
+         */
+        this.m_delta = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_deltas
+         * @type      {Array.&lt;b2Vec2&gt;}
+         */
+        this.m_deltas = b2Vec2.newVector( areaJointDef.bodies.length );
+
+        /**
+         * @public
+         * @property  m_joints
+         * @type      {Array.&lt;b2Vec2&gt;}
+         */
+        this.m_joints = new Array( areaJointDef.bodies.length );
+
+        /**
+         *
+         * @public
+         * @property  m_normals
+         * @type      {Array.&lt;b2Vec2&gt;}
+         */
+        this.m_normals = b2Vec2.newVector( areaJointDef.bodies.length );
+
+        /**
+         *
+         * @public
+         * @property  m_targetLengths
+         * @type      {Array}
+         */
+        this.m_targetLengths = newNumberVector( areaJointDef.bodies.length );
+
+     // property INITIALISATIONS
+
+        /**
+         *
+         * @public
+         * @property  m_bodies
+         * @type      {Array.&lt;b2Body&gt;}
+         */
+        this.m_bodies = areaJointDef.bodies;
+
+        /**
+         * @public
+         * @property  m_dampingRatio
+         * @type      {float}
+         */
+        this.m_dampingRatio = areaJointDef.dampingRatio;
+
+        /**
+         * @public
+         * @property  m_frequencyHz
+         * @type      {float}
+         */
+        this.m_frequencyHz = areaJointDef.frequencyHz;
+
+        /**
+         * @public
+         * @property  m_impulse
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_impulse = 0.0;
+
+        /**
+         * @public
+         * @property  m_targetArea
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_targetArea = 0.0;
+
+     // constructor LOGIC
+
+        var djd = new b2DistanceJointDef();
+        djd.frequencyHz = areaJointDef.frequencyHz;
+        djd.dampingRatio = areaJointDef.dampingRatio;
+
+
+        for (var i = 0, ict = this.m_bodies.length; i &lt; ict; ++i) {
+            var body = this.m_bodies[i];
+            var next = this.m_bodies[(i + 1) % ict];
+
+            var body_c = body.getWorldCenter();
+            var next_c = next.getWorldCenter();
+
+            this.m_targetLengths[i] = b2Vec2.distance( body_c, next_c );
+
+            this.m_targetArea += b2Vec2.cross( body_c, next_c );
+
+            djd.initialize( body, next, body_c, next_c );
+            this.m_joints[i] = areaJointDef.world.createJoint( djd );
+        }
+
+        this.m_targetArea *= 0.5;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██       ██               ██  ██                                              //
+//                  ██       ██                   ██                                              //
+//                  ██ █████ █████ █████ ████ ██ █████ █████ █████ █████ █████                    //
+//                  ██ ██ ██ ██ ██ ██ ██ ██   ██  ██      ██ ██ ██ ██    ██ ██                    //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ██   █████ ██ ██ ██    █████                    //
+//                  ██ ██ ██ ██ ██ ██    ██   ██  ██   ██ ██ ██ ██ ██    ██                       //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ████ █████ ██ ██ █████ █████                    //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    } b2AreaJoint.prototype = p = new b2Joint(); Box2D.b2AreaJoint = b2AreaJoint;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                       ██   ██        ██   ██             ██                                    //
+//                       ███ ███        ██   ██             ██                                    //
+//                       ███████ █████ █████ █████ █████ █████ █████                              //
+//                       ██ █ ██ ██ ██  ██   ██ ██ ██ ██ ██ ██ ██                                 //
+//                       ██   ██ █████  ██   ██ ██ ██ ██ ██ ██ █████                              //
+//                       ██   ██ ██     ██   ██ ██ ██ ██ ██ ██    ██                              //
+//                       ██   ██ █████  ████ ██ ██ █████ █████ █████                              //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ // INSTANCE METHODS
+
+    /**
+     * Get the reaction force given the inverse time step.
+     * Unit is Newtons.
+     *
+     * @public
+     * @override
+     * @method  getReactionForce
+     * @return {b2Vec2}
+     * @param {number} invDeltaTime
+     * @param {b2Vec2} out
+     */
+    p.getReactionForce = function ( invDeltaTime, out ) {
+        return out.setZero();
+    };
+
+    /**
+     * Get the reaction torque given the inverse time step.
+     * Unit is N*m. This is always zero for a distance joint.
+     *
+     * @public
+     * @override
+     * @method  getReactionTorque
+     * @param   {float} invDeltaTime
+     * @return  {float}
+     */
+    p.getReactionTorque = function ( invDeltaTime ) {
+        return 0.0;
+    };
+
+    /**
+     * Set frequency in Hz.
+     *
+     * @public
+     * @method  setFrequency
+     * @param   {float}    hz
+     * @return  {void}
+     */
+    p.setFrequency = function ( hz ) {
+        this.m_frequencyHz = hz;
+        for (var i = 0, ict = this.m_joints.length; i &lt; ict; ++i) {
+            this.m_joints[i].setFrequency( hz );
+        }
+    };
+
+    /**
+     * Get frequency in Hz.
+     *
+     * @public
+     * @method  setFrequency
+     * @return  {float}
+     */
+    p.getFrequency = function () {
+        return this.m_frequencyHz;
+    };
+
+    /**
+     * Set damping ratio.
+     *
+     * @public
+     * @method  setDampingRatio
+     * @param   {float}    ratio
+     * @return  {void}
+     */
+    p.setDampingRatio = function ( ratio ) {
+        this.m_dampingRatio = ratio;
+
+        for (var i = 0, ict = this.m_joints.length; i &lt; ict; ++i) {
+            this.m_joints[i].setDampingRatio( ratio );
+        }
+    };
+
+    /**
+     * Get damping ratio.
+     *
+     * @public
+     * @method  getDampingRatio
+     * @return  {float}
+     */
+    p.getDampingRatio = function () {
+        return this.m_dampingRatio;
+    };
+
+//    /**
+//     *
+//     * @public
+//     * @method  getBodies
+//     * @return  {}
+//     */
+//    p.getBodies = function () {
+//        return this.m_bodies;
+//    };
+//
+//    /**
+//     *
+//     * @public
+//     * @method  inflate
+//     * @return  {}
+//     */
+//    p.inflate = function ( factor ) {
+//        this.m_targetVolume *= factor;
+//    };
+//
+//    /**
+//     *
+//     * @public
+//     * @method  getArea
+//     * @return  {}
+//     */
+//    p.getArea = function () {
+//        var area = 0;
+//        area += this.m_bodies[this.m_bodies.length - 1].getWorldCenter().x * this.m_bodies[0].getWorldCenter().y - this.m_bodies[0].getWorldCenter().x * this.m_bodies[this.m_bodies.length - 1].getWorldCenter().y;
+//
+//        for (var i = 0, length = this.m_bodies.length; i &lt; length - 1; ++i) {
+//            area += this.m_bodies[i].getWorldCenter().x * this.m_bodies[i + 1].getWorldCenter().y - this.m_bodies[i + 1].getWorldCenter().x * this.m_bodies[i].getWorldCenter().y;
+//        }
+//
+//        area *= 0.5;
+//        return area;
+//    };
+//
+//    /**
+//     *
+//     * @public
+//     * @method  constrainEdges
+//     * @return  {}
+//     */
+//    p.constrainEdges = function ( step ) {
+//        var perimeter = 0;
+//
+//        for (var i = 0, length = this.m_bodies.length; i &lt; length; ++i) {
+//            var next = (i == this.m_bodies.length - 1 ? 0 : i + 1);
+//            var dx = this.m_bodies[next].getWorldCenter().x - this.m_bodies[i].getWorldCenter().x;
+//            var dy = this.m_bodies[next].getWorldCenter().y - this.m_bodies[i].getWorldCenter().y;
+//            var dist = Math.sqrt( dx * dx + dy * dy );
+//
+//            if ( dist &lt; b2Settings.b2_linearSleepTolerance ) {
+//                dist = 1;
+//            }
+//
+//            this.m_normals[i].x = dy / dist;
+//            this.m_normals[i].y = -dx / dist;
+//            perimeter += dist;
+//        }
+//
+//        var deltaArea = this.m_targetVolume - this.getArea();
+//        var toExtrude = 0.5 * deltaArea / perimeter;
+//        var done = true;
+//
+//        for (i = 0, length = this.m_bodies.length; i &lt; length; ++i) {
+//            var next = (i == this.m_bodies.length - 1 ? 0 : i + 1);
+//
+//            var delta = new b2Vec2(
+//                    toExtrude * (this.m_normals[i].x + this.m_normals[next].x),
+//                    toExtrude * (this.m_normals[i].y + this.m_normals[next].y)
+//            );
+//
+//            var norm = delta.length();
+//
+//            if ( norm &gt; b2Settings.b2_maxLinearCorrection ) {
+//                delta.multiply( b2Settings.b2_maxLinearCorrection / norm );
+//            }
+//
+//            if ( norm &gt; b2Settings.b2_linearSlop ) {
+//                done = false;
+//            }
+//
+//            this.m_bodies[next].m_sweep.c.x += delta.x;
+//            this.m_bodies[next].m_sweep.c.y += delta.y;
+//            this.m_bodies[next].synchronizeTransform();
+//        }
+//
+//        return done;
+//    };
+
+    /**
+     * @public
+     * @override
+     * @method  initVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.initVelocityConstraints
+    p.initVelocityConstraints = function ( data ) {
+        for (var i = 0, ict = this.m_bodies.length; i &lt; ict; ++i) {
+            var prev = this.m_bodies[(i + ict - 1) % ict];
+            var next = this.m_bodies[(i + 1) % ict];
+            var prev_c = data.positions[prev.m_islandIndex].c;
+            var next_c = data.positions[next.m_islandIndex].c;
+            var delta = this.m_deltas[i];
+
+            b2Vec2.subtract( next_c, prev_c, delta );
+        }
+
+        if ( data.step.warmStarting ) {
+            this.m_impulse *= data.step.dtRatio;
+
+            for (var i = 0, ict = this.m_bodies.length; i &lt; ict; ++i) {
+                var body = this.m_bodies[i];
+                var body_v = data.velocities[body.m_islandIndex].v;
+                var delta = this.m_deltas[i];
+
+                body_v.x += body.m_invMass * delta.y * 0.5 * this.m_impulse;
+                body_v.y += body.m_invMass * -delta.x * 0.5 * this.m_impulse;
+            }
+        }
+        else {
+            this.m_impulse = 0;
+        }
+    };
+
+    /**
+     * @public
+     * @override
+     * @method  solvePositionConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solvePositionConstraints
+    p.solvePositionConstraints = function ( data ) {
+        var perimeter = 0;
+        var area = 0;
+
+        for (var i = 0, ict = this.m_bodies.length; i &lt; ict; ++i) {
+            var body = this.m_bodies[i];
+            var next = this.m_bodies[(i + 1) % ict];
+            var body_c = data.positions[body.m_islandIndex].c;
+            var next_c = data.positions[next.m_islandIndex].c;
+
+            var delta = b2Vec2.subtract( next_c, body_c, this.m_delta );
+
+            var dist = delta.length();
+            if ( dist &lt; b2Settings.b2_epsilon ) {
+                dist = 1;
+            }
+
+            this.m_normals[i].x = delta.y / dist;
+            this.m_normals[i].y = -delta.x / dist;
+
+            perimeter += dist;
+
+            area += b2Vec2.cross( body_c, next_c );
+        }
+
+        area *= 0.5;
+
+        var deltaArea = this.m_targetArea - area;
+        var toExtrude = 0.5 * deltaArea / perimeter;
+        var done = true;
+
+        for (var i = 0, ict = this.m_bodies.length; i &lt; ict; ++i) {
+            var body = this.m_bodies[i];
+            var body_c = data.positions[body.m_islandIndex].c;
+            var next_i = (i + 1) % ict;
+
+            var delta = b2Vec2.add( this.m_normals[i], this.m_normals[next_i], this.m_delta );
+            delta.times( toExtrude );
+
+            var normSquared = delta.lengthSquared();
+            if ( normSquared &gt; ( this.m_radius * this.m_radius ) ) {
+                delta.times( b2Settings.b2_maxLinearCorrection / Math.sqrt( normSquared ) );
+            }
+            if ( normSquared &gt; ( this.m_radius * this.m_radius ) ) {
+                done = false;
+            }
+
+            body_c.x += delta.x;
+            body_c.y += delta.y;
+        }
+
+        return done;
+    };
+
+    /**
+     * @public
+     * @override
+     * @method  solveVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solveVelocityConstraints
+    p.solveVelocityConstraints = function ( data ) {
+        var dotMassSum = 0;
+        var crossMassSum = 0;
+
+        for (var i = 0, ict = this.m_bodies.length; i &lt; ict; ++i) {
+            var body = this.m_bodies[i];
+            var body_v = data.velocities[body.m_islandIndex].v;
+            var delta = this.m_deltas[i];
+
+            dotMassSum += delta.lengthSquared() / body.getMass();
+            crossMassSum += b2Vec2.cross( body_v, delta );
+        }
+
+        var lambda = -2 * crossMassSum / dotMassSum;
+        //lambda = b2Math.clamp(lambda, -b2Settings.b2_maxLinearCorrection, b2Settings.b2_maxLinearCorrection);
+
+        this.m_impulse += lambda;
+
+        for (var i = 0, ict = this.m_bodies.length; i &lt; ict; ++i) {
+            var body = this.m_bodies[i];
+            var body_v = data.velocities[body.m_islandIndex].v;
+            var delta = this.m_deltas[i];
+
+            body_v.x += body.m_invMass * delta.y * 0.5 * lambda;
+            body_v.y += body.m_invMass * -delta.x * 0.5 * lambda;
+        }
+    };
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

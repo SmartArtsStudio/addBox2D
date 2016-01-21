@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : b2MouseJointDef</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>b2MouseJointDef Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends B2JointDef
+        </div>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/addBox2D_Dynamics_Joints_b2MouseJointDef.js.html#l17"><code>b2MouseJointDef:17</code></a>
+        </div>
+    
+
+    
+        
+            Module: <a href="../modules/Joints.html">Joints</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Mouse joint definition. This requires a world target point,
+tuning parameters, and the time step.</p>
+
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_b2MouseJointDef" class="method item">
+    <h3 class="name"><code>b2MouseJointDef</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2MouseJointDef.js.html#l17"><code>b2MouseJointDef:17</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property public">
+                                <a href="#property_dampingRatio">dampingRatio</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_frequencyHz">frequencyHz</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_maxForce">maxForce</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_target">target</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property public">
+                                <a href="#property_type">type</a>
+
+                                
+                                
+                            </li>
+
+                        <li class="index-item method inherited public">
+                            <a href="#property_bodyB">bodyB</a>
+
+
+                        </li>
+
+                        <li class="index-item method inherited public">
+                            <a href="#property_collideConnected">collideConnected</a>
+
+
+                        </li>
+
+                        <li class="index-item method inherited public">
+                            <a href="#property_type">type</a>
+
+
+                        </li>
+
+                        <li class="index-item method inherited public">
+                            <a href="#property_userData">userData</a>
+
+
+                        </li>
+
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_dampingRatio" class="property item public">
+    <h3 class="name"><code>dampingRatio</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2MouseJointDef.js.html#l91"><code>dampingRatio:91</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The damping ratio. 0 = no damping, 1 = critical damping.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.7</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_frequencyHz" class="property item public">
+    <h3 class="name"><code>frequencyHz</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2MouseJointDef.js.html#l81"><code>frequencyHz:81</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The response speed.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 5.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_maxForce" class="property item public">
+    <h3 class="name"><code>maxForce</code></h3>
+    <span class="type">Float</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2MouseJointDef.js.html#l69"><code>maxForce:69</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The maximum constraint force that can be exerted to move the
+candidate body. Usually you will express as some multiple of
+the weight (multiplier <em> mass </em> gravity).</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0.0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_target" class="property item public">
+    <h3 class="name"><code>target</code></h3>
+    <span class="type">B2Vec2</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2MouseJointDef.js.html#l49"><code>target:49</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The initial world target point. This is assumed to coincide
+with the body anchor initially.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_type" class="property item public">
+    <h3 class="name"><code>type</code></h3>
+    <span class="type">Int</span>
+
+    
+
+    
+        <span class="flag public">public</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/addBox2D_Dynamics_Joints_b2MouseJointDef.js.html#l61"><code>type:61</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

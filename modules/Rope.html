@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : Rope</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+
+                <li><a href="../classes/addBox2D.html">addBox2D</a></li>
+            
+                <li><a href="../classes/b2AABB.html">b2AABB</a></li>
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2BlockAllocator.html">b2BlockAllocator</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2BodyDef.html">b2BodyDef</a></li>
+            
+                <li><a href="../classes/b2BroadPhase.html">b2BroadPhase</a></li>
+            
+                <li><a href="../classes/b2ChainAndCircleContact.html">b2ChainAndCircleContact</a></li>
+            
+                <li><a href="../classes/b2ChainAndPolygonContact.html">b2ChainAndPolygonContact</a></li>
+            
+                <li><a href="../classes/b2ChainShape.html">b2ChainShape</a></li>
+            
+                <li><a href="../classes/b2CircleContact.html">b2CircleContact</a></li>
+            
+                <li><a href="../classes/b2CircleShape.html">b2CircleShape</a></li>
+            
+                <li><a href="../classes/b2ClipVertex.html">b2ClipVertex</a></li>
+            
+                <li><a href="../classes/b2Collision.html">b2Collision</a></li>
+            
+                <li><a href="../classes/b2Color.html">b2Color</a></li>
+            
+                <li><a href="../classes/b2CompositeShape.html">b2CompositeShape</a></li>
+            
+                <li><a href="../classes/b2ConnectionFilter.html">b2ConnectionFilter</a></li>
+            
+                <li><a href="../classes/b2Contact.html">b2Contact</a></li>
+            
+                <li><a href="../classes/b2ContactEdge.html">b2ContactEdge</a></li>
+            
+                <li><a href="../classes/b2ContactFactory.html">b2ContactFactory</a></li>
+            
+                <li><a href="../classes/b2ContactFeature.html">b2ContactFeature</a></li>
+            
+                <li><a href="../classes/b2ContactFilter.html">b2ContactFilter</a></li>
+            
+                <li><a href="../classes/b2ContactID.html">b2ContactID</a></li>
+            
+                <li><a href="../classes/b2ContactImpulse.html">b2ContactImpulse</a></li>
+            
+                <li><a href="../classes/b2ContactListener.html">b2ContactListener</a></li>
+            
+                <li><a href="../classes/b2ContactManager.html">b2ContactManager</a></li>
+            
+                <li><a href="../classes/b2ContactPositionConstraint.html">b2ContactPositionConstraint</a></li>
+            
+                <li><a href="../classes/b2ContactRegister.html">b2ContactRegister</a></li>
+            
+                <li><a href="../classes/b2ContactSolver.html">b2ContactSolver</a></li>
+            
+                <li><a href="../classes/b2ContactSolverDef.html">b2ContactSolverDef</a></li>
+            
+                <li><a href="../classes/b2ContactVelocityConstraint.html">b2ContactVelocityConstraint</a></li>
+            
+                <li><a href="../classes/b2DebugDraw.html">b2DebugDraw</a></li>
+            
+                <li><a href="../classes/b2DestroyParticlesInShapeCallback.html">b2DestroyParticlesInShapeCallback</a></li>
+            
+                <li><a href="../classes/b2DestructionListener.html">b2DestructionListener</a></li>
+            
+                <li><a href="../classes/b2Distance.html">b2Distance</a></li>
+            
+                <li><a href="../classes/b2DistanceInput.html">b2DistanceInput</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2DistanceOutput.html">b2DistanceOutput</a></li>
+            
+                <li><a href="../classes/b2DistanceProxy.html">b2DistanceProxy</a></li>
+            
+                <li><a href="../classes/b2Draw.html">b2Draw</a></li>
+            
+                <li><a href="../classes/b2DynamicTree.html">b2DynamicTree</a></li>
+            
+                <li><a href="../classes/b2EdgeAndCircleContact.html">b2EdgeAndCircleContact</a></li>
+            
+                <li><a href="../classes/b2EdgeAndPolygonContact.html">b2EdgeAndPolygonContact</a></li>
+            
+                <li><a href="../classes/b2EdgeShape.html">b2EdgeShape</a></li>
+            
+                <li><a href="../classes/b2EPAxis.html">b2EPAxis</a></li>
+            
+                <li><a href="../classes/b2Filter.html">b2Filter</a></li>
+            
+                <li><a href="../classes/b2FixedSetAllocator.html">b2FixedSetAllocator</a></li>
+            
+                <li><a href="../classes/b2Fixture.html">b2Fixture</a></li>
+            
+                <li><a href="../classes/b2FixtureDef.html">b2FixtureDef</a></li>
+            
+                <li><a href="../classes/b2FixtureParticle.html">b2FixtureParticle</a></li>
+            
+                <li><a href="../classes/b2FixtureParticleQueryCallback.html">b2FixtureParticleQueryCallback</a></li>
+            
+                <li><a href="../classes/b2FixtureParticleSet.html">b2FixtureParticleSet</a></li>
+            
+                <li><a href="../classes/b2FixtureProxy.html">b2FixtureProxy</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2GrowableBuffer.html">b2GrowableBuffer</a></li>
+            
+                <li><a href="../classes/b2GrowableStack.html">b2GrowableStack</a></li>
+            
+                <li><a href="../classes/b2InsideBoundsEnumerator.html">b2InsideBoundsEnumerator</a></li>
+            
+                <li><a href="../classes/b2Island.html">b2Island</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/b2JoinParticleGroupsFilter.html">b2JoinParticleGroupsFilter</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2Manifold.html">b2Manifold</a></li>
+            
+                <li><a href="../classes/b2ManifoldPoint.html">b2ManifoldPoint</a></li>
+            
+                <li><a href="../classes/b2MassData.html">b2MassData</a></li>
+            
+                <li><a href="../classes/b2Mat22.html">b2Mat22</a></li>
+            
+                <li><a href="../classes/b2Mat33.html">b2Mat33</a></li>
+            
+                <li><a href="../classes/b2Math.html">b2Math</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2Particle.html">b2Particle</a></li>
+            
+                <li><a href="../classes/b2ParticleBodyContact.html">b2ParticleBodyContact</a></li>
+            
+                <li><a href="../classes/b2ParticleColor.html">b2ParticleColor</a></li>
+            
+                <li><a href="../classes/b2ParticleContact.html">b2ParticleContact</a></li>
+            
+                <li><a href="../classes/b2ParticleDef.html">b2ParticleDef</a></li>
+            
+                <li><a href="../classes/b2ParticleFlag.html">b2ParticleFlag</a></li>
+            
+                <li><a href="../classes/b2ParticleGroup.html">b2ParticleGroup</a></li>
+            
+                <li><a href="../classes/b2ParticleGroupDef.html">b2ParticleGroupDef</a></li>
+            
+                <li><a href="../classes/b2ParticleGroupFlag.html">b2ParticleGroupFlag</a></li>
+            
+                <li><a href="../classes/b2ParticleHandle.html">b2ParticleHandle</a></li>
+            
+                <li><a href="../classes/b2ParticleListNode.html">b2ParticleListNode</a></li>
+            
+                <li><a href="../classes/b2ParticlePair.html">b2ParticlePair</a></li>
+            
+                <li><a href="../classes/b2ParticlePairSet.html">b2ParticlePairSet</a></li>
+            
+                <li><a href="../classes/b2ParticleSystem.html">b2ParticleSystem</a></li>
+            
+                <li><a href="../classes/b2ParticleSystemDef.html">b2ParticleSystemDef</a></li>
+            
+                <li><a href="../classes/b2ParticleTriad.html">b2ParticleTriad</a></li>
+            
+                <li><a href="../classes/b2PolygonAndCircleContact.html">b2PolygonAndCircleContact</a></li>
+            
+                <li><a href="../classes/b2PolygonContact.html">b2PolygonContact</a></li>
+            
+                <li><a href="../classes/b2PolygonShape.html">b2PolygonShape</a></li>
+            
+                <li><a href="../classes/b2Position.html">b2Position</a></li>
+            
+                <li><a href="../classes/b2PositionSolverManifold.html">b2PositionSolverManifold</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2Profile.html">b2Profile</a></li>
+            
+                <li><a href="../classes/b2Proxy.html">b2Proxy</a></li>
+            
+                <li><a href="../classes/b2PSParticlePair.html">b2PSParticlePair</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2QueryCallback.html">b2QueryCallback</a></li>
+            
+                <li><a href="../classes/b2RayCastCallback.html">b2RayCastCallback</a></li>
+            
+                <li><a href="../classes/b2RayCastInput.html">b2RayCastInput</a></li>
+            
+                <li><a href="../classes/b2RayCastOutput.html">b2RayCastOutput</a></li>
+            
+                <li><a href="../classes/b2ReactiveFilter.html">b2ReactiveFilter</a></li>
+            
+                <li><a href="../classes/b2ReferenceFace.html">b2ReferenceFace</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2Rope.html">b2Rope</a></li>
+            
+                <li><a href="../classes/b2RopeDef.html">b2RopeDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2Rot.html">b2Rot</a></li>
+            
+                <li><a href="../classes/b2SeparationFunction.html">b2SeparationFunction</a></li>
+            
+                <li><a href="../classes/b2Settings.html">b2Settings</a></li>
+            
+                <li><a href="../classes/b2Shape.html">b2Shape</a></li>
+            
+                <li><a href="../classes/b2Simplex.html">b2Simplex</a></li>
+            
+                <li><a href="../classes/b2SimplexCache.html">b2SimplexCache</a></li>
+            
+                <li><a href="../classes/b2SimplexVertex.html">b2SimplexVertex</a></li>
+            
+                <li><a href="../classes/b2SolveCollisionCallback.html">b2SolveCollisionCallback</a></li>
+            
+                <li><a href="../classes/b2SolverData.html">b2SolverData</a></li>
+            
+                <li><a href="../classes/b2StackAllocator.html">b2StackAllocator</a></li>
+            
+                <li><a href="../classes/b2StackQueue.html">b2StackQueue</a></li>
+            
+                <li><a href="../classes/b2Sweep.html">b2Sweep</a></li>
+            
+                <li><a href="../classes/b2TempPolygon.html">b2TempPolygon</a></li>
+            
+                <li><a href="../classes/b2TimeOfImpact.html">b2TimeOfImpact</a></li>
+            
+                <li><a href="../classes/b2Timer.html">b2Timer</a></li>
+            
+                <li><a href="../classes/b2TimeStep.html">b2TimeStep</a></li>
+            
+                <li><a href="../classes/b2TOIInput.html">b2TOIInput</a></li>
+            
+                <li><a href="../classes/b2TOIOutput.html">b2TOIOutput</a></li>
+            
+                <li><a href="../classes/b2Transform.html">b2Transform</a></li>
+            
+                <li><a href="../classes/b2TreeNode.html">b2TreeNode</a></li>
+            
+                <li><a href="../classes/b2UpdateBodyContactsCallback.html">b2UpdateBodyContactsCallback</a></li>
+            
+                <li><a href="../classes/b2UserOverridableBuffer.html">b2UserOverridableBuffer</a></li>
+            
+                <li><a href="../classes/b2Vec2.html">b2Vec2</a></li>
+            
+                <li><a href="../classes/b2Vec3.html">b2Vec3</a></li>
+            
+                <li><a href="../classes/b2Vec4.html">b2Vec4</a></li>
+            
+                <li><a href="../classes/b2Velocity.html">b2Velocity</a></li>
+            
+                <li><a href="../classes/b2VelocityConstraintPoint.html">b2VelocityConstraintPoint</a></li>
+            
+                <li><a href="../classes/b2VoronoiDiagram.html">b2VoronoiDiagram</a></li>
+            
+                <li><a href="../classes/b2VoronoiDiagram.generator.html">b2VoronoiDiagram.generator</a></li>
+            
+                <li><a href="../classes/b2VoronoiDiagramTask.html">b2VoronoiDiagramTask</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+                <li><a href="../classes/b2WorldManifold.html">b2WorldManifold</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/addBox2D.html">addBox2D</a></li>
+            
+                <li><a href="../modules/Collision.html">Collision</a></li>
+            
+                <li><a href="../modules/Common.html">Common</a></li>
+            
+                <li><a href="../modules/Contacts.html">Contacts</a></li>
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+                <li><a href="../modules/Math.html">Math</a></li>
+            
+                <li><a href="../modules/Particle.html">Particle</a></li>
+            
+                <li><a href="../modules/ParticleSystem.html">ParticleSystem</a></li>
+            
+                <li><a href="../modules/Rope.html">Rope</a></li>
+            
+                <li><a href="../modules/Shapes.html">Shapes</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>Rope Module</h1>
+<div class="box clearfix meta">
+    
+
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/.._src_addBox2D_Rope_b2RopeDef.js.html#l20"><code>Rope:20</code></a>
+        </div>
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Creates and simulates a Rope by chaining b2RopeJoints together.</p>
+
+</div>
+
+
+
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+        
+            <p>This module provides the following classes:</p>
+
+            <ul class="module-classes">
+            
+                <li class="module-class">
+                    <a href="../classes/b2Rope.html">
+                        b2Rope
+                    </a>
+                </li>
+            
+                <li class="module-class">
+                    <a href="../classes/b2RopeDef.html">
+                        b2RopeDef
+                    </a>
+                </li>
+            
+            </ul>
+        
+    </div>
+
+    <div class="yui3-u-1-2">
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

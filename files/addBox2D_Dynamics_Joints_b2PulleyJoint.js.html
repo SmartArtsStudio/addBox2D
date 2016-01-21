@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : addBox2D\Dynamics\Joints\b2PulleyJoint.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = addBox2D\Dynamics\Joints\b2PulleyJoint.js
+</script>
+<h1 class="file-heading">File:addBox2D\Dynamics\Joints\b2PulleyJoint.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+//################################################################################################//
+//################################################################################################//
+//                                                                                                //
+//             ██    ██████ ██████       ██ ██                ██       ██        ██               //
+//             ██        ██ ██  ██       ██ ██                ██                 ██               //
+//             █████     ██ ██  ██ ██ ██ ██ ██ █████ ██ ██    ██ █████ ██ █████ █████             //
+//             ██ ██ ██████ ██████ ██ ██ ██ ██ ██ ██ ██ ██    ██ ██ ██ ██ ██ ██  ██               //
+//             ██ ██ ██     ██     ██ ██ ██ ██ █████ ██ ██    ██ ██ ██ ██ ██ ██  ██               //
+//             ██ ██ ██     ██     ██ ██ ██ ██ ██    ██ ██    ██ ██ ██ ██ ██ ██  ██               //
+//             █████ ██████ ██     █████ ██ ██ █████ █████ █████ █████ ██ ██ ██  ████             //
+//                                                      ██                                        //
+//                                                   █████                                        //
+//                                                                                                //
+//################################################################################################//
+//################################################################################################//
+
+ // CLASS CONSTRUCTOR
+
+    /**
+     * The pulley joint is connected to two bodies and two fixed ground points.
+     * The pulley supports a ratio such that:
+     * lengthA + ratio * lengthB &lt;= constant
+     * Yes, the force transmitted is scaled by the ratio.
+     *
+     * Warning: the pulley joint can get a bit squirrelly by itself.
+     * They often work better when combined with prismatic joints.
+     * You should also cover the the anchor points with static
+     * shapes to prevent one side from going to zero length.
+     *
+     * @class   b2PulleyJoint
+     * @constructor
+     * @param   {b2PulleyJointDef}  pulleyJointDef
+     * @extends {b2Joint}
+     * @module  Joints
+     */
+    function b2PulleyJoint( pulleyJointDef ) {
+
+        /**
+         * Invokes parent class constructor function reference.
+         */
+        this.constructor( pulleyJointDef );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██████                              ██   ██                                   //
+//                  ██  ██                              ██                                        //
+//                  ██  ██ ████ █████ █████ █████ ████ █████ ██ █████ █████                       //
+//                  ██████ ██   ██ ██ ██ ██ ██ ██ ██    ██   ██ ██ ██ ██                          //
+//                  ██     ██   ██ ██ ██ ██ █████ ██    ██   ██ █████ █████                       //
+//                  ██     ██   ██ ██ ██ ██ ██    ██    ██   ██ ██       ██                       //
+//                  ██     ██   █████ █████ █████ ██    ████ ██ █████ █████                       //
+//                                    ██                                                          //
+//                                    ██                                                          //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // property DECLARATIONS
+
+        /**
+         *
+         * @public
+         * @property  m_groundAnchorA
+         * @type      {b2Vec2}
+         */
+        this.m_groundAnchorA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_groundAnchorB
+         * @type      {b2Vec2}
+         */
+        this.m_groundAnchorB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localAnchorA
+         * @type      {b2Vec2}
+         */
+        this.m_localAnchorA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localAnchorB
+         * @type      {b2Vec2}
+         */
+        this.m_localAnchorB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_uA
+         * @type      {b2Vec2}
+         */
+        this.m_uA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_uB
+         * @type      {b2Vec2}
+         */
+        this.m_uB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_rA
+         * @type      {b2Vec2}
+         */
+        this.m_rA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_rB
+         * @type      {b2Vec2}
+         */
+        this.m_rB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localCenterA
+         * @type      {b2Vec2}
+         */
+        this.m_localCenterA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localCenterB
+         * @type      {b2Vec2}
+         */
+        this.m_localCenterB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_qA
+         * @type      {b2Rot}
+         */
+        this.m_qA = new b2Rot;
+
+        /**
+         *
+         * @public
+         * @property  m_qB
+         * @type      {b2Rot}
+         */
+        this.m_qB = new b2Rot;
+
+        /**
+         *
+         * @public
+         * @property  m_lalcA
+         * @type      {b2Rot}
+         */
+        this.m_lalcA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_lalcB
+         * @type      {b2Rot}
+         */
+        this.m_lalcB = new b2Vec2;
+
+     // property INITIALISATIONS
+
+        this.m_groundAnchorA.x = pulleyJointDef.groundAnchorA.x;
+        this.m_groundAnchorA.y = pulleyJointDef.groundAnchorA.y;
+        this.m_groundAnchorB.x = pulleyJointDef.groundAnchorB.x;
+        this.m_groundAnchorB.y = pulleyJointDef.groundAnchorB.y;
+        this.m_localAnchorA.x = pulleyJointDef.localAnchorA.x;
+        this.m_localAnchorA.y = pulleyJointDef.localAnchorA.y;
+        this.m_localAnchorA.x = pulleyJointDef.localAnchorB.x;
+        this.m_localAnchorA.y = pulleyJointDef.localAnchorB.y;
+
+        /**
+         *
+         * @public
+         * @property  m_lengthA
+         * @type      {float}
+         */
+        this.m_lengthA = pulleyJointDef.lengthA;
+
+        /**
+         *
+         * @public
+         * @property  m_lengthB
+         * @type      {float}
+         */
+        this.m_lengthB = pulleyJointDef.lengthB;
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) { b2Assert( pulleyJointDef.ratio !== 0 ); }
+        /*#end EXPORT_ASSERTS */
+        /**
+         *
+         * @public
+         * @property  m_ratio
+         * @type      {float}
+         */
+        this.m_ratio = pulleyJointDef.ratio;
+
+        /**
+         *
+         * @public
+         * @property  m_constant
+         * @type      {float}
+         */
+        this.m_constant = pulleyJointDef.lengthA + this.m_ratio * pulleyJointDef.lengthB;
+
+        /**
+         *
+         * @public
+         * @property  m_impulse
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_impulse = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexA
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexA = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexB
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexB = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invMassA = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invMassB = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invIA = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invIB = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_mass
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_mass = 0.0;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██       ██               ██  ██                                              //
+//                  ██       ██                   ██                                              //
+//                  ██ █████ █████ █████ ████ ██ █████ █████ █████ █████ █████                    //
+//                  ██ ██ ██ ██ ██ ██ ██ ██   ██  ██      ██ ██ ██ ██    ██ ██                    //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ██   █████ ██ ██ ██    █████                    //
+//                  ██ ██ ██ ██ ██ ██    ██   ██  ██   ██ ██ ██ ██ ██    ██                       //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ████ █████ ██ ██ █████ █████                    //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    } b2PulleyJoint.prototype = p = new b2Joint; Box2D.b2PulleyJoint = b2PulleyJoint;
+
+     // STATIC CLASS PROPERTIES
+
+        b2PulleyJoint.b2_minPulleyLength = 2.0;
+
+        /**
+         * Object pool for memory management.
+         */
+        b2PulleyJoint._B2VEC2_POOL0 = new b2Vec2;
+        b2PulleyJoint._B2VEC2_POOL1 = new b2Vec2;
+        b2PulleyJoint._B2VEC2_POOL2 = new b2Vec2;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                       ██   ██        ██   ██             ██                                    //
+//                       ███ ███        ██   ██             ██                                    //
+//                       ███████ █████ █████ █████ █████ █████ █████                              //
+//                       ██ █ ██ ██ ██  ██   ██ ██ ██ ██ ██ ██ ██                                 //
+//                       ██   ██ █████  ██   ██ ██ ██ ██ ██ ██ █████                              //
+//                       ██   ██ ██     ██   ██ ██ ██ ██ ██ ██    ██                              //
+//                       ██   ██ █████  ████ ██ ██ █████ █████ █████                              //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ // INSTANCE METHODS
+
+    /**
+     * @public
+     * @method  getAnchorB
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getAnchorA = function ( out ) {
+        out = out || b2PulleyJoint._B2VEC2_POOL0;
+        return this.m_bodyA.getWorldPoint( this.m_localAnchorA, out );
+    };
+
+    /**
+     * @public
+     * @method  getAnchorB
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getAnchorB = function ( out ) {
+        out = out || b2PulleyJoint._B2VEC2_POOL0;
+        return this.m_bodyB.getWorldPoint( this.m_localAnchorB, out );
+    };
+
+    /**
+     * @public
+     * @method  getGroundAnchorA
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getGroundAnchorA = function ( out ) {
+        out = out || b2PulleyJoint._B2VEC2_POOL0;
+        return out.copy( this.m_groundAnchorA );
+    };
+
+    /**
+     * @public
+     * @method  getGroundAnchorB
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getGroundAnchorB = function ( out ) {
+        out = out || b2PulleyJoint._B2VEC2_POOL0;
+        return out.copy( this.m_groundAnchorB );
+    };
+
+    /**
+     * Get the current length of the segment attached to bodyA.
+     *
+     * @public
+     * @method  getLengthA
+     * @return  {float}
+     */
+    p.getLengthA = function () {
+        return this.m_lengthA;
+    };
+
+    /**
+     * Get the current length of the segment attached to bodyB.
+     *
+     * @public
+     * @method  getLengthB
+     * @return  {float}
+     */
+    p.getLengthB = function () {
+        return this.m_lengthB;
+    };
+
+    /**
+     * Get the current length of the segment attached to bodyA.
+     *
+     * @public
+     * @method  getCurrentLengthA
+     * @return  {float}
+     */
+    p.getCurrentLengthA = function () {
+        var p = this.m_bodyA.getWorldPoint( this.m_localAnchorA, b2PulleyJoint._B2VEC2_POOL0 );
+        var s = this.m_groundAnchorA;
+        return b2Vec2.distance( p, s );
+    };
+
+    /**
+     * Get the current length of the segment attached to bodyB.
+     *
+     * @public
+     * @method  getCurrentLengthB
+     * @return  {float}
+     */
+    p.getCurrentLengthB = function () {
+        var p = this.m_bodyB.getWorldPoint( this.m_localAnchorB, b2PulleyJoint._B2VEC2_POOL0 );
+        var s = this.m_groundAnchorB;
+        return b2Vec2.distance( p, s );
+    };
+
+    /**
+     * Get the pulley ratio.
+     *
+     * @public
+     * @method  getRatio
+     * @return  {float}
+     */
+    p.getRatio = function () {
+        return this.m_ratio;
+    };
+
+    /**
+     * Get the reaction force given the inverse time step.
+     * Unit is N.
+     *
+     * @public
+     * @method  getReactionForce
+     * @param   {float}     invDeltaTime
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getReactionForce = function ( invDeltaTime, out ) {
+        out = out || b2PulleyJoint._B2VEC2_POOL0;
+        return out.set( invDeltaTime * this.m_impulse * this.m_uB.x, invDeltaTime * this.m_impulse * this.m_uB.y );
+    };
+
+    /**
+     * Get the reaction torque given the inverse time step.
+     * Unit is N*m. This is always zero for a distance joint.
+     *
+     * @public
+     * @method  getReactionTorque
+     * @param   {float}     invDeltaTime
+     * @return  {float}
+     */
+    p.getReactionTorque = function ( invDeltaTime ) {
+        return 0.0;
+    };
+
+    /**
+     * @public
+     * @method  shiftOrigin
+     * @param   {b2Vec2}     newOrigin
+     * @return  {void}
+     */
+    // Implement b2Joint.shiftOrigin
+    p.shiftOrigin = function ( newOrigin ) {
+        this.m_groundAnchorA.minus( newOrigin );
+        this.m_groundAnchorB.minus( newOrigin );
+    };
+
+    /**
+     * @public
+     * @override
+     * @method  initVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.initVelocityConstraints
+    p.initVelocityConstraints = function ( data ) {
+        this.m_indexA = this.m_bodyA.m_islandIndex;
+        this.m_indexB = this.m_bodyB.m_islandIndex;
+        this.m_localCenterA.copy(this.m_bodyA.m_sweep.localCenter);
+        this.m_localCenterB.copy(this.m_bodyB.m_sweep.localCenter);
+        this.m_invMassA = this.m_bodyA.m_invMass;
+        this.m_invMassB = this.m_bodyB.m_invMass;
+        this.m_invIA = this.m_bodyA.m_invI;
+        this.m_invIB = this.m_bodyB.m_invI;
+
+        /*b2Vec2&amp;*/ var cA = data.positions[this.m_indexA].c;
+        /*float32*/ var aA = data.positions[this.m_indexA].a;
+        /*b2Vec2&amp;*/ var vA = data.velocities[this.m_indexA].v;
+        /*float32*/ var wA = data.velocities[this.m_indexA].w;
+
+        /*b2Vec2&amp;*/ var cB = data.positions[this.m_indexB].c;
+        /*float32*/ var aB = data.positions[this.m_indexB].a;
+        /*b2Vec2&amp;*/ var vB = data.velocities[this.m_indexB].v;
+        /*float32*/ var wB = data.velocities[this.m_indexB].w;
+
+        //	b2Rot qA(aA), qB(aB);
+        /*b2Rot*/ var qA = this.m_qA.setAngle(aA), qB = this.m_qB.setAngle(aB);
+
+        //	m_rA = b2Mul(qA, m_localAnchorA - m_localCenterA);
+        b2Vec2.subtract(this.m_localAnchorA, this.m_localCenterA, this.m_lalcA);
+        b2Rot.timesV2(qA, this.m_lalcA, this.m_rA);
+        //	m_rB = b2Mul(qB, m_localAnchorB - m_localCenterB);
+        b2Vec2.subtract(this.m_localAnchorB, this.m_localCenterB, this.m_lalcB);
+        b2Rot.timesV2(qB, this.m_lalcB, this.m_rB);
+
+        // Get the pulley axes.
+        //	m_uA = cA + m_rA - m_groundAnchorA;
+        this.m_uA.copy(cA).plus(this.m_rA).minus(this.m_groundAnchorA);
+        //	m_uB = cB + m_rB - m_groundAnchorB;
+        this.m_uB.copy(cB).plus(this.m_rB).minus(this.m_groundAnchorB);
+
+        /*float32*/ var lengthA = this.m_uA.length();
+        /*float32*/ var lengthB = this.m_uB.length();
+
+        if ( lengthA &gt; 10 * b2Settings.b2_linearSlop ) {
+            this.m_uA.times( 1 / lengthA );
+        }
+        else {
+            this.m_uA.setZero();
+        }
+
+        if ( lengthB &gt; 10 * b2Settings.b2_linearSlop ) {
+            this.m_uB.times( 1 / lengthB );
+        }
+        else {
+            this.m_uB.setZero();
+        }
+
+            // Compute effective mass.
+            /*float32*/ var ruA = b2Vec2.cross(this.m_rA, this.m_uA);
+            /*float32*/ var ruB = b2Vec2.cross(this.m_rB, this.m_uB);
+
+            /*float32*/ var mA = this.m_invMassA + this.m_invIA * ruA * ruA;
+            /*float32*/ var mB = this.m_invMassB + this.m_invIB * ruB * ruB;
+
+            this.m_mass = mA + this.m_ratio * this.m_ratio * mB;
+
+        if ( this.m_mass &gt; 0 ) {
+            this.m_mass = 1 / this.m_mass;
+        }
+
+        if ( data.step.warmStarting ) {
+                // Scale impulses to support variable time steps.
+                this.m_impulse *= data.step.dtRatio;
+
+                // Warm starting.
+                // b2Vec2 PA = -(m_impulse) * m_uA;
+                var PA = b2Vec2.numTimes(-(this.m_impulse), this.m_uA, b2PulleyJoint._B2VEC2_POOL0 );
+                // b2Vec2 PB = (-m_ratio * m_impulse) * m_uB;
+                var PB = b2Vec2.numTimes((-this.m_ratio * this.m_impulse), this.m_uB, b2PulleyJoint._B2VEC2_POOL1 );
+
+                // vA += m_invMassA * PA;
+                vA.plusEqualsMul(this.m_invMassA, PA);
+                wA += this.m_invIA * b2Vec2.cross(this.m_rA, PA);
+                // vB += m_invMassB * PB;
+                vB.plusEqualsMul(this.m_invMassB, PB);
+                wB += this.m_invIB * b2Vec2.cross(this.m_rB, PB);
+        }
+        else {
+            this.m_impulse = 0;
+        }
+            // data.velocities[this.m_indexA].v = vA;
+            data.velocities[this.m_indexA].w = wA;
+            // data.velocities[this.m_indexB].v = vB;
+            data.velocities[this.m_indexB].w = wB;
+    };
+
+    /**
+     *
+     * @public
+     * @override
+     * @method  solveVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solveVelocityConstraints
+    p.solveVelocityConstraints = function ( data ) {
+        /*b2Vec2&amp;*/ var vA = data.velocities[this.m_indexA].v;
+        /*float32*/ var wA = data.velocities[this.m_indexA].w;
+        /*b2Vec2&amp;*/ var vB = data.velocities[this.m_indexB].v;
+        /*float32*/ var wB = data.velocities[this.m_indexB].w;
+
+        // b2Vec2 vpA = vA + b2Cross(wA, m_rA);
+        var vpA = b2Vec2.vPlusCrossFV(vA, wA, this.m_rA, b2PulleyJoint._B2VEC2_POOL0);
+        // b2Vec2 vpB = vB + b2Cross(wB, m_rB);
+        var vpB = b2Vec2.vPlusCrossFV(vB, wB, this.m_rB, b2PulleyJoint._B2VEC2_POOL1);
+
+        /*float32*/ var Cdot = -b2Vec2.dot(this.m_uA, vpA) - this.m_ratio * b2Vec2.dot(this.m_uB, vpB);
+        /*float32*/ var impulse = -this.m_mass * Cdot;
+        this.m_impulse += impulse;
+
+        // b2Vec2 PA = -impulse * m_uA;
+        var PA = b2Vec2.numTimes(-impulse, this.m_uA, b2PulleyJoint._B2VEC2_POOL2);
+        // b2Vec2 PB = -m_ratio * impulse * m_uB;
+        var PB = b2Vec2.numTimes(-this.m_ratio * impulse, this.m_uB, b2PulleyJoint._B2VEC2_POOL3);
+        // vA += m_invMassA * PA;
+        vA.plusEqualsMul(this.m_invMassA, PA);
+        wA += this.m_invIA * b2Vec2.cross(this.m_rA, PA);
+        // vB += m_invMassB * PB;
+        vB.plusEqualsMul(this.m_invMassB, PB);
+        wB += this.m_invIB * b2Vec2.cross(this.m_rB, PB);
+
+        // data.velocities[this.m_indexA].v = vA;
+        data.velocities[this.m_indexA].w = wA;
+        // data.velocities[this.m_indexB].v = vB;
+        data.velocities[this.m_indexB].w = wB;
+    };
+
+    /**
+     * @public
+     * @override
+     * @method  solvePositionConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solvePositionConstraints
+    p.solvePositionConstraints = function ( data ) {
+        /*b2Vec2&amp;*/ var cA = data.positions[this.m_indexA].c;
+        /*float32*/ var aA = data.positions[this.m_indexA].a;
+        /*b2Vec2&amp;*/ var cB = data.positions[this.m_indexB].c;
+        /*float32*/ var aB = data.positions[this.m_indexB].a;
+
+        // b2Rot qA(aA), qB(aB);
+        /*b2Rot*/ var qA = this.m_qA.setAngle(aA), qB = this.m_qB.setAngle(aB);
+
+        // b2Vec2 rA = b2Mul(qA, m_localAnchorA - m_localCenterA);
+        b2Vec2.subtract(this.m_localAnchorA, this.m_localCenterA, this.m_lalcA);
+        var rA = b2Rot.timesV2(qA, this.m_lalcA, this.m_rA);
+        // b2Vec2 rB = b2Mul(qB, m_localAnchorB - m_localCenterB);
+        b2Vec2.subtract(this.m_localAnchorB, this.m_localCenterB, this.m_lalcB);
+        var rB = b2Rot.timesV2(qB, this.m_lalcB, this.m_rB);
+
+        // Get the pulley axes.
+        // b2Vec2 uA = cA + rA - m_groundAnchorA;
+        var uA = this.m_uA.copy(cA).plus(rA).minus(this.m_groundAnchorA);
+        // b2Vec2 uB = cB + rB - m_groundAnchorB;
+        var uB = this.m_uB.copy(cB).plus(rB).minus(this.m_groundAnchorB);
+
+        /*float32*/ var lengthA = uA.length();
+        /*float32*/ var lengthB = uB.length();
+
+        if ( lengthA &gt; 10 * b2Settings.b2_linearSlop ) {
+            uA.times( 1 / lengthA );
+        }
+        else {
+            uA.setZero();
+        }
+
+        if ( lengthB &gt; 10 * b2Settings.b2_linearSlop ) {
+            uB.times( 1 / lengthB );
+        }
+        else {
+            uB.setZero();
+        }
+
+        // Compute effective mass.
+        /*float32*/ var ruA = b2Vec2.cross(rA, uA);
+        /*float32*/ var ruB = b2Vec2.cross(rB, uB);
+
+        /*float32*/ var mA = this.m_invMassA + this.m_invIA * ruA * ruA;
+        /*float32*/ var mB = this.m_invMassB + this.m_invIB * ruB * ruB;
+
+        /*float32*/ var mass = mA + this.m_ratio * this.m_ratio * mB;
+
+        if ( mass &gt; 0 ) {
+            mass = 1 / mass;
+        }
+
+        /*float32*/ var C = this.m_constant - lengthA - this.m_ratio * lengthB;
+        /*float32*/ var linearError = Math.abs(C);
+
+        /*float32*/ var impulse = -mass * C;
+
+        // b2Vec2 PA = -impulse * uA;
+        var PA = b2Vec2.numTimes(-impulse, uA, b2PulleyJoint._B2VEC2_POOL0);
+        // b2Vec2 PB = -m_ratio * impulse * uB;
+        var PB = b2Vec2.numTimes(-this.m_ratio * impulse, uB, b2PulleyJoint._B2VEC2_POOL1);
+
+        // cA += m_invMassA * PA;
+        cA.plusEqualsMul(this.m_invMassA, PA);
+        aA += this.m_invIA * b2Vec2.cross(rA, PA);
+        // cB += m_invMassB * PB;
+        cB.plusEqualsMul(this.m_invMassB, PB);
+        aB += this.m_invIB * b2Vec2.cross(rB, PB);
+
+        // data.positions[this.m_indexA].c = cA;
+        data.positions[this.m_indexA].a = aA;
+        // data.positions[this.m_indexB].c = cB;
+        data.positions[this.m_indexB].a = aB;
+
+        return linearError &lt; b2Settings.b2_linearSlop;
+    };
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

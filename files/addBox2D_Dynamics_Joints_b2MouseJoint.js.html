@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : addBox2D\Dynamics\Joints\b2MouseJoint.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = addBox2D\Dynamics\Joints\b2MouseJoint.js
+</script>
+<h1 class="file-heading">File:addBox2D\Dynamics\Joints\b2MouseJoint.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+//################################################################################################//
+//################################################################################################//
+//                                                                                                //
+//            ██    ██████ ██   ██                            ██       ██        ██               //
+//            ██        ██ ███ ███                            ██                 ██               //
+//            █████     ██ ███████ █████ ██ ██ █████ █████    ██ █████ ██ █████ █████             //
+//            ██ ██ ██████ ██ █ ██ ██ ██ ██ ██ ██    ██ ██    ██ ██ ██ ██ ██ ██  ██               //
+//            ██ ██ ██     ██   ██ ██ ██ ██ ██ █████ █████    ██ ██ ██ ██ ██ ██  ██               //
+//            ██ ██ ██     ██   ██ ██ ██ ██ ██    ██ ██       ██ ██ ██ ██ ██ ██  ██               //
+//            █████ ██████ ██   ██ █████ █████ █████ █████ █████ █████ ██ ██ ██  ████             //
+//                                                                                                //
+//################################################################################################//
+//################################################################################################//
+
+ // CLASS CONSTRUCTOR
+
+    /**
+     * A mouse joint is used to make a point on a body track a
+     * specified world point. This a soft constraint with a maximum
+     * force. This allows the constraint to stretch and without
+     * applying huge forces.
+     *
+     * NOTE: this joint is not documented in the manual because it
+     * was developed to be used in the testbed. If you want to learn
+     * how to use the mouse joint, look at the testbed.
+     *
+     * @class   b2MouseJoint
+     * @constructor
+     * @param   {b2MouseJointDef}  mouseJointDef
+     * @extends {b2Joint}
+     * @module  Joints
+     */
+    function b2MouseJoint( mouseJointDef ) {
+
+        /**
+         *Invoke parent class constructor function reference.
+         */
+        this.constructor( mouseJointDef );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██████                              ██   ██                                   //
+//                  ██  ██                              ██                                        //
+//                  ██  ██ ████ █████ █████ █████ ████ █████ ██ █████ █████                       //
+//                  ██████ ██   ██ ██ ██ ██ ██ ██ ██    ██   ██ ██ ██ ██                          //
+//                  ██     ██   ██ ██ ██ ██ █████ ██    ██   ██ █████ █████                       //
+//                  ██     ██   ██ ██ ██ ██ ██    ██    ██   ██ ██       ██                       //
+//                  ██     ██   █████ █████ █████ ██    ████ ██ █████ █████                       //
+//                                    ██                                                          //
+//                                    ██                                                          //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // property DECLARATIONS
+
+        /**
+         *
+         * @public
+         * @property  m_K
+         * @type      {b2Mat22}
+         */
+        this.m_K = new b2Mat22;
+
+        /**
+         *
+         * @public
+         * @property  m_mass
+         * @type      {b2Mat22}
+         */
+        this.m_mass = new b2Mat22;
+
+        /**
+         *
+         * @public
+         * @property  m_localAnchorB
+         * @type      {b2Vec2}
+         */
+        this.m_localAnchorB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_targetA
+         * @type      {b2Vec2}
+         */
+        this.m_targetA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_impulse
+         * @type      {b2Vec2}
+         */
+        this.m_impulse = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_rB
+         * @type      {b2Vec2}
+         */
+        this.m_rB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localCenterB
+         * @type      {b2Vec2}
+         */
+        this.m_localCenterB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_C
+         * @type      {b2Vec2}
+         */
+        this.m_C = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_qB
+         * @type      {b2Rot}
+         */
+        this.m_qB = new b2Rot();
+
+        /**
+         *
+         * @public
+         * @property  m_lalcB
+         * @type      {b2Vec2}
+         */
+        this.m_lalcB = new b2Vec2;
+        /*##if EXPORT_ASSERTS */
+        if ( b2Settings.ASSERTS_ENABLED ) {
+            b2Assert( mouseJointDef.target.isValid() );
+            b2Assert( isFinite( mouseJointDef.maxForce ) &amp;&amp; mouseJointDef.maxForce &gt;= 0 );
+            b2Assert( isFinite( mouseJointDef.frequencyHz ) &amp;&amp; mouseJointDef.frequencyHz &gt;= 0 );
+            b2Assert( isFinite( mouseJointDef.dampingRatio ) &amp;&amp; mouseJointDef.dampingRatio &gt;= 0 );
+        }/*#*/
+
+     // property INITIALISATIONS
+
+        this.m_targetA.copy( mouseJointDef.target );
+        b2Transform.tTimesV2( this.m_bodyB.getTransform(), this.m_targetA, this.m_localAnchorB );
+        this.m_impulse.setZero();
+
+        /**
+         *
+         * @public
+         * @property  m_maxForce
+         * @type      {float}
+         */
+        this.m_maxForce = mouseJointDef.maxForce;
+
+        /**
+         *
+         * @public
+         * @property  m_frequencyHz
+         * @type      {float}
+         */
+        this.m_frequencyHz = mouseJointDef.frequencyHz;
+
+        /**
+         *
+         * @public
+         * @property  m_dampingRatio
+         * @type      {float}
+         */
+        this.m_dampingRatio = mouseJointDef.dampingRatio;
+
+        /**
+         *
+         * @public
+         * @property  m_beta
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_beta = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_gamma
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_gamma = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexA
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexA = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexB
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexB = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_invMassB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invMassB = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_invIB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invIB = 0.0;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██       ██               ██  ██                                              //
+//                  ██       ██                   ██                                              //
+//                  ██ █████ █████ █████ ████ ██ █████ █████ █████ █████ █████                    //
+//                  ██ ██ ██ ██ ██ ██ ██ ██   ██  ██      ██ ██ ██ ██    ██ ██                    //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ██   █████ ██ ██ ██    █████                    //
+//                  ██ ██ ██ ██ ██ ██    ██   ██  ██   ██ ██ ██ ██ ██    ██                       //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ████ █████ ██ ██ █████ █████                    //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    } b2MouseJoint.prototype = p = new b2Joint(); Box2D.b2MouseJoint = b2MouseJoint;
+
+     // STATIC CLASS PROPERTIES
+
+        /**
+         * Object pool for memory management.
+         */
+        b2MouseJoint._B2VEC2_POOL0 = new b2Vec2;
+        b2MouseJoint._B2VEC2_POOL1 = new b2Vec2;
+        b2MouseJoint._B2VEC2_POOL2 = new b2Vec2;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                       ██   ██        ██   ██             ██                                    //
+//                       ███ ███        ██   ██             ██                                    //
+//                       ███████ █████ █████ █████ █████ █████ █████                              //
+//                       ██ █ ██ ██ ██  ██   ██ ██ ██ ██ ██ ██ ██                                 //
+//                       ██   ██ █████  ██   ██ ██ ██ ██ ██ ██ █████                              //
+//                       ██   ██ ██     ██   ██ ██ ██ ██ ██ ██    ██                              //
+//                       ██   ██ █████  ████ ██ ██ █████ █████ █████                              //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ // INSTANCE METHODS
+
+    /**
+     * @public
+     * @method  getAnchorB
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getAnchorA = function ( out ) {
+        out = out || b2MouseJoint._B2VEC2_POOL0;
+        return out.copy( this.m_targetA );
+    };
+
+    /**
+     * @public
+     * @method  getAnchorB
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getAnchorB = function ( out ) {
+        out = out || b2MouseJoint._B2VEC2_POOL0;
+        return this.m_bodyB.getWorldPoint( this.m_localAnchorB, out );
+    };
+
+    /**
+     * Get the reaction force given the inverse time step.
+     * Unit is N.
+     *
+     * @public
+     * @method  getReactionForce
+     * @param   {float}     invDeltaTime
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getReactionForce = function ( invDeltaTime, out ) {
+        out = out || b2MouseJoint._B2VEC2_POOL0;
+        return b2Vec2.numTimes( invDeltaTime, this.m_impulse, out );
+    };
+
+    /**
+     * Get the reaction torque given the inverse time step.
+     * Unit is N*m. This is always zero for a distance joint.
+     *
+     * @public
+     * @method  getReactionTorque
+     * @param   {float}     invDeltaTime
+     * @return  {float}
+     */
+    p.getReactionTorque = function ( invDeltaTime ) {
+        return 0;
+    };
+
+    /**
+     * @public
+     * @method  setTarget
+     * @param   {float}     target
+     * @return  {float}
+     */
+    p.setTarget = function ( target ) {
+        if ( !this.m_bodyB.isAwake() ) {
+            this.m_bodyB.setAwake( true );
+        }
+        this.m_targetA.copy( target );
+    };
+
+    /**
+     * @public
+     * @method  getTarget
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getTarget = function ( out ) {
+        out = out || b2MouseJoint._B2VEC2_POOL0;
+        return out.copy( this.m_targetA );
+    };
+
+    /**
+     * Set the target angular offset, in radians.
+     *
+     * @public
+     * @method  setDampingRatio
+     * @param   {float}     ratio
+     * @return  {float}
+     */
+    p.setDampingRatio = function ( ratio ) {
+        this.m_dampingRatio = ratio;
+    };
+
+    /**
+     * Get the target angular offset, in radians.
+     *
+     * @public
+     * @method  getDampingRatio
+     * @return  {float}
+     */
+    p.getDampingRatio = function () {
+        return this.m_dampingRatio;
+    };
+
+    /**
+     * @public
+     * @method  setMaxForce
+     * @param   {float}     maxForce
+     * @return  {float}
+     */
+    p.setMaxForce = function ( maxForce ) {
+        this.m_maxForce = maxForce;
+    };
+
+    /**
+     * Get the maximum friction force in N.
+     *
+     * @public
+     * @method  getMaxForce
+     * @return  {float}
+     */
+    p.getMaxForce = function () {
+        return this.m_maxForce;
+    };
+
+    /**
+     * @public
+     * @method  setFrequency
+     * @param   {float}     hz
+     * @return  {float}
+     */
+    p.setFrequency = function ( hz ) {
+        this.m_frequencyHz = hz;
+    };
+
+    /**
+     * @public
+     * @method  getFrequency
+     * @return  {float}
+     */
+    p.getFrequency = function () {
+        return this.m_frequencyHz;
+    };
+
+    /**
+     * @public
+     * @method  shiftOrigin
+     * @param   {float}     newOrigin
+     * @return  {float}
+     */
+        // Implement b2Joint.shiftOrigin
+    p.shiftOrigin = function ( newOrigin ) {
+        this.m_targetA.minus( newOrigin );
+    };
+
+    /**
+     * @public
+     * @override
+     * @method  initVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.initVelocityConstraints
+    p.initVelocityConstraints = function ( data ) {
+        	this.m_indexB = this.m_bodyB.m_islandIndex;
+        	this.m_localCenterB.copy(this.m_bodyB.m_sweep.localCenter);
+        	this.m_invMassB = this.m_bodyB.m_invMass;
+        	this.m_invIB = this.m_bodyB.m_invI;
+
+        	/*b2Vec2&amp;*/ var cB = data.positions[this.m_indexB].c;
+        	/*float32*/ var aB = data.positions[this.m_indexB].a;
+        	/*b2Vec2&amp;*/ var vB = data.velocities[this.m_indexB].v;
+        	/*float32*/ var wB = data.velocities[this.m_indexB].w;
+
+        	var qB = this.m_qB.setAngle(aB);
+
+        	/*float32*/ var mass = this.m_bodyB.getMass();
+
+        	// Frequency
+        	/*float32*/ var omega = 2 * Math.PI * this.m_frequencyHz;
+
+        	// Damping coefficient
+        	/*float32*/ var d = 2 * mass * this.m_dampingRatio * omega;
+
+        	// Spring stiffness
+        	/*float32*/ var k = mass * (omega * omega);
+
+        	// magic formulas
+        	// gamma has units of inverse mass.
+        	// beta has units of inverse time.
+        	/*float32*/ var h = data.step.dt;
+        	/*##if EXPORT_ASSERTS */
+        	if (b2Settings.ASSERTS_ENABLED) { b2Assert(d + h * k &gt; b2Settings.b2_epsilon); }
+            /*#end EXPORT_ASSERTS */
+        	this.m_gamma = h * (d + h * k);
+        	if (this.m_gamma !== 0)
+        	{
+        		this.m_gamma = 1 / this.m_gamma;
+        	}
+        	this.m_beta = h * k * this.m_gamma;
+
+        	// Compute the effective mass matrix.
+        	b2Vec2.subtract(this.m_localAnchorB, this.m_localCenterB, this.m_lalcB);
+        	b2Rot.timesV2(qB, this.m_lalcB, this.m_rB);
+
+        	// K    = [(1/m1 + 1/m2) * eye(2) - skew(r1) * invI1 * skew(r1) - skew(r2) * invI2 * skew(r2)]
+        	//      = [1/m1+1/m2     0    ] + invI1 * [r1.y*r1.y -r1.x*r1.y] + invI2 * [r1.y*r1.y -r1.x*r1.y]
+        	//        [    0     1/m1+1/m2]           [-r1.x*r1.y r1.x*r1.x]           [-r1.x*r1.y r1.x*r1.x]
+        	var K = this.m_K;
+        	K.ex.x = this.m_invMassB + this.m_invIB * this.m_rB.y * this.m_rB.y + this.m_gamma;
+        	K.ex.y = -this.m_invIB * this.m_rB.x * this.m_rB.y;
+        	K.ey.x = K.ex.y;
+        	K.ey.y = this.m_invMassB + this.m_invIB * this.m_rB.x * this.m_rB.x + this.m_gamma;
+
+        	K.getInverse(this.m_mass);
+
+            // m_C = cB + m_rB - m_targetA;
+        	this.m_C.x = cB.x + this.m_rB.x - this.m_targetA.x;
+        	this.m_C.y = cB.y + this.m_rB.y - this.m_targetA.y;
+            // m_C *= m_beta;
+        	this.m_C.times(this.m_beta);
+
+        	// Cheat with some damping
+        	wB *= 0.98;
+
+        	if (data.step.warmStarting)
+        	{
+        		this.m_impulse.times(data.step.dtRatio);
+            // vB += m_invMassB * m_impulse;
+        		vB.x += this.m_invMassB * this.m_impulse.x;
+        		vB.y += this.m_invMassB * this.m_impulse.y;
+        		wB += this.m_invIB * b2Vec2.cross(this.m_rB, this.m_impulse);
+        	}
+        	else
+        	{
+        		this.m_impulse.setZero();
+        	}
+
+            // data.velocities[this.m_indexB].v = vB;
+        	data.velocities[this.m_indexB].w = wB;
+    };
+
+    /**
+     *
+     * @public
+     * @override
+     * @method  solveVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solveVelocityConstraints
+    p.solveVelocityConstraints = function ( data ) {
+        	/*b2Vec2&amp;*/ var vB = data.velocities[this.m_indexB].v;
+        	/*float32*/ var wB = data.velocities[this.m_indexB].w;
+
+        	// Cdot = v + cross(w, r)
+        //	b2Vec2 Cdot = vB + b2Cross(wB, m_rB);
+        	var Cdot = b2Vec2.vPlusCrossFV(vB, wB, this.m_rB, b2MouseJoint._B2VEC2_POOL0);
+        //	b2Vec2 impulse = b2Mul(m_mass, -(Cdot + m_C + m_gamma * m_impulse));
+        	var impulse = b2Mat22.timesV2(
+        		this.m_mass,
+        		b2Vec2.add(
+        			Cdot,
+        			b2Vec2.add(this.m_C,
+        				b2Vec2.numTimes(this.m_gamma, this.m_impulse, b2Vec2.POOL0),
+        				b2Vec2.POOL0),
+        			b2Vec2.POOL0).negative(),
+                b2MouseJoint._B2VEC2_POOL1);
+
+        //	b2Vec2 oldImpulse = m_impulse;
+        	var oldImpulse = b2MouseJoint._B2VEC2_POOL2.copy(this.m_impulse);
+        //	m_impulse += impulse;
+        	this.m_impulse.plus(impulse);
+        	/*float32*/ var maxImpulse = data.step.dt * this.m_maxForce;
+        	if (this.m_impulse.lengthSquared() &gt; maxImpulse * maxImpulse)
+        	{
+        		this.m_impulse.times(maxImpulse / this.m_impulse.length());
+        	}
+        //	impulse = m_impulse - oldImpulse;
+        	b2Vec2.subtract(this.m_impulse, oldImpulse, impulse);
+
+        //	vB += m_invMassB * impulse;
+        vB.plusEqualsMul( this.m_invMassB, impulse );
+        wB += this.m_invIB * b2Vec2.cross( this.m_rB, impulse );
+
+        //	data.velocities[this.m_indexB].v = vB;
+        data.velocities[this.m_indexB].w = wB;
+    };
+
+    /**
+     * @public
+     * @override
+     * @method  solvePositionConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solvePositionConstraints
+    p.solvePositionConstraints = function ( data ) {
+        return true;
+    };
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : addBox2D\Dynamics\Joints\b2FrictionJoint.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = addBox2D\Dynamics\Joints\b2FrictionJoint.js
+</script>
+<h1 class="file-heading">File:addBox2D\Dynamics\Joints\b2FrictionJoint.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+//################################################################################################//
+//################################################################################################//
+//                                                                                                //
+//       ██    ██████ ██████      ██        ██   ██                ██       ██        ██          //
+//       ██        ██ ██                    ██                     ██                 ██          //
+//       █████     ██ ██     ████ ██ █████ █████ ██ █████ █████    ██ █████ ██ █████ █████        //
+//       ██ ██ ██████ █████  ██   ██ ██     ██   ██ ██ ██ ██ ██    ██ ██ ██ ██ ██ ██  ██          //
+//       ██ ██ ██     ██     ██   ██ ██     ██   ██ ██ ██ ██ ██    ██ ██ ██ ██ ██ ██  ██          //
+//       ██ ██ ██     ██     ██   ██ ██     ██   ██ ██ ██ ██ ██    ██ ██ ██ ██ ██ ██  ██          //
+//       █████ ██████ ██     ██   ██ █████  ████ ██ █████ ██ ██ █████ █████ ██ ██ ██  ████        //
+//                                                                                                //
+//################################################################################################//
+//################################################################################################//
+
+ // CLASS CONSTRUCTOR
+
+    /**
+     * Friction joint. This is used for top-down friction. It
+     * provides 2D translational friction and angular friction.
+     *
+     * @class   b2FrictionJoint
+     * @constructor
+     * @param   {b2FrictionJointDef}  frictionJointDef
+     * @extends {b2Joint}
+     * @module  Joints
+     */
+    //TODO: test b2FrictionJoint. Ported but not yet tested.
+    function b2FrictionJoint( frictionJointDef ) {
+
+        /**
+         * Invokes parent class constructor function reference.
+         */
+        this.constructor( frictionJointDef );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██████                              ██   ██                                   //
+//                  ██  ██                              ██                                        //
+//                  ██  ██ ████ █████ █████ █████ ████ █████ ██ █████ █████                       //
+//                  ██████ ██   ██ ██ ██ ██ ██ ██ ██    ██   ██ ██ ██ ██                          //
+//                  ██     ██   ██ ██ ██ ██ █████ ██    ██   ██ █████ █████                       //
+//                  ██     ██   ██ ██ ██ ██ ██    ██    ██   ██ ██       ██                       //
+//                  ██     ██   █████ █████ █████ ██    ████ ██ █████ █████                       //
+//                                    ██                                                          //
+//                                    ██                                                          //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // property DECLARATIONS
+
+        /**
+         * @public
+         * @property  m_localAnchorA
+         * @type      {b2Vec2}
+         */
+        this.m_localAnchorA = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_localAnchorB
+         * @type      {b2Vec2}
+         */
+        this.m_localAnchorB = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_linearImpulse
+         * @type      {b2Vec2}
+         */
+        this.m_linearImpulse = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_linearMass
+         * @type      {b2Mat22}
+         */
+        this.m_linearMass = new b2Mat22;
+
+        /**
+         * @public
+         * @property  m_rA
+         * @type      {b2Vec2}
+         */
+        this.m_rA = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_rB
+         * @type      {b2Vec2}
+         */
+        this.m_rB = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_localCenterA
+         * @type      {b2Vec2}
+         */
+        this.m_localCenterA = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_localCenterB
+         * @type      {b2Vec2}
+         */
+        this.m_localCenterB = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_qA
+         * @type      {b2Rot}
+         */
+        this.m_qA = new b2Rot;
+
+        /**
+         * @public
+         * @property  m_qB
+         * @type      {b2Rot}
+         */
+        this.m_qB = new b2Rot;
+
+        /**
+         * @public
+         * @property  m_lalcA
+         * @type      {b2Vec2}
+         */
+        this.m_lalcA = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_lalcB
+         * @type      {b2Vec2}
+         */
+        this.m_lalcB = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_K
+         * @type      {b2Mat22}
+         */
+        this.m_K = new b2Mat22;
+
+    // property INITIALISATIONS
+
+        this.m_localAnchorA.copy( frictionJointDef.localAnchorA );
+        this.m_localAnchorB.copy( frictionJointDef.localAnchorB );
+        this.m_linearMass.setZero();
+        this.m_linearImpulse.setZero();
+
+        /**
+         * @public
+         * @property  m_maxForce
+         * @type      {float}
+         */
+        this.m_maxForce = frictionJointDef.maxForce;
+
+        /**
+         * @public
+         * @property  m_maxTorque
+         * @type      {float}
+         */
+        this.m_maxTorque = frictionJointDef.maxTorque;
+
+        /**
+         *
+         * @public
+         * @property  m_angularMass
+         * @type      {number}
+         * @default   0
+         */
+        this.m_angularMass = 0.0;
+
+        /**
+         * @public
+         * @property  m_angularImpulse
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_angularImpulse = 0.0;
+
+     // Solver temp
+
+        /**
+         * @public
+         * @property  m_indexA
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexA = 0;
+
+        /**
+         * @public
+         * @property  m_indexB
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexB = 0;
+
+        /**
+         * @public
+         * @property  m_invMassA
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invMassA = 0.0;
+
+        /**
+         * @public
+         * @property  m_invMassB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invMassB = 0.0;
+
+        /**
+         * @public
+         * @property  m_invIA
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invIA = 0.0;
+
+        /**
+         * @public
+         * @property  m_invIB
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_invIB = 0.0;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██       ██               ██  ██                                              //
+//                  ██       ██                   ██                                              //
+//                  ██ █████ █████ █████ ████ ██ █████ █████ █████ █████ █████                    //
+//                  ██ ██ ██ ██ ██ ██ ██ ██   ██  ██      ██ ██ ██ ██    ██ ██                    //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ██   █████ ██ ██ ██    █████                    //
+//                  ██ ██ ██ ██ ██ ██    ██   ██  ██   ██ ██ ██ ██ ██    ██                       //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ████ █████ ██ ██ █████ █████                    //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    } b2FrictionJoint.prototype = p = new b2Joint(); Box2D.b2FrictionJoint = b2FrictionJoint;
+
+     // STATIC CLASS PROPERTIES
+
+        /**
+         * Object pool for memory management.
+         */
+        b2FrictionJoint._B2VEC2_POOL0 = new b2Vec2;
+        b2FrictionJoint._B2VEC2_POOL1 = new b2Vec2;
+        b2FrictionJoint._B2VEC2_POOL2 = new b2Vec2;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                       ██   ██        ██   ██             ██                                    //
+//                       ███ ███        ██   ██             ██                                    //
+//                       ███████ █████ █████ █████ █████ █████ █████                              //
+//                       ██ █ ██ ██ ██  ██   ██ ██ ██ ██ ██ ██ ██                                 //
+//                       ██   ██ █████  ██   ██ ██ ██ ██ ██ ██ █████                              //
+//                       ██   ██ ██     ██   ██ ██ ██ ██ ██ ██    ██                              //
+//                       ██   ██ █████  ████ ██ ██ █████ █████ █████                              //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ // INSTANCE METHODS
+
+    /**
+     * @public
+     * @override
+     * @method  solvePositionConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solvePositionConstraints
+    p.solvePositionConstraints = function ( data ) {
+        return true;
+    };
+
+    /**
+     * @public
+     * @method  getAnchorA
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getAnchorA = function ( out ) {
+        out = out || b2FrictionJoint._B2VEC2_POOL0;
+        return this.m_bodyA.getWorldPoint( this.m_localAnchorA, out );
+    };
+
+    /**
+     * @public
+     * @method  getAnchorB
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getAnchorB = function ( out ) {
+        out = out || b2FrictionJoint._B2VEC2_POOL0;
+        return this.m_bodyB.getWorldPoint( this.m_localAnchorB, out );
+    };
+
+    /**
+     * Get the reaction force given the inverse time step.
+     * Unit is N.
+     *
+     * @public
+     * @method  getReactionForce
+     * @param   {float}     invDeltaTime
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getReactionForce = function ( invDeltaTime, out ) {
+        out = out || b2FrictionJoint._B2VEC2_POOL0;
+        return out.set( invDeltaTime * this.m_linearImpulse.x, invDeltaTime * this.m_linearImpulse.y );
+    };
+
+    /**
+     * Get the reaction torque given the inverse time step.
+     * Unit is N*m. This is always zero for a distance joint.
+     *
+     * @public
+     * @method  getReactionTorque
+     * @param   {float}     invDeltaTime
+     * @return  {float}
+     */
+    p.getReactionTorque = function ( invDeltaTime ) {
+        return invDeltaTime * this.m_angularImpulse;
+    };
+
+    /**
+     * The local anchor point relative to bodyA&#x27;s origin.
+     *
+     * @public
+     * @method  getLocalAnchorA
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getLocalAnchorA = function ( out ) {
+        out = out || b2FrictionJoint._B2VEC2_POOL0;
+        return out.copy( this.m_localAnchorA );
+    };
+
+    /**
+     * The local anchor point relative to bodyB&#x27;s origin.
+     *
+     * @public
+     * @method  getLocalAnchorB
+     * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+     * @return  {b2Vec2|Object}    out
+     */
+    p.getLocalAnchorB = function ( out ) {
+        out = out || b2FrictionJoint._B2VEC2_POOL0;
+        return out.copy( this.m_localAnchorB );
+    };
+
+    /**
+     * Set the maximum friction force in N.
+     *
+     * @public
+     * @method  setMaxForce
+     * @param   {float}   force
+     * @return  {void}
+     */
+    p.setMaxForce = function ( force ) {
+        this.m_maxForce = force;
+    };
+
+    /**
+     * Get the maximum friction force in N.
+     *
+     * @public
+     * @method  getMaxForce
+     * @return  {float}
+     */
+    p.getMaxForce = function () {
+        return this.m_maxForce;
+    };
+
+    /**
+     * Set the maximum friction torque in N*m.
+     *
+     * @public
+     * @method  setMaxTorque
+     * @param   {float}   torque
+     * @return  {void}
+     */
+    p.setMaxTorque = function ( torque ) {
+        this.m_maxTorque = torque;
+    };
+
+    /**
+     * Get the maximum friction torque in N*m.
+     *
+     * @public
+     * @method  getMaxTorque
+     * @return  {float}
+     */
+    p.getMaxTorque = function () {
+        return this.m_maxTorque;
+    };
+
+    /**
+     * @public
+     * @override
+     * @method  initVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+        // Implement b2Joint.initVelocityConstraints
+    p.initVelocityConstraints = function ( data ) {
+        this.m_indexA = this.m_bodyA.m_islandIndex;
+        this.m_indexB = this.m_bodyB.m_islandIndex;
+        this.m_localCenterA.copy( this.m_bodyA.m_sweep.localCenter );
+        this.m_localCenterB.copy( this.m_bodyB.m_sweep.localCenter );
+        this.m_invMassA = this.m_bodyA.m_invMass;
+        this.m_invMassB = this.m_bodyB.m_invMass;
+        this.m_invIA = this.m_bodyA.m_invI;
+        this.m_invIB = this.m_bodyB.m_invI;
+
+        //	/*b2Vec2&amp;*/ var cA = data.positions[this.m_indexA].c;
+        /**float32*/var aA = data.positions[this.m_indexA].a;
+        /**b2Vec2&amp;*/var vA = data.velocities[this.m_indexA].v;
+        /**float32*/var wA = data.velocities[this.m_indexA].w;
+
+        //	/*b2Vec2&amp;*/ var cB = data.positions[this.m_indexB].c;
+        /**float32*/var aB = data.positions[this.m_indexB].a;
+        /**b2Vec2&amp;*/var vB = data.velocities[this.m_indexB].v;
+        /**float32*/var wB = data.velocities[this.m_indexB].w;
+
+        //	/*b2Rot*/ var qA = new b2Rot(aA), /*b2Rot*/ qB = new b2Rot(aB);
+        var qA = this.m_qA.setAngle( aA ), qB = this.m_qB.setAngle( aB );
+
+        // Compute the effective mass matrix.
+        //	m_rA = b2Mul(qA, m_localAnchorA - m_localCenterA);
+        b2Vec2.subtract( this.m_localAnchorA, this.m_localCenterA, this.m_lalcA );
+        var rA = b2Rot.timesV2( qA, this.m_lalcA, this.m_rA );
+        //	m_rB = b2Mul(qB, m_localAnchorB - m_localCenterB);
+        b2Vec2.subtract( this.m_localAnchorB, this.m_localCenterB, this.m_lalcB );
+        var rB = b2Rot.timesV2( qB, this.m_lalcB, this.m_rB );
+
+        // J = [-I -r1_skew I r2_skew]
+        //     [ 0       -1 0       1]
+        // r_skew = [-ry; rx]
+
+        // Matlab
+        // K = [ mA+r1y^2*iA+mB+r2y^2*iB,  -r1y*iA*r1x-r2y*iB*r2x,          -r1y*iA-r2y*iB]
+        //     [  -r1y*iA*r1x-r2y*iB*r2x, mA+r1x^2*iA+mB+r2x^2*iB,           r1x*iA+r2x*iB]
+        //     [          -r1y*iA-r2y*iB,           r1x*iA+r2x*iB,                   iA+iB]
+
+        /*float32*/var mA = this.m_invMassA, mB = this.m_invMassB;
+        /*float32*/var iA = this.m_invIA, iB = this.m_invIB;
+
+        /*b2Mat22*/var K = this.m_K; //new b2Mat22();
+        K.ex.x = mA + mB + iA * rA.y * rA.y + iB * rB.y * rB.y;
+        K.ex.y = -iA * rA.x * rA.y - iB * rB.x * rB.y;
+        K.ey.x = K.ex.y;
+        K.ey.y = mA + mB + iA * rA.x * rA.x + iB * rB.x * rB.x;
+
+        K.getInverse( this.m_linearMass );
+
+        this.m_angularMass = iA + iB;
+        if ( this.m_angularMass &gt; 0 ) {
+            this.m_angularMass = 1 / this.m_angularMass;
+        }
+
+        if ( data.step.warmStarting ) {
+            // Scale impulses to support a variable time step.
+            // m_linearImpulse *= data.step.dtRatio;
+            this.m_linearImpulse.times( data.step.dtRatio );
+            this.m_angularImpulse *= data.step.dtRatio;
+
+            // /*b2Vec2*/ var P(m_linearImpulse.x, m_linearImpulse.y);
+            /*b2Vec2*/
+            var P = this.m_linearImpulse;
+
+            // vA -= mA * P;
+            vA.minusEqualsMul( mA, P );
+            // wA -= iA * (b2Cross(m_rA, P) + m_angularImpulse);
+            wA -= iA * (b2Vec2.cross( this.m_rA, P ) + this.m_angularImpulse);
+            // vB += mB * P;
+            vB.plusEqualsMul( mB, P );
+            // wB += iB * (b2Cross(m_rB, P) + m_angularImpulse);
+            wB += iB * (b2Vec2.cross( this.m_rB, P ) + this.m_angularImpulse);
+        }
+        else {
+            this.m_linearImpulse.setZero();
+            this.m_angularImpulse = 0;
+        }
+
+        // data.velocities[this.m_indexA].v = vA;
+        data.velocities[this.m_indexA].w = wA;
+        // data.velocities[this.m_indexB].v = vB;
+        data.velocities[this.m_indexB].w = wB;
+    };
+
+    /**
+     *
+     * @public
+     * @override
+     * @method  solveVelocityConstraints
+     * @param   {b2SolverData} data
+     * @return  {void}
+     */
+    // Implement b2Joint.solveVelocityConstraints
+    p.solveVelocityConstraints = function ( data ) {
+        /*b2Vec2&amp;*/var vA = data.velocities[this.m_indexA].v;
+        /*float32*/var wA = data.velocities[this.m_indexA].w;
+        /*b2Vec2&amp;*/var vB = data.velocities[this.m_indexB].v;
+        /*float32*/var wB = data.velocities[this.m_indexB].w;
+
+        /*float32*/var mA = this.m_invMassA, mB = this.m_invMassB;
+        /*float32*/var iA = this.m_invIA, iB = this.m_invIB;
+
+        /**float32*/var h = data.step.dt;
+
+        // Solve angular friction
+        {
+            /**float32*/var Cdot = wB - wA;
+            /**float32*/var impulse = (-this.m_angularMass * Cdot);
+
+            /**float32*/var oldImpulse = this.m_angularImpulse;
+            /**float32*/var maxImpulse = h * this.m_maxTorque;
+            this.m_angularImpulse = b2Math.clamp( this.m_angularImpulse + impulse, (-maxImpulse), maxImpulse );
+            impulse = this.m_angularImpulse - oldImpulse;
+
+            wA -= iA * impulse;
+            wB += iB * impulse;
+        }
+
+        // Solve linear friction
+        {
+            // b2Vec2 Cdot = vB + b2Cross(wB, m_rB) - vA - b2Cross(wA, m_rA);
+            Cdot = b2Vec2.subtract(
+                b2Vec2.vPlusCrossFV( vB, wB, this.m_rB, b2Vec2.POOL0 ),
+                b2Vec2.vPlusCrossFV( vA, wA, this.m_rA, b2Vec2.POOL1 ),
+                b2FrictionJoint._B2VEC2_POOL0 );
+
+            // b2Vec2 impulse = -b2Mul(m_linearMass, Cdot);
+            var impulseV = b2Mat22.timesV2( this.m_linearMass, Cdot, b2FrictionJoint._B2VEC2_POOL1 ).negative();
+            // b2Vec2 oldImpulse = m_linearImpulse;
+            var oldImpulseV = b2FrictionJoint._B2VEC2_POOL3.copy( this.m_linearImpulse );
+            // m_linearImpulse += impulse;
+            this.m_linearImpulse.plus( impulseV );
+
+            maxImpulse = h * this.m_maxForce;
+
+            if ( this.m_linearImpulse.lengthSquared() &gt; maxImpulse * maxImpulse ) {
+                this.m_linearImpulse.norm();
+                this.m_linearImpulse.times( maxImpulse );
+            }
+
+            // impulse = m_linearImpulse - oldImpulse;
+            b2Vec2.subtract( this.m_linearImpulse, oldImpulseV, impulseV );
+
+            // vA -= mA * impulse;
+            vA.minusEqualsMul( mA, impulseV );
+            // wA -= iA * b2Cross(m_rA, impulse);
+            wA -= iA * b2Vec2.cross( this.m_rA, impulseV );
+
+            // vB += mB * impulse;
+            vB.plusEqualsMul( mB, impulseV );
+            // wB += iB * b2Cross(m_rB, impulse);
+            wB += iB * b2Vec2.cross( this.m_rB, impulseV );
+        }
+        // data.velocities[this.m_indexA].v = vA;
+        data.velocities[this.m_indexA].w = wA;
+        // data.velocities[this.m_indexB].v = vB;
+        data.velocities[this.m_indexB].w = wB;
+    };
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

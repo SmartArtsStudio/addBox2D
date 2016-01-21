@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>addBox2D v API Documentation : addBox2D\Dynamics\Joints\b2RopeJoint.js</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href="https://github.com/SmartArtsStudio/addBox2D"><img src="../assets/addBox2D-logo-docs.png" title="addBox2D"></a></h1>
+            
+        </div>
+        <div class="version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/b2AreaJoint.html">b2AreaJoint</a></li>
+            
+                <li><a href="../classes/b2AreaJointDef.html">b2AreaJointDef</a></li>
+            
+                <li><a href="../classes/b2Body.html">b2Body</a></li>
+            
+                <li><a href="../classes/b2DistanceJoint.html">b2DistanceJoint</a></li>
+            
+                <li><a href="../classes/b2DistanceJointDef.html">b2DistanceJointDef</a></li>
+            
+                <li><a href="../classes/b2FrictionJoint.html">b2FrictionJoint</a></li>
+            
+                <li><a href="../classes/b2FrictionJointDef.html">b2FrictionJointDef</a></li>
+            
+                <li><a href="../classes/b2GearJoint.html">b2GearJoint</a></li>
+            
+                <li><a href="../classes/b2GearJointDef.html">b2GearJointDef</a></li>
+            
+                <li><a href="../classes/b2Jacobian.html">b2Jacobian</a></li>
+            
+                <li><a href="../classes/B2Joint.html">B2Joint</a></li>
+            
+                <li><a href="../classes/b2JointDef.html">b2JointDef</a></li>
+            
+                <li><a href="../classes/b2JointEdge.html">b2JointEdge</a></li>
+            
+                <li><a href="../classes/b2JointFactory.html">b2JointFactory</a></li>
+            
+                <li><a href="../classes/b2MotorJoint.html">b2MotorJoint</a></li>
+            
+                <li><a href="../classes/b2MotorJointDef.html">b2MotorJointDef</a></li>
+            
+                <li><a href="../classes/b2MouseJoint.html">b2MouseJoint</a></li>
+            
+                <li><a href="../classes/b2MouseJointDef.html">b2MouseJointDef</a></li>
+            
+                <li><a href="../classes/b2PrismaticJoint.html">b2PrismaticJoint</a></li>
+            
+                <li><a href="../classes/b2PrismaticJointDef.html">b2PrismaticJointDef</a></li>
+            
+                <li><a href="../classes/b2PulleyJoint.html">b2PulleyJoint</a></li>
+            
+                <li><a href="../classes/b2PulleyJointDef.html">b2PulleyJointDef</a></li>
+            
+                <li><a href="../classes/b2RevoluteJoint.html">b2RevoluteJoint</a></li>
+            
+                <li><a href="../classes/b2RevoluteJointDef.html">b2RevoluteJointDef</a></li>
+            
+                <li><a href="../classes/b2RopeJoint.html">b2RopeJoint</a></li>
+            
+                <li><a href="../classes/b2RopeJointDef.html">b2RopeJointDef</a></li>
+            
+                <li><a href="../classes/b2WeldJoint.html">b2WeldJoint</a></li>
+            
+                <li><a href="../classes/b2WeldJointDef.html">b2WeldJointDef</a></li>
+            
+                <li><a href="../classes/b2WheelJoint.html">b2WheelJoint</a></li>
+            
+                <li><a href="../classes/b2WheelJointDef.html">b2WheelJointDef</a></li>
+            
+                <li><a href="../classes/b2World.html">b2World</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Dynamics.html">Dynamics</a></li>
+            
+                <li><a href="../modules/Joints.html">Joints</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = addBox2D\Dynamics\Joints\b2RopeJoint.js
+</script>
+<h1 class="file-heading">File:addBox2D\Dynamics\Joints\b2RopeJoint.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+//################################################################################################//
+//################################################################################################//
+//                                                                                                //
+//                ██    ██████ ██████                      ██       ██        ██                  //
+//                ██        ██ ██  ██                      ██                 ██                  //
+//                █████     ██ ██  ██ █████ █████ █████    ██ █████ ██ █████ █████                //
+//                ██ ██ ██████ ██████ ██ ██ ██ ██ ██ ██    ██ ██ ██ ██ ██ ██  ██                  //
+//                ██ ██ ██     ██ ██  ██ ██ ██ ██ █████    ██ ██ ██ ██ ██ ██  ██                  //
+//                ██ ██ ██     ██  ██ ██ ██ ██ ██ ██       ██ ██ ██ ██ ██ ██  ██                  //
+//                █████ ██████ ██  ██ █████ █████ █████ █████ █████ ██ ██ ██  ████                //
+//                                          ██                                                    //
+//                                          ██                                                    //
+//                                                                                                //
+//################################################################################################//
+//################################################################################################//
+
+ // CLASS CONSTRUCTOR
+
+    /**
+     * A rope joint enforces a maximum distance between two points on two bodies.
+     * It has no other effect.
+     *
+     * Warning: if you attempt to change the maximum length during
+     * the simulation you will get some non-physical behavior. A model that would allow you
+     * to dynamically modify the length would have some sponginess, so I chose not to
+     * implement it that way. See b2DistanceJoint if you want to dynamically  control length.
+     *
+     *      @example Limit:
+     *               C = norm(pB - pA) - L
+     *               u = (pB - pA) / norm(pB - pA)
+     *               Cdot = dot(u, vB + cross(wB, rB) - vA - cross(wA, rA))
+     *               J = [-u -cross(rA, u) u cross(rB, u)]
+     *               K = J * invM * JT
+     *                 = invMassA + invIA * cross(rA, u)^2 + invMassB + invIB * cross(rB, u)^2
+     *
+     * @class   b2RopeJoint
+     * @constructor
+     * @extends {b2Joint}
+     * @param   {b2RopeJointDef}  ropeJointDef
+     * @module  Joints
+     */
+    //TODO: test b2RopeJoint. Ported but not yet tested.
+    function b2RopeJoint( ropeJointDef ) {
+
+        /**
+         *Invoke parent class constructor function reference.
+         */
+        this.constructor( ropeJointDef );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██████                              ██   ██                                   //
+//                  ██  ██                              ██                                        //
+//                  ██  ██ ████ █████ █████ █████ ████ █████ ██ █████ █████                       //
+//                  ██████ ██   ██ ██ ██ ██ ██ ██ ██    ██   ██ ██ ██ ██                          //
+//                  ██     ██   ██ ██ ██ ██ █████ ██    ██   ██ █████ █████                       //
+//                  ██     ██   ██ ██ ██ ██ ██    ██    ██   ██ ██       ██                       //
+//                  ██     ██   █████ █████ █████ ██    ████ ██ █████ █████                       //
+//                                    ██                                                          //
+//                                    ██                                                          //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     // property DECLARATIONS
+
+        /**
+         *
+         * @public
+         * @property  m_localAnchorA
+         * @type      {b2Vec2}
+         * @default   {b2ropeDef.localAnchorB}  (0,0)
+         */
+        this.m_localAnchorA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localAnchorB
+         * @type      {b2Vec2}
+         * @default   {b2ropeDef.localAnchorB}  (0,0)
+         */
+        this.m_localAnchorB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localCenterA
+         * @type      {b2Vec2}
+         */
+        this.m_localCenterA = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_localCenterB
+         * @type      {b2Vec2}
+         */
+        this.m_localCenterB = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_u
+         * @type      {b2Vec2}
+         */
+        this.m_u = new b2Vec2;
+
+        /**
+         *
+         * @public
+         * @property  m_rA
+         * @type      {b2Vec2}
+         */
+        this.m_rA = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_rB
+         * @type      {b2Vec2}
+         */
+        this.m_rB = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_qA
+         * @type      {b2Rot}
+         */
+        this.m_qA = new b2Rot;
+
+        /**
+         * @public
+         * @property  m_qA
+         * @type      {b2Rot}
+         */
+        this.m_qA = new b2Rot;
+
+        /**
+         * @public
+         * @property  m_qB
+         * @type      {b2Rot}
+         */
+        this.m_qB = new b2Rot;
+
+        /**
+         * @public
+         * @property  m_lalcA
+         * @type      {b2Vec2}
+         */
+        this.m_lalcA = new b2Vec2;
+
+        /**
+         * @public
+         * @property  m_lalcB
+         * @type      {b2Vec2}
+         */
+        this.m_lalcB = new b2Vec2;
+
+     // property INITIALISATIONS
+
+        this.m_localAnchorA.copy(ropeJointDef.localAnchorA);
+        this.m_localAnchorB.copy(ropeJointDef.localAnchorB);
+
+        /**
+         *
+         * @public
+         * @property  m_maxLength
+         * @type      {float}
+         * @default   {b2ropeDef.maxLength}   0.0
+         */
+        this.m_maxLength = ropeJointDef.maxLength;
+
+        /**
+         *
+         * @public
+         * @property  m_frequencyHz
+         * @type      {float}
+         * @default   {b2ropeDef.frequencyHz}   0.0
+         */
+        this.m_frequencyHz = ropeJointDef.frequencyHz;
+
+        /**
+         *
+         * @public
+         * @property  m_bias
+         * @type      {float}
+         * @default   (0,0)
+         */
+        this.m_bias = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_gamma
+         * @type      {float}
+         * @default   (0,0)
+         */
+        this.m_gamma = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_impulse
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_impulse = 0.0;
+
+        /**
+         *
+         * @protected
+         * @property  m_state
+         * @type      {float}
+         * @default   b2Joint.e_inactiveLimit
+         */
+        this.m_limitState = b2Joint.e_inactiveLimit;
+
+        /**
+         *
+         * @public
+         * @property  m_length
+         * @type      {float}
+         * @default   {b2ropeDef.length}    1.0
+         */
+        this.m_length = ropeJointDef.length;
+
+        /**
+         *
+         * @protected
+         * @property  m_mass
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_mass = 0.0;
+
+        /**
+         *
+         * @public
+         * @property  m_maxLength
+         * @type      {float}
+         * @default   0.0
+         */
+        this.m_maxLength = ropeJointDef.maxLength;
+
+        /**
+         *
+         * @public
+         * @property  m_indexA
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexA = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_indexB
+         * @type      {int}
+         * @default   0
+         */
+        this.m_indexB = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_state
+         * @type      {int}
+         * @default   b2Joint.e_inactiveLimit
+         */
+        this.m_state = b2Joint.e_inactiveLimit;
+
+        /**
+         *
+         * @public
+         * @property  m_invMassB
+         * @type      {int}
+         * @default   0.0
+         */
+        this.m_invMassB = 0;
+
+        /**
+         *
+         * @public
+         * @property  m_invMassB
+         * @type      {int}
+         * @default   0
+         * */
+        this.m_invIA = 0;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                  ██       ██               ██  ██                                              //
+//                  ██       ██                   ██                                              //
+//                  ██ █████ █████ █████ ████ ██ █████ █████ █████ █████ █████                    //
+//                  ██ ██ ██ ██ ██ ██ ██ ██   ██  ██      ██ ██ ██ ██    ██ ██                    //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ██   █████ ██ ██ ██    █████                    //
+//                  ██ ██ ██ ██ ██ ██    ██   ██  ██   ██ ██ ██ ██ ██    ██                       //
+//                  ██ ██ ██ ██ ██ █████ ██   ██  ████ █████ ██ ██ █████ █████                    //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    } b2RopeJoint.prototype = p = new b2Joint; Box2D.b2RopeJoint = b2RopeJoint;
+
+      // STATIC CLASS PROPERTIES
+
+         /**
+          * Object pool for memory management.
+          */
+         b2RopeJoint._B2VEC2_POOL0 = new b2Vec2;
+         b2RopeJoint._B2VEC2_POOL1 = new b2Vec2;
+         b2RopeJoint._B2VEC2_POOL2 = new b2Vec2;
+
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                //
+//                       ██   ██        ██   ██             ██                                    //
+//                       ███ ███        ██   ██             ██                                    //
+//                       ███████ █████ █████ █████ █████ █████ █████                              //
+//                       ██ █ ██ ██ ██  ██   ██ ██ ██ ██ ██ ██ ██                                 //
+//                       ██   ██ █████  ██   ██ ██ ██ ██ ██ ██ █████                              //
+//                       ██   ██ ██     ██   ██ ██ ██ ██ ██ ██    ██                              //
+//                       ██   ██ █████  ████ ██ ██ █████ █████ █████                              //
+//                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // INSTANCE METHODS
+
+     /**
+      * @public
+      * @method  getAnchorA
+      * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+      * @return  {b2Vec2|Object}    out
+      */
+     p.getAnchorA = function ( out ) {
+         out = out || b2RopeJoint._B2VEC2_POOL0;
+         return this.m_bodyA.getWorldPoint( this.m_localAnchorA, out );
+     };
+
+     /**
+      * @public
+      * @method  getAnchorB
+      * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+      * @return  {b2Vec2|Object}    out
+      */
+     p.getAnchorB = function ( out ) {
+         out = out || b2RopeJoint._B2VEC2_POOL0;
+         return this.m_bodyB.getWorldPoint( this.m_localAnchorB, out );
+     };
+
+     /**
+      * Get the reaction force given the inverse time step.
+      * Unit is N.
+      *
+      * @public
+      * @method  getReactionForce
+      * @param   {float}     invDeltaTime
+      * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+      * @return  {b2Vec2|Object}    out
+      */
+     p.getReactionForce = function ( invDeltaTime, out ) {
+         out = out || b2RopeJoint._B2VEC2_POOL0;
+         /*b2Vec2*/return b2Vec2.numTimes( (invDeltaTime * this.m_impulse), this.m_u, out );
+     };
+
+     /**
+      * Get the reaction torque given the inverse time step.
+      * Unit is N*m. This is always zero for a distance joint.
+      *
+      * @public
+      * @method  getReactionTorque
+      * @param   {float}     invDeltaTime
+      * @return  {float}
+      */
+     p.getReactionTorque = function ( invDeltaTime ) {
+         return 0;
+     };
+
+     /**
+      * The local anchor point relative to bodyA&#x27;s origin.
+      *
+      * @public
+      * @method  getLocalAnchorA
+      * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+      * @return  {b2Vec2|Object}    out
+      */
+     p.getLocalAnchorA = function ( out ) {
+         out = out || b2RopeJoint._B2VEC2_POOL0;
+         return out.copy( this.m_localAnchorA );
+     };
+
+     /**
+      * The local anchor point relative to bodyB&#x27;s origin.
+      *
+      * @public
+      * @method  getLocalAnchorB
+      * @param   {b2Vec2|Object=}   [out=b2Vec2]   reusable object
+      * @return  {b2Vec2|Object}    out
+      */
+     p.getLocalAnchorB = function ( out ) {
+         out = out || b2RopeJoint._B2VEC2_POOL0;
+         return out.copy( this.m_localAnchorB );
+     };
+
+     /**
+      * Set the maximum length of the rope.
+      *
+      * @public
+      * @method  setMaxLength
+      * @param   {float}     length
+      * @return  {void}
+      */
+     p.setMaxLength = function ( length ) {
+         this.m_maxLength = length;
+     };
+
+     /**
+      * Get the maximum length of the rope.
+      *
+      * @public
+      * @method  getMaxLength
+      * @return  {float}
+      */
+     p.getMaxLength = function () {
+         return this.m_maxLength;
+     };
+
+     /**
+      * @public
+      * @method  getLimitState
+      * @return  {int}
+      */
+     p.getLimitState = function () {
+         return this.m_state;
+     };
+
+     /**
+      * @public
+      * @override
+      * @method  initVelocityConstraints
+      * @param   {b2SolverData} data
+      * @return  {void}
+      */
+     // Implement b2Joint.initVelocityConstraints
+     p.initVelocityConstraints = function ( data ) {
+        this.m_indexA = this.m_bodyA.m_islandIndex;
+        this.m_indexB = this.m_bodyB.m_islandIndex;
+        this.m_localCenterA.copy(this.m_bodyA.m_sweep.localCenter);
+        this.m_localCenterB.copy(this.m_bodyB.m_sweep.localCenter);
+        this.m_invMassA = this.m_bodyA.m_invMass;
+        this.m_invMassB = this.m_bodyB.m_invMass;
+        this.m_invIA = this.m_bodyA.m_invI;
+        this.m_invIB = this.m_bodyB.m_invI;
+
+        /*b2Vec2&amp;*/ var cA = data.positions[this.m_indexA].c;
+        /*float32*/ var aA = data.positions[this.m_indexA].a;
+        /*b2Vec2&amp;*/ var vA = data.velocities[this.m_indexA].v;
+        /*float32*/ var wA = data.velocities[this.m_indexA].w;
+
+        /*b2Vec2&amp;*/ var cB = data.positions[this.m_indexB].c;
+        /*float32*/ var aB = data.positions[this.m_indexB].a;
+        /*b2Vec2&amp;*/ var vB = data.velocities[this.m_indexB].v;
+        /*float32*/ var wB = data.velocities[this.m_indexB].w;
+
+        /*b2Rot*/ var qA = this.m_qA.setAngle(aA), qB = this.m_qB.setAngle(aB);
+
+        // this.m_rA = b2Mul(qA, this.m_localAnchorA - this.m_localCenterA);
+        b2Vec2.subtract(this.m_localAnchorA, this.m_localCenterA, this.m_lalcA);
+        b2Rot.timesV2(qA, this.m_lalcA, this.m_rA);
+        // this.m_rB = b2Mul(qB, this.m_localAnchorB - this.m_localCenterB);
+        b2Vec2.subtract(this.m_localAnchorB, this.m_localCenterB, this.m_lalcB);
+        b2Rot.timesV2(qB, this.m_lalcB, this.m_rB);
+        // this.m_u = cB + this.m_rB - cA - this.m_rA;
+        this.m_u.copy(cB).plus(this.m_rB).minus(cA).minus(this.m_rA);
+
+        this.m_length = this.m_u.length();
+
+         /*float32*/ var C = this.m_length - this.m_maxLength;
+         if ( C &gt; 0 ) {
+             this.m_state = b2Joint.e_atUpperLimit;
+         }
+         else {
+             this.m_state = b2Joint.e_inactiveLimit;
+         }
+
+         if ( this.m_length &gt; b2Settings.b2_linearSlop ) {
+             this.m_u.times( 1 / this.m_length );
+         }
+         else {
+             this.m_u.setZero();
+             this.m_mass = 0;
+             this.m_impulse = 0;
+             return;
+         }
+
+        // Compute effective mass.
+        /*float32*/ var crA = b2Vec2.cross(this.m_rA, this.m_u);
+        /*float32*/ var crB = b2Vec2.cross(this.m_rB, this.m_u);
+        /*float32*/ var invMass = this.m_invMassA + this.m_invIA * crA * crA + this.m_invMassB + this.m_invIB * crB * crB;
+
+        this.m_mass = invMass !== 0 ? 1 / invMass : 0;
+
+         if ( data.step.warmStarting ) {
+            // Scale the impulse to support a variable time step.
+            this.m_impulse *= data.step.dtRatio;
+
+            // b2Vec2 P = m_impulse * m_u;
+            var P = b2Vec2.numTimes(this.m_impulse, this.m_u, b2RopeJoint._B2VEC2_POOL0);
+            // vA -= m_invMassA * P;
+            vA.minusEqualsMul(this.m_invMassA, P);
+            wA -= this.m_invIA * b2Vec2.cross(this.m_rA, P);
+            // vB += m_invMassB * P;
+            vB.plusEqualsMul(this.m_invMassB, P);
+            wB += this.m_invIB * b2Vec2.cross(this.m_rB, P);
+         }
+         else {
+             this.m_impulse = 0;
+         }
+
+        // data.velocities[this.m_indexA].v = vA;
+        data.velocities[this.m_indexA].w = wA;
+        // data.velocities[this.m_indexB].v = vB;
+        data.velocities[this.m_indexB].w = wB;
+     };
+
+     /**
+      *
+      * @public
+      * @override
+      * @method  solveVelocityConstraints
+      * @param   {b2SolverData} data
+      * @return  {void}
+      */
+     // Implement b2Joint.solveVelocityConstraints
+     p.solveVelocityConstraints = function ( data ) {
+        /*b2Vec2&amp;*/ var vA = data.velocities[this.m_indexA].v;
+        /*float32*/ var wA = data.velocities[this.m_indexA].w;
+        /*b2Vec2&amp;*/ var vB = data.velocities[this.m_indexB].v;
+        /*float32*/ var wB = data.velocities[this.m_indexB].w;
+
+        // Cdot = dot(u, v + cross(w, r))
+        // b2Vec2 vpA = vA + b2Cross(wA, m_rA);
+        var vpA = b2Vec2.vPlusCrossFV(vA, wA, this.m_rA, b2RopeJoint._B2VEC2_POOL0);
+        // b2Vec2 vpB = vB + b2Cross(wB, m_rB);
+        var vpB = b2Vec2.vPlusCrossFV(vB, wB, this.m_rB, b2RopeJoint._B2VEC2_POOL1);
+        // float32 C = m_length - m_maxLength;
+        /*float32*/ var C = this.m_length - this.m_maxLength;
+        // float32 Cdot = b2Dot(m_u, vpB - vpA);
+        /*float32*/ var Cdot = b2Vec2.dot(this.m_u, b2Vec2.subtract(vpB, vpA, b2Vec2.POOL0));
+
+        // Predictive constraint.
+        /*float32*/ var impulse = -this.m_mass * Cdot;
+        /*float32*/ var oldImpulse = this.m_impulse;
+        this.m_impulse = Math.min(0, this.m_impulse + impulse);
+        impulse = this.m_impulse - oldImpulse;
+
+        // b2Vec2 P = impulse * m_u;
+        var P = b2Vec2.numTimes(impulse, this.m_u, b2RopeJoint._B2VEC2_POOL2);
+        // vA -= m_invMassA * P;
+        vA.minusEqualsMul(this.m_invMassA, P);
+        wA -= this.m_invIA * b2Vec2.cross(this.m_rA, P);
+        // vB += m_invMassB * P;
+        vB.plusEqualsMul(this.m_invMassB, P);
+        wB += this.m_invIB * b2Vec2.cross(this.m_rB, P);
+
+        // data.velocities[this.m_indexA].v = vA;
+        data.velocities[this.m_indexA].w = wA;
+        // data.velocities[this.m_indexB].v = vB;
+        data.velocities[this.m_indexB].w = wB;
+     };
+
+     /**
+      * @public
+      * @override
+      * @method  solvePositionConstraints
+      * @param   {b2SolverData} data
+      * @return  {void}
+      */
+     // Implement b2Joint.solvePositionConstraints
+     p.solvePositionConstraints = function ( data ) {
+         /*b2Vec2&amp;*/ var cA = data.positions[this.m_indexA].c;
+         /*float32*/ var aA = data.positions[this.m_indexA].a;
+         /*b2Vec2&amp;*/ var cB = data.positions[this.m_indexB].c;
+         /*float32*/ var aB = data.positions[this.m_indexB].a;
+
+         /*b2Rot*/ var qA = this.m_qA.setAngle(aA), qB = this.m_qB.setAngle(aB);
+
+         //	b2Vec2 rA = b2Mul(qA, this.m_localAnchorA - this.m_localCenterA);
+         b2Vec2.subtract(this.m_localAnchorA, this.m_localCenterA, this.m_lalcA);
+         var rA = b2Rot.timesV2(qA, this.m_lalcA, this.m_rA);
+         //	b2Vec2 rB = b2Mul(qB, this.m_localAnchorB - this.m_localCenterB);
+         b2Vec2.subtract(this.m_localAnchorB, this.m_localCenterB, this.m_lalcB);
+         var rB = b2Rot.timesV2(qB, this.m_lalcB, this.m_rB);
+         //	b2Vec2 u = cB + rB - cA - rA;
+         /*b2Vec2*/ var u = this.m_u.copy(cB).plus(rB).minus(cA).minus(rA);
+
+         /*float32*/ var length = u.norm();
+         /*float32*/ var C = length - this.m_maxLength;
+
+         C = b2Math.clamp(C, 0, b2Settings.b2_maxLinearCorrection);
+
+         /*float32*/ var impulse = -this.m_mass * C;
+         //	b2Vec2 P = impulse * u;
+         var P = b2Vec2.numTimes(impulse, u, b2RopeJoint._B2VEC2_POOL0);
+
+         //	cA -= m_invMassA * P;
+         cA.minusEqualsMul(this.m_invMassA, P);
+         aA -= this.m_invIA * b2Vec2.cross(rA, P);
+         //	cB += m_invMassB * P;
+         cB.plusEqualsMul(this.m_invMassB, P);
+         aB += this.m_invIB * b2Vec2.cross(rB, P);
+
+         //	data.positions[this.m_indexA].c = cA;
+         data.positions[this.m_indexA].a = aA;
+         //	data.positions[this.m_indexB].c = cB;
+         data.positions[this.m_indexB].a = aB;
+
+         return length - this.m_maxLength &lt; b2Settings.b2_linearSlop;
+     };
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
