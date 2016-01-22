@@ -101,7 +101,7 @@
             "name": "..\\src_partial_docs\\addBox2D\\Dynamics\\Joints\\b2Joint.js",
             "modules": {},
             "classes": {
-                "B2Joint": 1
+                "b2Joint": 1
             },
             "fors": {},
             "namespaces": {}
@@ -343,7 +343,7 @@
                 "b2GearJoint": 1,
                 "b2GearJointDef": 1,
                 "b2Jacobian": 1,
-                "B2Joint": 1,
+                "b2Joint": 1,
                 "b2JointDef": 1,
                 "b2JointEdge": 1,
                 "b2JointFactory": 1,
@@ -430,7 +430,7 @@
             "line": 17,
             "description": "A distance joint constrains two points on two bodies to\nremain at a fixed distance from each other. You can view this\nas a massless, rigid rod.",
             "is_constructor": 1,
-            "extends": "{B2Joint}",
+            "extends": "{b2Joint}",
             "params": [
                 {
                     "name": "distanceJointDef",
@@ -546,9 +546,9 @@
             "line": 17,
             "is_constructor": 1
         },
-        "B2Joint": {
-            "name": "B2Joint",
-            "shortname": "B2Joint",
+        "b2Joint": {
+            "name": "b2Joint",
+            "shortname": "b2Joint",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -3616,7 +3616,7 @@
             "name": "getJoint1",
             "return": {
                 "description": "",
-                "type": "B2Joint"
+                "type": "b2Joint"
             },
             "class": "b2GearJoint",
             "module": "Joints"
@@ -3631,7 +3631,7 @@
             "name": "getJoint1",
             "return": {
                 "description": "",
-                "type": "B2Joint"
+                "type": "b2Joint"
             },
             "class": "b2GearJoint",
             "module": "Joints"
@@ -3853,7 +3853,7 @@
             "itemtype": "property",
             "name": "m_edgeA",
             "type": "{b2JointEdge}",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3865,7 +3865,7 @@
             "itemtype": "property",
             "name": "m_edgeB",
             "type": "{b2JointEdge}",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3878,7 +3878,7 @@
             "name": "m_type",
             "type": "{int}",
             "default": "b2jointDef.type",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3891,7 +3891,7 @@
             "name": "m_prev",
             "type": "{b2Joint|null}",
             "default": "null",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3904,7 +3904,7 @@
             "name": "m_next",
             "type": "{b2Joint|null}",
             "default": "null",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3917,7 +3917,7 @@
             "name": "m_bodyA",
             "type": "{b2Body}",
             "default": "b2jointDef.bodyA",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3930,7 +3930,7 @@
             "name": "m_bodyB",
             "type": "{b2Body}",
             "default": "b2jointDef.bodyB",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3943,7 +3943,7 @@
             "name": "m_collideConnected",
             "type": "{boolean}",
             "default": "b2jointDef.collideConnected",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3955,7 +3955,7 @@
             "name": "m_islandFlag",
             "type": "{boolean}",
             "default": "false",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3967,7 +3967,7 @@
             "name": "m_index",
             "type": "{int}",
             "default": "false",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3980,7 +3980,7 @@
             "name": "m_userData",
             "type": "{*}",
             "default": "b2jointDef.userData",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -3992,7 +3992,7 @@
             "itemtype": "property",
             "name": "ParentClass",
             "type": "{constructor}",
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4017,7 +4017,7 @@
             "return": {
                 "description": "b2Joint"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4032,15 +4032,15 @@
                 {
                     "name": "b2JointDef",
                     "description": "",
-                    "type": "B2Joint"
+                    "type": "b2Joint"
                 },
                 {
                     "name": "allocator",
                     "description": "",
-                    "type": "B2Joint"
+                    "type": "b2Joint"
                 }
             ],
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4055,7 +4055,7 @@
                 "description": "",
                 "type": "Int"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4070,7 +4070,7 @@
                 "description": "",
                 "type": "B2Body"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4085,7 +4085,7 @@
                 "description": "",
                 "type": "B2Body"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4108,7 +4108,7 @@
                 "description": "out",
                 "type": "B2Vec2"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4131,7 +4131,7 @@
                 "description": "out",
                 "type": "B2Vec2"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4159,7 +4159,7 @@
                 "description": "",
                 "type": "B2Vec2"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4175,7 +4175,7 @@
                 "description": "",
                 "type": "Float"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4188,9 +4188,9 @@
             "name": "getNext",
             "return": {
                 "description": "",
-                "type": "B2Joint"
+                "type": "b2Joint"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4205,7 +4205,7 @@
                 "description": "",
                 "type": "*"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4220,7 +4220,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4235,7 +4235,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4250,7 +4250,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4272,7 +4272,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4294,7 +4294,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4317,7 +4317,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4340,7 +4340,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "B2Joint",
+            "class": "b2Joint",
             "module": "Joints"
         },
         {
@@ -4482,7 +4482,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "B2Joint"
+                "type": "b2Joint"
             },
             "class": "b2JointFactory",
             "module": "Joints"
@@ -4500,7 +4500,7 @@
                 {
                     "name": "joint",
                     "description": "",
-                    "type": "B2Joint"
+                    "type": "b2Joint"
                 },
                 {
                     "name": "allocator",
@@ -13732,7 +13732,7 @@
             "name": "getJointList",
             "return": {
                 "description": "The head of the world joint linked-list.",
-                "type": "B2Joint"
+                "type": "b2Joint"
             },
             "class": "b2World",
             "module": "Dynamics"

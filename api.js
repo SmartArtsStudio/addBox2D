@@ -1,7 +1,7 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "B2Joint",
+        "b2Joint",
         "b2AreaJoint",
         "b2AreaJointDef",
         "b2Body",
